@@ -1,0 +1,5272 @@
+﻿1
+00:00:00,949 --> 00:00:03,929
+hi guys also welcome to this another
+
+2
+00:00:03,929 --> 00:00:05,310
+weekly life
+
+3
+00:00:05,310 --> 00:00:08,069
+my name is Ethel and I'm from team K
+
+4
+00:00:08,069 --> 00:00:11,509
+Tony Academy and like every week every
+
+5
+00:00:11,509 --> 00:00:17,940
+Tuesday 3:00 p.m. GMT 8 a.m. PST 8:30
+
+6
+00:00:17,940 --> 00:00:21,330
+p.m. est and 4 p.m. UK time because it's
+
+7
+00:00:21,330 --> 00:00:24,240
+a British standard or summer time we
+
+8
+00:00:24,240 --> 00:00:26,369
+cover this roughly around 30 to 40
+
+9
+00:00:26,369 --> 00:00:28,890
+minutes session I might be doing a
+
+10
+00:00:28,890 --> 00:00:32,430
+little bit quicker today it's a lot of
+
+11
+00:00:32,430 --> 00:00:35,820
+Sun today so I will be starting in a
+
+12
+00:00:35,820 --> 00:00:39,290
+minute but if you're watching this video
+
+13
+00:00:39,290 --> 00:00:43,680
+then maybe skip a minute or two and then
+
+14
+00:00:43,680 --> 00:00:45,239
+I'll be starting because I'm just
+
+15
+00:00:45,239 --> 00:00:47,640
+catching up I was just and what we are
+
+16
+00:00:47,640 --> 00:00:50,070
+going to cover today is about WebLogic
+
+17
+00:00:50,070 --> 00:00:54,300
+server verb logic and specific are
+
+18
+00:00:54,300 --> 00:00:58,379
+targeted for admins ebusiness suite ab
+
+19
+00:00:58,379 --> 00:01:02,100
+CB s so let me go straight on to the web
+
+20
+00:01:02,100 --> 00:01:03,989
+to the to the slides what we going to
+
+21
+00:01:03,989 --> 00:01:07,770
+cover but if you like anything and if
+
+22
+00:01:07,770 --> 00:01:09,780
+something is not clear then make sure
+
+23
+00:01:09,780 --> 00:01:14,070
+you ask questions are from me so let me
+
+24
+00:01:14,070 --> 00:01:17,880
+go and check in my slide one second yep
+
+25
+00:01:17,880 --> 00:01:22,080
+it looks all fine okay so I hope you are
+
+26
+00:01:22,080 --> 00:01:24,720
+able to see my screen let me make it
+
+27
+00:01:24,720 --> 00:01:26,490
+full size let me make it bigger
+
+28
+00:01:26,490 --> 00:01:30,270
+oh hold on yeah so this is what we are
+
+29
+00:01:30,270 --> 00:01:32,070
+going to cover today let me look at the
+
+30
+00:01:32,070 --> 00:01:34,890
+parallely in a come on my or start this
+
+31
+00:01:34,890 --> 00:01:37,320
+on my page as well or sorry on my phone
+
+32
+00:01:37,320 --> 00:01:40,250
+as well I'm just flipping up a litte bit
+
+33
+00:01:40,250 --> 00:01:43,649
+so I hope you can see my screen which
+
+34
+00:01:43,649 --> 00:01:47,579
+says WebLogic and oracle ebusiness wait
+
+35
+00:01:47,579 --> 00:01:50,700
+are twelve question answer and what you
+
+36
+00:01:50,700 --> 00:01:52,079
+see on the right hand side on this
+
+37
+00:01:52,079 --> 00:01:55,979
+screen is a console sorry I forgot your
+
+38
+00:01:55,979 --> 00:01:58,560
+console but coming from Oracle
+
+39
+00:01:58,560 --> 00:02:02,130
+e-business suite are 12.2 so this is a
+
+40
+00:02:02,130 --> 00:02:04,500
+WebLogic admin console which is coming
+
+41
+00:02:04,500 --> 00:02:11,730
+from ebusiness suite our 12.2 okay hold
+
+42
+00:02:11,730 --> 00:02:14,390
+on let me minimize
+
+43
+00:02:14,750 --> 00:02:18,360
+okay so this is targeted for ab CBS
+
+44
+00:02:18,360 --> 00:02:21,630
+parallely I'll also connect and see on
+
+45
+00:02:21,630 --> 00:02:23,940
+the WebLogic console let me see if I am
+
+46
+00:02:23,940 --> 00:02:26,310
+connected to the VPN make sure you post
+
+47
+00:02:26,310 --> 00:02:28,380
+all your questions when connecting to
+
+48
+00:02:28,380 --> 00:02:30,450
+the VPN switcher which means I'm going
+
+49
+00:02:30,450 --> 00:02:32,340
+to do actual hands-on we are going to
+
+50
+00:02:32,340 --> 00:02:34,920
+connect and work on server and I'm going
+
+51
+00:02:34,920 --> 00:02:36,810
+to show you how does filesystem of
+
+52
+00:02:36,810 --> 00:02:38,880
+e-business suite I printer to look like
+
+53
+00:02:38,880 --> 00:02:42,080
+and I'm going to focus for from a from
+
+54
+00:02:42,080 --> 00:02:44,700
+applications or from a web logic point
+
+55
+00:02:44,700 --> 00:02:46,890
+of view and also if you have any
+
+56
+00:02:46,890 --> 00:02:48,330
+question how does this work like that
+
+57
+00:02:48,330 --> 00:02:50,460
+why it's working like that let me know
+
+58
+00:02:50,460 --> 00:02:52,290
+those questions as well those who are
+
+59
+00:02:52,290 --> 00:02:54,960
+attending here say hi a big hi to
+
+60
+00:02:54,960 --> 00:02:57,780
+everyone this is the agenda be able to
+
+61
+00:02:57,780 --> 00:03:00,240
+cover today so let me show you this is
+
+62
+00:03:00,240 --> 00:03:02,070
+all be able to cover today but before
+
+63
+00:03:02,070 --> 00:03:04,500
+that those who are here a he Pablo of
+
+64
+00:03:04,500 --> 00:03:08,690
+welcome here hey RJ hello welcome here
+
+65
+00:03:08,690 --> 00:03:12,830
+then we have shritha hi vamsee mukesh
+
+66
+00:03:12,830 --> 00:03:16,860
+okay so hi everyone make sure you post
+
+67
+00:03:16,860 --> 00:03:19,980
+your questions that you have but this is
+
+68
+00:03:19,980 --> 00:03:21,450
+what we have to begin with we'll start
+
+69
+00:03:21,450 --> 00:03:24,480
+with WebLogic overview very quickly then
+
+70
+00:03:24,480 --> 00:03:26,970
+tasks performed by admins then we are
+
+71
+00:03:26,970 --> 00:03:28,320
+going to there was one question being
+
+72
+00:03:28,320 --> 00:03:32,780
+asked in past which was about that a
+
+73
+00:03:32,780 --> 00:03:35,340
+oracle ebusiness with art world or two
+
+74
+00:03:35,340 --> 00:03:37,830
+runs web logic or is run on top of
+
+75
+00:03:37,830 --> 00:03:39,780
+WebLogic server and that WebLogic server
+
+76
+00:03:39,780 --> 00:03:42,900
+has managed servers and sometimes these
+
+77
+00:03:42,900 --> 00:03:45,060
+manage servers go in a warning state
+
+78
+00:03:45,060 --> 00:03:46,500
+i'll show you all what you mean by
+
+79
+00:03:46,500 --> 00:03:48,180
+warning so why do they go in that
+
+80
+00:03:48,180 --> 00:03:49,740
+warning state it said we're going to
+
+81
+00:03:49,740 --> 00:03:52,020
+look at g vm memory uses garbage
+
+82
+00:03:52,020 --> 00:03:54,240
+collection heap dump stack dump thread
+
+83
+00:03:54,240 --> 00:03:55,290
+dump what are these
+
+84
+00:03:55,290 --> 00:03:58,590
+how does memory look like so just to UM
+
+85
+00:03:58,590 --> 00:04:00,480
+little bit excited because this is
+
+86
+00:04:00,480 --> 00:04:02,130
+something i've never covered spatially
+
+87
+00:04:02,130 --> 00:04:04,020
+not even in any training so this is what
+
+88
+00:04:04,020 --> 00:04:06,360
+we are going to look at as well what is
+
+89
+00:04:06,360 --> 00:04:08,910
+a young generation what is old
+
+90
+00:04:08,910 --> 00:04:11,100
+generation what is a heap
+
+91
+00:04:11,100 --> 00:04:13,230
+what is the permanent generation how
+
+92
+00:04:13,230 --> 00:04:14,940
+does garbage collection look like and
+
+93
+00:04:14,940 --> 00:04:17,730
+some of these performance are things as
+
+94
+00:04:17,730 --> 00:04:19,200
+well so make sure you ask a lot of
+
+95
+00:04:19,200 --> 00:04:21,358
+questions you come even if you are not a
+
+96
+00:04:21,358 --> 00:04:23,190
+apps DBA you are going to get tons of
+
+97
+00:04:23,190 --> 00:04:25,800
+value web logic is used everywhere
+
+98
+00:04:25,800 --> 00:04:26,790
+pretty much every
+
+99
+00:04:26,790 --> 00:04:29,070
+so you'll get tons of value so going
+
+100
+00:04:29,070 --> 00:04:32,220
+back and also if you if you at any point
+
+101
+00:04:32,220 --> 00:04:34,620
+in time you like this session don't
+
+102
+00:04:34,620 --> 00:04:38,070
+forget to don't forget to share and and
+
+103
+00:04:38,070 --> 00:04:40,350
+leave a comment to me and tell me and
+
+104
+00:04:40,350 --> 00:04:42,450
+give me some little hoods so that we
+
+105
+00:04:42,450 --> 00:04:44,940
+have more guys joining hi I use hi
+
+106
+00:04:44,940 --> 00:04:47,190
+Vishal is like session started yes
+
+107
+00:04:47,190 --> 00:04:48,780
+absolutely we shall we have started a
+
+108
+00:04:48,780 --> 00:04:52,110
+hoop Emma I'm audible you can hear me
+
+109
+00:04:52,110 --> 00:04:56,100
+Mithu hi Mootoo welcome here and let me
+
+110
+00:04:56,100 --> 00:04:58,650
+know as well are you guys AB CBA's do
+
+111
+00:04:58,650 --> 00:05:01,410
+you have are you guys AB see behaves or
+
+112
+00:05:01,410 --> 00:05:03,810
+not and have you worked on WebLogic or
+
+113
+00:05:03,810 --> 00:05:05,070
+not so this is what we'll be able to
+
+114
+00:05:05,070 --> 00:05:08,640
+cover so but before we go on to hold on
+
+115
+00:05:08,640 --> 00:05:11,460
+yeah I think I moved forward so this is
+
+116
+00:05:11,460 --> 00:05:14,430
+what I'll be able to cover but earlier
+
+117
+00:05:14,430 --> 00:05:16,050
+in the show so I have this weekly
+
+118
+00:05:16,050 --> 00:05:19,980
+session so early in the show this is all
+
+119
+00:05:19,980 --> 00:05:21,840
+we have covered in Xero one cloud like
+
+120
+00:05:21,840 --> 00:05:24,180
+zero one we covered cloud service model
+
+121
+00:05:24,180 --> 00:05:26,280
+zero three we covered 12-point checklist
+
+122
+00:05:26,280 --> 00:05:29,010
+to go from DBA to cloud DBA and so on so
+
+123
+00:05:29,010 --> 00:05:30,120
+I'm going to move a little bit quicker
+
+124
+00:05:30,120 --> 00:05:32,280
+but if you want you can come back again
+
+125
+00:05:32,280 --> 00:05:35,220
+here and have a look at this if anything
+
+126
+00:05:35,220 --> 00:05:37,380
+of your interest all out plenty of
+
+127
+00:05:37,380 --> 00:05:39,900
+useful information in all this previous
+
+128
+00:05:39,900 --> 00:05:41,760
+shows everything is available on
+
+129
+00:05:41,760 --> 00:05:44,750
+Facebook as well also I did a Fae a
+
+130
+00:05:44,750 --> 00:05:47,790
+WebLogic I did a web logic live hold on
+
+131
+00:05:47,790 --> 00:05:52,410
+there guys so I did a Facebook life I do
+
+132
+00:05:52,410 --> 00:05:53,820
+not Facebook like I did a free webinar
+
+133
+00:05:53,820 --> 00:05:56,160
+on WebLogic Oracle WebLogic server 12c
+
+134
+00:05:56,160 --> 00:05:58,950
+what why and how so these questions came
+
+135
+00:05:58,950 --> 00:06:00,300
+from there so if you want to go and
+
+136
+00:06:00,300 --> 00:06:02,040
+attend that as well later go back to
+
+137
+00:06:02,040 --> 00:06:04,350
+ketone in academy.com ford slash web
+
+138
+00:06:04,350 --> 00:06:07,440
+logic 0 2 so before i start everything
+
+139
+00:06:07,440 --> 00:06:09,870
+let's do a quick win and shout out for
+
+140
+00:06:09,870 --> 00:06:12,300
+some of you guys made progress last week
+
+141
+00:06:12,300 --> 00:06:15,480
+so big congratulations for this is for
+
+142
+00:06:15,480 --> 00:06:19,710
+from Quinn Lee for migrating Oracle
+
+143
+00:06:19,710 --> 00:06:21,780
+e-business suite lifting or migrating
+
+144
+00:06:21,780 --> 00:06:24,090
+from on-premise to cloud so big big
+
+145
+00:06:24,090 --> 00:06:27,030
+commute relations also to acknowledge he
+
+146
+00:06:27,030 --> 00:06:28,890
+also did lift and shift it was a little
+
+147
+00:06:28,890 --> 00:06:30,720
+bit painful exercise and why it was
+
+148
+00:06:30,720 --> 00:06:32,820
+painful was because I think Oracle
+
+149
+00:06:32,820 --> 00:06:34,080
+changed something with respect to
+
+150
+00:06:34,080 --> 00:06:36,600
+certificates so we are going to add I am
+
+151
+00:06:36,600 --> 00:06:38,160
+going to a blog about it and I am going
+
+152
+00:06:38,160 --> 00:06:39,220
+to tell you that as well
+
+153
+00:06:39,220 --> 00:06:40,660
+bring congratulations to both Quinn Lee
+
+154
+00:06:40,660 --> 00:06:42,970
+and at least and if you have achieved
+
+155
+00:06:42,970 --> 00:06:45,820
+something in last one week let me know
+
+156
+00:06:45,820 --> 00:06:48,340
+and share it with me as well and guys
+
+157
+00:06:48,340 --> 00:06:49,600
+I'm extremely sorry if there's a
+
+158
+00:06:49,600 --> 00:06:53,290
+background noise because the day door is
+
+159
+00:06:53,290 --> 00:06:55,360
+open it's quite hot here the place where
+
+160
+00:06:55,360 --> 00:07:01,060
+I am so also if you wish to continue on
+
+161
+00:07:01,060 --> 00:07:02,920
+a weekly basis every Thursday we have a
+
+162
+00:07:02,920 --> 00:07:07,180
+newsletter there's a train going next to
+
+163
+00:07:07,180 --> 00:07:08,380
+my house so I'm extremely sorry guys
+
+164
+00:07:08,380 --> 00:07:11,730
+there's a little bit background noise
+
+165
+00:07:12,900 --> 00:07:15,700
+this is that give me one second I'll
+
+166
+00:07:15,700 --> 00:07:17,320
+just quickly come and close the door and
+
+167
+00:07:17,320 --> 00:07:18,940
+see if there is a background noise we'll
+
+168
+00:07:18,940 --> 00:07:21,120
+be using
+
+169
+00:07:34,930 --> 00:07:37,479
+okay I'm back now guys excuse me sorry I
+
+170
+00:07:37,479 --> 00:07:39,880
+hope it has improved a little bit yeah
+
+171
+00:07:39,880 --> 00:07:42,669
+so this is I'm saying is if you have not
+
+172
+00:07:42,669 --> 00:07:44,560
+yet part of our weekly newsletter you
+
+173
+00:07:44,560 --> 00:07:46,630
+can go and subscribe to go and write
+
+174
+00:07:46,630 --> 00:07:48,610
+inside ki Tony Academy comm four slash
+
+175
+00:07:48,610 --> 00:07:52,840
+blog and get it so let me see if there's
+
+176
+00:07:52,840 --> 00:07:55,090
+a guys if you are here if you're an ab
+
+177
+00:07:55,090 --> 00:07:57,580
+CBA or if you're working on WebLogic let
+
+178
+00:07:57,580 --> 00:07:58,900
+me know what you work and what
+
+179
+00:07:58,900 --> 00:08:00,729
+challenges you face what issues you've
+
+180
+00:08:00,729 --> 00:08:05,560
+faced in sooner or recently so a ji man
+
+181
+00:08:05,560 --> 00:08:07,449
+ab c-- be having experience on WebLogic
+
+182
+00:08:07,449 --> 00:08:09,970
+11g but new knowledge of art 12.1 in
+
+183
+00:08:09,970 --> 00:08:12,039
+WebLogic perfect so if you know WebLogic
+
+184
+00:08:12,039 --> 00:08:13,300
+you should be able to correlate i'm
+
+185
+00:08:13,300 --> 00:08:15,340
+going to show it today with respect to
+
+186
+00:08:15,340 --> 00:08:17,260
+oracle e-business suite how does it look
+
+187
+00:08:17,260 --> 00:08:20,080
+like in e-business way today so what is
+
+188
+00:08:20,080 --> 00:08:22,300
+WebLogic those who are new who don't
+
+189
+00:08:22,300 --> 00:08:23,830
+know WebLogic is nothing but an
+
+190
+00:08:23,830 --> 00:08:26,380
+application server and it's Java EE
+
+191
+00:08:26,380 --> 00:08:29,229
+Enterprise Edition compliant server it
+
+192
+00:08:29,229 --> 00:08:31,150
+could be high version of picked up maybe
+
+193
+00:08:31,150 --> 00:08:33,610
+seven but it could be eight or nine I'm
+
+194
+00:08:33,610 --> 00:08:35,469
+not hunter percent confident but Java EE
+
+195
+00:08:35,469 --> 00:08:38,049
+complained what do you do you deploy and
+
+196
+00:08:38,049 --> 00:08:41,919
+run you deploy run and distribute Java
+
+197
+00:08:41,919 --> 00:08:43,750
+applications on that so any java
+
+198
+00:08:43,750 --> 00:08:46,060
+application you can write you can you
+
+199
+00:08:46,060 --> 00:08:47,860
+run it on top of application server
+
+200
+00:08:47,860 --> 00:08:48,850
+which is Rob logic
+
+201
+00:08:48,850 --> 00:08:51,850
+now it also access other services like
+
+202
+00:08:51,850 --> 00:08:54,339
+databases messaging external enterprise
+
+203
+00:08:54,339 --> 00:08:57,190
+systems like so uh sweet or cloud or any
+
+204
+00:08:57,190 --> 00:08:59,350
+so you can connect from WebLogic to
+
+205
+00:08:59,350 --> 00:09:01,630
+other enter external service or LDAP
+
+206
+00:09:01,630 --> 00:09:04,209
+servers as well where is it use pretty
+
+207
+00:09:04,209 --> 00:09:06,670
+much every product and so if you have
+
+208
+00:09:06,670 --> 00:09:08,830
+not worked on WebLogic you should start
+
+209
+00:09:08,830 --> 00:09:11,770
+learning a web logic because whether you
+
+210
+00:09:11,770 --> 00:09:14,529
+work on premise or you go on cloud it's
+
+211
+00:09:14,529 --> 00:09:16,750
+going to be used and way why because
+
+212
+00:09:16,750 --> 00:09:19,540
+it's used in sua it's using OPI E which
+
+213
+00:09:19,540 --> 00:09:21,250
+is Oracle business intelligence and why
+
+214
+00:09:21,250 --> 00:09:23,709
+the reason it's being used in Oracle
+
+215
+00:09:23,709 --> 00:09:25,660
+access manager identity manager it's
+
+216
+00:09:25,660 --> 00:09:29,890
+being used in EBS at 12.2 so 12.2 uses
+
+217
+00:09:29,890 --> 00:09:31,870
+WebLogic earlier they used to be other
+
+218
+00:09:31,870 --> 00:09:34,420
+application server so tell me now what
+
+219
+00:09:34,420 --> 00:09:36,730
+that application server was tell me what
+
+220
+00:09:36,730 --> 00:09:38,830
+was the application server in a bs11 ID
+
+221
+00:09:38,830 --> 00:09:41,589
+and what was eleven even 12.1 let's see
+
+222
+00:09:41,589 --> 00:09:43,089
+who can answer those are with the ab c--
+
+223
+00:09:43,089 --> 00:09:43,870
+BIA background
+
+224
+00:09:43,870 --> 00:09:46,660
+apart from that fuse and applications
+
+225
+00:09:46,660 --> 00:09:48,310
+also uses the
+
+226
+00:09:48,310 --> 00:09:50,199
+as an underlying application server
+
+227
+00:09:50,199 --> 00:09:52,300
+anything that runs from the cloud in a
+
+228
+00:09:52,300 --> 00:09:54,879
+SAS software this service uses WebLogic
+
+229
+00:09:54,879 --> 00:09:59,079
+Enterprise Manager 13c uses Oh give me
+
+230
+00:09:59,079 --> 00:10:00,730
+one second sighs I need to close the
+
+231
+00:10:00,730 --> 00:10:09,610
+doors sorry for that again extremely
+
+232
+00:10:09,610 --> 00:10:12,819
+sorry guys um this is yeah so enter
+
+233
+00:10:12,819 --> 00:10:14,620
+phase manager 13 see also uses for D
+
+234
+00:10:14,620 --> 00:10:15,129
+behave
+
+235
+00:10:15,129 --> 00:10:17,529
+now what 12c so those who are coming
+
+236
+00:10:17,529 --> 00:10:20,230
+from 11g background in 12c WebLogic
+
+237
+00:10:20,230 --> 00:10:22,420
+server supports multi-tenancy so we
+
+238
+00:10:22,420 --> 00:10:24,999
+covered this in the free webinar which
+
+239
+00:10:24,999 --> 00:10:27,790
+i've covered earlier on how to how to
+
+240
+00:10:27,790 --> 00:10:29,439
+get out of that free 90 minute webinar
+
+241
+00:10:29,439 --> 00:10:32,199
+where we covered 12c multi-tenancy some
+
+242
+00:10:32,199 --> 00:10:34,720
+of the features like partitioning of
+
+243
+00:10:34,720 --> 00:10:36,819
+micro containers so leave a comment to
+
+244
+00:10:36,819 --> 00:10:38,589
+me or leave a comment and someone will
+
+245
+00:10:38,589 --> 00:10:40,959
+share at the webinar replay link if you
+
+246
+00:10:40,959 --> 00:10:43,870
+want so it's basically one domain so
+
+247
+00:10:43,870 --> 00:10:45,850
+multi-tenancy is nothing but one domain
+
+248
+00:10:45,850 --> 00:10:48,129
+divided into multiple parts which is
+
+249
+00:10:48,129 --> 00:10:50,709
+called as partitions and if you are
+
+250
+00:10:50,709 --> 00:10:53,110
+familiar with docker so Oracle has fully
+
+251
+00:10:53,110 --> 00:10:55,420
+supported now WebLogic on top of docker
+
+252
+00:10:55,420 --> 00:10:58,240
+containers apart so similar to web logic
+
+253
+00:10:58,240 --> 00:11:00,759
+the other application servers are like
+
+254
+00:11:00,759 --> 00:11:03,579
+IBM websphere Apache Tomcat these are
+
+255
+00:11:03,579 --> 00:11:06,220
+two other famous application servers so
+
+256
+00:11:06,220 --> 00:11:08,079
+this is all in a nutshell about WebLogic
+
+257
+00:11:08,079 --> 00:11:10,089
+server what are some of the common tasks
+
+258
+00:11:10,089 --> 00:11:12,339
+done by administrators you do install
+
+259
+00:11:12,339 --> 00:11:14,379
+and configure or you install the project
+
+260
+00:11:14,379 --> 00:11:16,029
+server you configure the WebLogic domain
+
+261
+00:11:16,029 --> 00:11:18,759
+what you do you deploy applications that
+
+262
+00:11:18,759 --> 00:11:21,129
+applications could be test again if I'm
+
+263
+00:11:21,129 --> 00:11:21,939
+going fast
+
+264
+00:11:21,939 --> 00:11:23,740
+make sure you ask question I'm going to
+
+265
+00:11:23,740 --> 00:11:26,230
+answer those questions at each logical
+
+266
+00:11:26,230 --> 00:11:30,399
+point so you deploy applications on top
+
+267
+00:11:30,399 --> 00:11:32,620
+of and it could be a it will always be a
+
+268
+00:11:32,620 --> 00:11:34,689
+java application only but you can deploy
+
+269
+00:11:34,689 --> 00:11:37,809
+so a based application you can deploy a
+
+270
+00:11:37,809 --> 00:11:40,179
+web based applications you can deploy
+
+271
+00:11:40,179 --> 00:11:42,429
+enterprise applications quartz which is
+
+272
+00:11:42,429 --> 00:11:44,499
+commercially of the shelf products like
+
+273
+00:11:44,499 --> 00:11:45,660
+ebusiness suite
+
+274
+00:11:45,660 --> 00:11:51,579
+peoplesoft Hyperion or EPM or Enterprise
+
+275
+00:11:51,579 --> 00:11:53,139
+Performance Management Hyperion or
+
+276
+00:11:53,139 --> 00:11:55,600
+Fusion Applications they all use so
+
+277
+00:11:55,600 --> 00:11:57,519
+these are basically example of deploying
+
+278
+00:11:57,519 --> 00:11:59,709
+application on top of a blodgett also
+
+279
+00:11:59,709 --> 00:12:01,450
+admin they migrate domain
+
+280
+00:12:01,450 --> 00:12:04,180
+from test dev to prod you integrate with
+
+281
+00:12:04,180 --> 00:12:05,710
+identity and access management system
+
+282
+00:12:05,710 --> 00:12:07,390
+you troubleshoot issues and be able to
+
+283
+00:12:07,390 --> 00:12:09,100
+look at one of the issue today which is
+
+284
+00:12:09,100 --> 00:12:10,870
+about performance tuning where what
+
+285
+00:12:10,870 --> 00:12:13,060
+happens if your managed server in
+
+286
+00:12:13,060 --> 00:12:17,650
+e-business 2 it goes into into a running
+
+287
+00:12:17,650 --> 00:12:19,620
+or wait state then we are going to or
+
+288
+00:12:19,620 --> 00:12:22,300
+web admins they also do monitoring
+
+289
+00:12:22,300 --> 00:12:24,130
+management high availability set up
+
+290
+00:12:24,130 --> 00:12:25,990
+these are some of the things all
+
+291
+00:12:25,990 --> 00:12:29,650
+WebLogic admins do ok so let me take
+
+292
+00:12:29,650 --> 00:12:36,210
+question and ok so I usually saying I
+
+293
+00:12:36,210 --> 00:12:39,220
+usually say we are facing high heap uses
+
+294
+00:12:39,220 --> 00:12:41,560
+and high CPU uses continuously so I
+
+295
+00:12:41,560 --> 00:12:43,060
+usually so we are going to cover today
+
+296
+00:12:43,060 --> 00:12:46,600
+first of all what is heap and and CPU
+
+297
+00:12:46,600 --> 00:12:48,610
+and what scenarios it happens I briefly
+
+298
+00:12:48,610 --> 00:12:50,470
+on a high-level overview but I need a
+
+299
+00:12:50,470 --> 00:12:52,150
+little bit more detail in terms of what
+
+300
+00:12:52,150 --> 00:12:54,670
+that application is type what does your
+
+301
+00:12:54,670 --> 00:12:56,530
+JVM settings are do you understand what
+
+302
+00:12:56,530 --> 00:12:58,450
+is heap size and permanent size we are
+
+303
+00:12:58,450 --> 00:12:59,800
+going to cover and hopefully that will
+
+304
+00:12:59,800 --> 00:13:02,320
+give you some insights on to how you
+
+305
+00:13:02,320 --> 00:13:05,580
+troubleshoot how you can troubleshoot
+
+306
+00:13:05,850 --> 00:13:08,680
+Vamsi is saying Apache server in 11 I
+
+307
+00:13:08,680 --> 00:13:11,220
+know Apache was a web server in 11 I and
+
+308
+00:13:11,220 --> 00:13:14,380
+even in 11 I it's not Apache so that's a
+
+309
+00:13:14,380 --> 00:13:16,270
+web server so I asked a question earlier
+
+310
+00:13:16,270 --> 00:13:20,860
+saying oh what is were in 12.2
+
+311
+00:13:20,860 --> 00:13:23,020
+e-business suite I told to my
+
+312
+00:13:23,020 --> 00:13:26,380
+application server listens hold on let
+
+313
+00:13:26,380 --> 00:13:28,180
+me go and let me take these questions
+
+314
+00:13:28,180 --> 00:13:32,290
+and let me swap myself afraid so I asked
+
+315
+00:13:32,290 --> 00:13:34,210
+some questions earlier saying ebusiness
+
+316
+00:13:34,210 --> 00:13:39,580
+wait well dot 2 uses WebLogic server so
+
+317
+00:13:39,580 --> 00:13:41,290
+what are the previous version so 11 I
+
+318
+00:13:41,290 --> 00:13:45,610
+it's not it's not Apache Apache is a web
+
+319
+00:13:45,610 --> 00:13:48,390
+server I mean it's not a patch age it's
+
+320
+00:13:48,390 --> 00:13:51,130
+it's a web server and web server is
+
+321
+00:13:51,130 --> 00:13:54,550
+witches 11g OHS it uses OHS OHS is the
+
+322
+00:13:54,550 --> 00:13:56,890
+web server however 11 I it doesn't use
+
+323
+00:13:56,890 --> 00:13:59,410
+is a Apaches an application server it's
+
+324
+00:13:59,410 --> 00:14:01,030
+another application server the lexing
+
+325
+00:14:01,030 --> 00:14:04,660
+who can answer that we shall explain
+
+326
+00:14:04,660 --> 00:14:06,730
+12.2 architecture and how web logic is
+
+327
+00:14:06,730 --> 00:14:08,290
+integrated I'm going to show that it
+
+328
+00:14:08,290 --> 00:14:12,070
+today we shall definitely okay greet is
+
+329
+00:14:12,070 --> 00:14:14,870
+saying in EBS Oh a core I'm free
+
+330
+00:14:14,870 --> 00:14:17,750
+things tucked red ah and do we have five
+
+331
+00:14:17,750 --> 00:14:19,700
+Oh a core and three application server
+
+332
+00:14:19,700 --> 00:14:22,070
+okay so interesting question first of
+
+333
+00:14:22,070 --> 00:14:24,320
+all what is what is stuck thread what is
+
+334
+00:14:24,320 --> 00:14:25,790
+thread dump we are going to cover that
+
+335
+00:14:25,790 --> 00:14:29,960
+as well finally share webinar 12c AJ I
+
+336
+00:14:29,960 --> 00:14:31,910
+am going to leave a comment on that
+
+337
+00:14:31,910 --> 00:14:34,130
+so 12c webinar I'll share that as well
+
+338
+00:14:34,130 --> 00:14:35,870
+thinks I use okay good
+
+339
+00:14:35,870 --> 00:14:37,700
+thanks welcome Naga welcome Ranjith and
+
+340
+00:14:37,700 --> 00:14:40,100
+there's don't forget to give me a thumbs
+
+341
+00:14:40,100 --> 00:14:43,760
+up or little hearts as you see something
+
+342
+00:14:43,760 --> 00:14:46,130
+valuable coming okay so this is the free
+
+343
+00:14:46,130 --> 00:14:47,510
+webinar I was talking about Katyn
+
+344
+00:14:47,510 --> 00:14:49,880
+academy.com WebLogic 0 - there'll be a
+
+345
+00:14:49,880 --> 00:14:51,800
+workbook what we covered we covered all
+
+346
+00:14:51,800 --> 00:14:53,270
+these things what you see on the screen
+
+347
+00:14:53,270 --> 00:14:56,450
+so this is all things we covered we
+
+348
+00:14:56,450 --> 00:14:57,890
+covered what is WebLogic common tasks
+
+349
+00:14:57,890 --> 00:14:59,779
+tools then why you should learn web
+
+350
+00:14:59,779 --> 00:15:01,730
+logic we covered 12c architecture we
+
+351
+00:15:01,730 --> 00:15:04,700
+covered WebLogic domain JVM deployments
+
+352
+00:15:04,700 --> 00:15:07,279
+dynamic so we also covered clusters and
+
+353
+00:15:07,279 --> 00:15:09,470
+12c introduced a new concept called a
+
+354
+00:15:09,470 --> 00:15:11,540
+dynamic cluster which was not there in
+
+355
+00:15:11,540 --> 00:15:14,390
+11g in WebLogic so dynamic cluster and
+
+356
+00:15:14,390 --> 00:15:16,130
+how cluster communicate each other
+
+357
+00:15:16,130 --> 00:15:19,400
+including multicast versus unicast we
+
+358
+00:15:19,400 --> 00:15:21,160
+also looked at partitioning or
+
+359
+00:15:21,160 --> 00:15:23,420
+multi-tenancy in that we covered what is
+
+360
+00:15:23,420 --> 00:15:25,040
+micro container what is partitioning
+
+361
+00:15:25,040 --> 00:15:26,870
+what is virtual target what is the
+
+362
+00:15:26,870 --> 00:15:28,850
+resource isolation I also looked at
+
+363
+00:15:28,850 --> 00:15:31,640
+elfin checklist to learn like an expert
+
+364
+00:15:31,640 --> 00:15:33,860
+and then taking it to the next table so
+
+365
+00:15:33,860 --> 00:15:35,360
+this is all in the webinar that I
+
+366
+00:15:35,360 --> 00:15:36,470
+covered earlier
+
+367
+00:15:36,470 --> 00:15:39,650
+ok so let's begin with first question in
+
+368
+00:15:39,650 --> 00:15:41,330
+that webinar was asked by vivek there
+
+369
+00:15:41,330 --> 00:15:43,070
+were a lot of questions I answered some
+
+370
+00:15:43,070 --> 00:15:44,660
+but because of time we couldn't finish
+
+371
+00:15:44,660 --> 00:15:46,400
+all so this is what we are going to
+
+372
+00:15:46,400 --> 00:15:49,670
+cover first question is managed server
+
+373
+00:15:49,670 --> 00:15:51,950
+an e-business suite are 12.2 comes into
+
+374
+00:15:51,950 --> 00:15:54,770
+warning state so before I go and answer
+
+375
+00:15:54,770 --> 00:15:56,810
+that lets first so this was a question
+
+376
+00:15:56,810 --> 00:15:58,550
+being asked I'm working in Oracle
+
+377
+00:15:58,550 --> 00:16:01,100
+e-business suite Perl 2.3 my question is
+
+378
+00:16:01,100 --> 00:16:03,260
+that our way core manage servers are
+
+379
+00:16:03,260 --> 00:16:05,150
+going into warning state frequently and
+
+380
+00:16:05,150 --> 00:16:08,270
+so this is a note I added on top of that
+
+381
+00:16:08,270 --> 00:16:10,640
+which is Oh a code is nothing but one of
+
+382
+00:16:10,640 --> 00:16:12,500
+the manage servers in a very logic
+
+383
+00:16:12,500 --> 00:16:14,630
+domain how many of guys who don't know
+
+384
+00:16:14,630 --> 00:16:16,730
+about what is WebLogic domain if there's
+
+385
+00:16:16,730 --> 00:16:18,830
+anyone here I'm going to explain that
+
+386
+00:16:18,830 --> 00:16:20,390
+what is the verb logic domain those who
+
+387
+00:16:20,390 --> 00:16:22,250
+are not coming from 12.2 background or
+
+388
+00:16:22,250 --> 00:16:24,200
+not coming from WebLogic bad known if
+
+389
+00:16:24,200 --> 00:16:26,720
+this only someone who knows if everyone
+
+390
+00:16:26,720 --> 00:16:28,310
+knows about 12 herb logics
+
+391
+00:16:28,310 --> 00:16:31,699
+I'm going to skip that so what his
+
+392
+00:16:31,699 --> 00:16:33,350
+question was oh I have increased the
+
+393
+00:16:33,350 --> 00:16:35,839
+Java heap size so first of all what is
+
+394
+00:16:35,839 --> 00:16:37,699
+the heap size how do you increase it
+
+395
+00:16:37,699 --> 00:16:40,519
+from one get to 2gig is increasing from
+
+396
+00:16:40,519 --> 00:16:42,740
+1 to giggles a solution or is it
+
+397
+00:16:42,740 --> 00:16:45,980
+applicable for everything but he's still
+
+398
+00:16:45,980 --> 00:16:48,050
+getting this error and after collecting
+
+399
+00:16:48,050 --> 00:16:49,399
+the garbage collection so after
+
+400
+00:16:49,399 --> 00:16:50,899
+collecting garbage so what is garbage
+
+401
+00:16:50,899 --> 00:16:54,559
+how do you collect the garbage and is it
+
+402
+00:16:54,559 --> 00:16:56,930
+so his he's saying after collecting the
+
+403
+00:16:56,930 --> 00:16:59,480
+garbage it will it was okay but I want
+
+404
+00:16:59,480 --> 00:17:01,999
+to resolve this issue permanently how do
+
+405
+00:17:01,999 --> 00:17:05,030
+we solve it okay so what would you do if
+
+406
+00:17:05,030 --> 00:17:06,619
+you are in a situation like that wave
+
+407
+00:17:06,619 --> 00:17:08,990
+will you look will you simply increase 2
+
+408
+00:17:08,990 --> 00:17:12,199
+from 1 to 2 get are you able to do this
+
+409
+00:17:12,199 --> 00:17:15,520
+is something be able to cover all set
+
+410
+00:17:15,520 --> 00:17:16,730
+okay
+
+411
+00:17:16,730 --> 00:17:19,520
+so let's first begin with ABS 12.2
+
+412
+00:17:19,520 --> 00:17:21,140
+architecture and those this is for
+
+413
+00:17:21,140 --> 00:17:23,689
+oracle ebusiness wait for apps GBS and I
+
+414
+00:17:23,689 --> 00:17:25,789
+think those who are not coming from a
+
+415
+00:17:25,789 --> 00:17:27,439
+business sweet background will also find
+
+416
+00:17:27,439 --> 00:17:31,340
+it useful so ebusiness suite 12.2 has
+
+417
+00:17:31,340 --> 00:17:33,230
+like in previous versions is a
+
+418
+00:17:33,230 --> 00:17:35,090
+three-tier architecture you have a
+
+419
+00:17:35,090 --> 00:17:36,500
+database here you have an application
+
+420
+00:17:36,500 --> 00:17:39,559
+tier and you have a drip tier now in
+
+421
+00:17:39,559 --> 00:17:41,240
+database tier what are the some of the
+
+422
+00:17:41,240 --> 00:17:43,220
+changes which I can tell you now from
+
+423
+00:17:43,220 --> 00:17:45,950
+you can install 12c virgin database
+
+424
+00:17:45,950 --> 00:17:49,429
+using your start CD I think it's 51 so
+
+425
+00:17:49,429 --> 00:17:51,500
+when you install eby's this week there
+
+426
+00:17:51,500 --> 00:17:52,909
+is something called a start CD and
+
+427
+00:17:52,909 --> 00:17:55,880
+there's a number for that start CD so by
+
+428
+00:17:55,880 --> 00:17:59,210
+default in previous 12.2 Datuk 4 or 5 it
+
+429
+00:17:59,210 --> 00:18:03,799
+used to be 11g are 2 database now when
+
+430
+00:18:03,799 --> 00:18:05,510
+you start with 51 CD you get great
+
+431
+00:18:05,510 --> 00:18:10,250
+directly 12c now the 12c database other
+
+432
+00:18:10,250 --> 00:18:12,559
+thing which comes in ebusiness suite
+
+433
+00:18:12,559 --> 00:18:15,679
+12.2 is that during install time itself
+
+434
+00:18:15,679 --> 00:18:18,049
+you can do rack where is in previous
+
+435
+00:18:18,049 --> 00:18:20,899
+versions in 11 i or a 12.1 during
+
+436
+00:18:20,899 --> 00:18:23,120
+install you can't configure a rack you
+
+437
+00:18:23,120 --> 00:18:24,919
+install first single node database with
+
+438
+00:18:24,919 --> 00:18:26,990
+ebusiness suite and then you migrate it
+
+439
+00:18:26,990 --> 00:18:29,690
+to rack so that's difference or some
+
+440
+00:18:29,690 --> 00:18:31,880
+changes in on the database side also
+
+441
+00:18:31,880 --> 00:18:33,919
+there's a new concept called addition
+
+442
+00:18:33,919 --> 00:18:37,370
+based redefinition introduced for for
+
+443
+00:18:37,370 --> 00:18:39,320
+online patching which is another new
+
+444
+00:18:39,320 --> 00:18:42,310
+feature introduced in our 12.2
+
+445
+00:18:42,310 --> 00:18:46,730
+so then the major change happened on the
+
+446
+00:18:46,730 --> 00:18:49,090
+application tier in application tier
+
+447
+00:18:49,090 --> 00:18:52,730
+Oracle introduced WebLogic prior to that
+
+448
+00:18:52,730 --> 00:18:57,410
+in 12.1 there was OC for J so I asked
+
+449
+00:18:57,410 --> 00:19:00,200
+this question earlier that in 12.1 what
+
+450
+00:19:00,200 --> 00:19:01,850
+was the application server and
+
+451
+00:19:01,850 --> 00:19:05,150
+application server was OC for J Oracle
+
+452
+00:19:05,150 --> 00:19:07,400
+container for Java which is a 10 G
+
+453
+00:19:07,400 --> 00:19:10,490
+application server and prior to to L dot
+
+454
+00:19:10,490 --> 00:19:15,380
+1 or it 12.0 in 11 I it used to be J
+
+455
+00:19:15,380 --> 00:19:18,560
+serve Java server J sir which was 99
+
+456
+00:19:18,560 --> 00:19:21,860
+application server of oracle application
+
+457
+00:19:21,860 --> 00:19:25,190
+server prior to the WebLogic server so
+
+458
+00:19:25,190 --> 00:19:28,100
+that's called as J serve Java server so
+
+459
+00:19:28,100 --> 00:19:30,530
+in 12.2 oracle introduced WebLogic
+
+460
+00:19:30,530 --> 00:19:34,760
+server and application T or web tier is
+
+461
+00:19:34,760 --> 00:19:37,670
+sorry the the client here is pretty much
+
+462
+00:19:37,670 --> 00:19:39,320
+more or less same there are some
+
+463
+00:19:39,320 --> 00:19:42,200
+additional features or additional JDK
+
+464
+00:19:42,200 --> 00:19:44,690
+version so J GRE and new additional
+
+465
+00:19:44,690 --> 00:19:48,080
+browsers being supported so quickly the
+
+466
+00:19:48,080 --> 00:19:50,480
+database tier is this the application
+
+467
+00:19:50,480 --> 00:19:52,750
+tier new introduction is the logic and
+
+468
+00:19:52,750 --> 00:19:56,240
+web tier or planked here also there is a
+
+469
+00:19:56,240 --> 00:19:57,620
+dual patching and I think I've not
+
+470
+00:19:57,620 --> 00:20:00,140
+covered that on so I'll skip that at
+
+471
+00:20:00,140 --> 00:20:01,970
+that particular point now this is all
+
+472
+00:20:01,970 --> 00:20:06,200
+about 12.2 architecture now in 12.2
+
+473
+00:20:06,200 --> 00:20:08,810
+oracle also because it's WebLogic and
+
+474
+00:20:08,810 --> 00:20:10,730
+WebLogic has a concept called a domain
+
+475
+00:20:10,730 --> 00:20:13,310
+and there's no one who said I know what
+
+476
+00:20:13,310 --> 00:20:14,900
+I don't know I'm not sure should I cover
+
+477
+00:20:14,900 --> 00:20:16,640
+this so guys I'm going to wait for a
+
+478
+00:20:16,640 --> 00:20:18,350
+second and tell me should I cover
+
+479
+00:20:18,350 --> 00:20:21,020
+WebLogic domain or not are you clear
+
+480
+00:20:21,020 --> 00:20:22,790
+anyone even if once a person says Oh
+
+481
+00:20:22,790 --> 00:20:24,590
+cover logic domain I'm going to cover
+
+482
+00:20:24,590 --> 00:20:26,180
+that other result skip that the blodgett
+
+483
+00:20:26,180 --> 00:20:32,110
+domain I'll take a strip of water and
+
+484
+00:20:32,110 --> 00:20:34,490
+then I'll come to that point and tell me
+
+485
+00:20:34,490 --> 00:20:36,470
+should I it should we do WebLogic domain
+
+486
+00:20:36,470 --> 00:20:39,290
+or not in the meantime let me tell you
+
+487
+00:20:39,290 --> 00:20:41,060
+how does it WebLogic domain look like so
+
+488
+00:20:41,060 --> 00:20:43,490
+I'm connecting to one of my servers and
+
+489
+00:20:43,490 --> 00:20:48,830
+I think it's 63-65 console so this is I
+
+490
+00:20:48,830 --> 00:20:50,330
+am right now logging in this is an
+
+491
+00:20:50,330 --> 00:20:52,250
+Oracle e-business suite and I'm
+
+492
+00:20:52,250 --> 00:20:54,640
+connecting to 7:01 3 which
+
+493
+00:20:54,640 --> 00:20:58,150
+a WebLogic admin code so I say WebLogic
+
+494
+00:20:58,150 --> 00:21:00,970
+and click on login and Armani WebLogic
+
+495
+00:21:00,970 --> 00:21:03,100
+domain so this is called as a domain if
+
+496
+00:21:03,100 --> 00:21:04,990
+I go in left hand side and I click on
+
+497
+00:21:04,990 --> 00:21:08,710
+servers and then I see there is on top
+
+498
+00:21:08,710 --> 00:21:10,570
+there is an admin server and this is
+
+499
+00:21:10,570 --> 00:21:12,250
+managed server and it's very important
+
+500
+00:21:12,250 --> 00:21:13,600
+this is one of the most important thing
+
+501
+00:21:13,600 --> 00:21:15,580
+the whole thing that you see around is a
+
+502
+00:21:15,580 --> 00:21:18,610
+domain and there is a admin server and
+
+503
+00:21:18,610 --> 00:21:19,660
+there is madness servers
+
+504
+00:21:19,660 --> 00:21:22,270
+there's also applications deployed and
+
+505
+00:21:22,270 --> 00:21:25,120
+also the connectivity to the database so
+
+506
+00:21:25,120 --> 00:21:26,410
+what you see here datasource
+
+507
+00:21:26,410 --> 00:21:28,960
+so there are two data sources one is we
+
+508
+00:21:28,960 --> 00:21:30,730
+have its going to the e-business suite
+
+509
+00:21:30,730 --> 00:21:33,910
+database and also there is a oaa this is
+
+510
+00:21:33,910 --> 00:21:36,010
+this doesn't come by default on this
+
+511
+00:21:36,010 --> 00:21:37,150
+environment we are using this
+
+512
+00:21:37,150 --> 00:21:38,950
+environment this environment is also
+
+513
+00:21:38,950 --> 00:21:41,650
+integrated with Oracle access manager so
+
+514
+00:21:41,650 --> 00:21:44,110
+you have a additional man data source
+
+515
+00:21:44,110 --> 00:21:46,299
+connecting to the database called as oae
+
+516
+00:21:46,299 --> 00:21:48,370
+a so let me see if there's any question
+
+517
+00:21:48,370 --> 00:21:50,110
+related to should I cover the project
+
+518
+00:21:50,110 --> 00:21:53,080
+domain or not and if I see not even a
+
+519
+00:21:53,080 --> 00:21:54,549
+single person asking about domain I'll
+
+520
+00:21:54,549 --> 00:21:57,250
+skip that and if if otherwise if there's
+
+521
+00:21:57,250 --> 00:21:59,049
+a question then I'll cover that in a
+
+522
+00:21:59,049 --> 00:22:00,910
+minute but this is all itself WebLogic
+
+523
+00:22:00,910 --> 00:22:03,160
+domain coming from ebusiness suite are
+
+524
+00:22:03,160 --> 00:22:06,460
+12.2 so in servers you might be familiar
+
+525
+00:22:06,460 --> 00:22:10,150
+with in 11i as well as in 12c or sorry
+
+526
+00:22:10,150 --> 00:22:14,760
+in our 12.0 and 12.1 you have Oh a core
+
+527
+00:22:14,760 --> 00:22:18,190
+so you used to have OC 4 0 a code if you
+
+528
+00:22:18,190 --> 00:22:20,500
+are 12.1 if you're 11 I there's already
+
+529
+00:22:20,500 --> 00:22:23,410
+an OE core J sub similar to that here Oh
+
+530
+00:22:23,410 --> 00:22:25,390
+a core here also but it said a managed
+
+531
+00:22:25,390 --> 00:22:28,390
+server this is this is Oracle
+
+532
+00:22:28,390 --> 00:22:31,600
+application Fusion Middleware oae again
+
+533
+00:22:31,600 --> 00:22:33,309
+that doesn't come by default that comes
+
+534
+00:22:33,309 --> 00:22:36,750
+very empty this is my access gate Oracle
+
+535
+00:22:36,750 --> 00:22:39,970
+application ebusiness suite access gate
+
+536
+00:22:39,970 --> 00:22:43,390
+so oaa this is for EP om integration and
+
+537
+00:22:43,390 --> 00:22:46,330
+these are forms let me see and take any
+
+538
+00:22:46,330 --> 00:22:49,210
+questions if you guys have ok so I
+
+539
+00:22:49,210 --> 00:22:51,340
+should saying cover it at all please
+
+540
+00:22:51,340 --> 00:22:53,620
+cover and jeath we shall definitely okay
+
+541
+00:22:53,620 --> 00:22:55,540
+so let me cover very quickly what is
+
+542
+00:22:55,540 --> 00:22:58,330
+WebLogic domain it's nothing but logical
+
+543
+00:22:58,330 --> 00:23:03,730
+collection of all the resources clubbed
+
+544
+00:23:03,730 --> 00:23:05,559
+together so what I mean by the sources
+
+545
+00:23:05,559 --> 00:23:08,190
+is servers
+
+546
+00:23:09,299 --> 00:23:12,960
+all machines deployment is nothing but
+
+547
+00:23:12,960 --> 00:23:15,929
+web applicants or application deployment
+
+548
+00:23:15,929 --> 00:23:18,350
+or jar file deployment these deployments
+
+549
+00:23:18,350 --> 00:23:21,870
+also JDBC so these are applications so
+
+550
+00:23:21,870 --> 00:23:23,429
+if you see here there's a web
+
+551
+00:23:23,429 --> 00:23:25,500
+application called cat this is another
+
+552
+00:23:25,500 --> 00:23:27,750
+web application called DMS so collection
+
+553
+00:23:27,750 --> 00:23:30,450
+of all this is so logical collection of
+
+554
+00:23:30,450 --> 00:23:31,830
+all this is a web logic domain and
+
+555
+00:23:31,830 --> 00:23:33,750
+domain this is a two type of servers
+
+556
+00:23:33,750 --> 00:23:35,880
+admin server in a managed server and
+
+557
+00:23:35,880 --> 00:23:37,950
+it's always one and only one admin
+
+558
+00:23:37,950 --> 00:23:40,500
+server and multiple manage servers so
+
+559
+00:23:40,500 --> 00:23:42,660
+that's what we saw here and you will
+
+560
+00:23:42,660 --> 00:23:45,179
+always have once admin server in a
+
+561
+00:23:45,179 --> 00:23:46,890
+domain when you create and you can have
+
+562
+00:23:46,890 --> 00:23:49,350
+zero or n manage servers so this is what
+
+563
+00:23:49,350 --> 00:23:52,650
+you we see here now on these manage
+
+564
+00:23:52,650 --> 00:23:54,510
+server so admin server you deploy
+
+565
+00:23:54,510 --> 00:23:56,429
+something called as applications or
+
+566
+00:23:56,429 --> 00:23:58,710
+resources which are nothing but war web
+
+567
+00:23:58,710 --> 00:24:02,040
+archive er enterprise archives are job
+
+568
+00:24:02,040 --> 00:24:05,309
+archive JDBC Java Java database
+
+569
+00:24:05,309 --> 00:24:07,169
+connectivity JMS Java messaging server
+
+570
+00:24:07,169 --> 00:24:11,790
+and each server has its own JVM Java
+
+571
+00:24:11,790 --> 00:24:13,799
+Virtual Machine what I mean by that is
+
+572
+00:24:13,799 --> 00:24:18,059
+so forms will have a OC for oh sorry JVM
+
+573
+00:24:18,059 --> 00:24:20,760
+this boy code will have a JVM this will
+
+574
+00:24:20,760 --> 00:24:22,530
+have a JVM this will you have a JVM as
+
+575
+00:24:22,530 --> 00:24:24,540
+long it's running and JVM is nothing but
+
+576
+00:24:24,540 --> 00:24:27,360
+a java virtual machine which is what
+
+577
+00:24:27,360 --> 00:24:30,299
+which is nothing but it executes your
+
+578
+00:24:30,299 --> 00:24:33,299
+Java class file on a microprocessor so
+
+579
+00:24:33,299 --> 00:24:35,970
+developers will write a Java Java file
+
+580
+00:24:35,970 --> 00:24:37,770
+they will compile that it will become
+
+581
+00:24:37,770 --> 00:24:39,929
+class file and those class file will be
+
+582
+00:24:39,929 --> 00:24:41,730
+combined them into a jar file
+
+583
+00:24:41,730 --> 00:24:43,530
+these are deployed in the server and
+
+584
+00:24:43,530 --> 00:24:47,340
+when you sum run these these Java files
+
+585
+00:24:47,340 --> 00:24:52,500
+are are executed bytecodes on the JVM so
+
+586
+00:24:52,500 --> 00:24:54,330
+how does GBM look like or how do you
+
+587
+00:24:54,330 --> 00:24:56,940
+know of it kind of a JVM we have let's
+
+588
+00:24:56,940 --> 00:24:58,860
+go and connect on to the server so I'm
+
+589
+00:24:58,860 --> 00:25:01,440
+connecting to one of EB a servers behind
+
+590
+00:25:01,440 --> 00:25:03,990
+putty so this is how you can see what is
+
+591
+00:25:03,990 --> 00:25:06,179
+the JVM running so I'm connecting at
+
+592
+00:25:06,179 --> 00:25:08,760
+Appl MGR which is my application tier
+
+593
+00:25:08,760 --> 00:25:12,990
+user and I'm going to show you how does
+
+594
+00:25:12,990 --> 00:25:16,800
+Geum look like give it a few minutes
+
+595
+00:25:16,800 --> 00:25:19,100
+guys
+
+596
+00:25:19,650 --> 00:25:22,570
+okay give me a feedback that are you
+
+597
+00:25:22,570 --> 00:25:26,230
+learning it is it making sense or not
+
+598
+00:25:26,230 --> 00:25:31,690
+and why it's not slow okay
+
+599
+00:25:31,690 --> 00:25:34,780
+okay while it connects maybe maybe
+
+600
+00:25:34,780 --> 00:25:36,490
+because it's waiting for your little
+
+601
+00:25:36,490 --> 00:25:38,530
+likes and the minute you give hurts and
+
+602
+00:25:38,530 --> 00:25:43,270
+likes and thumbs up it might come okay
+
+603
+00:25:43,270 --> 00:25:46,170
+white slow new session
+
+604
+00:25:46,170 --> 00:25:54,130
+EBS load open okay I don't know why it's
+
+605
+00:25:54,130 --> 00:25:56,799
+not working but this is this is inactive
+
+606
+00:25:56,799 --> 00:26:00,100
+or at a we are we are here now so PS UX
+
+607
+00:26:00,100 --> 00:26:02,650
+and pipe so all you need to do is if you
+
+608
+00:26:02,650 --> 00:26:05,290
+do want to find the JVM you say PSU
+
+609
+00:26:05,290 --> 00:26:08,440
+x-pipe and grep for grep - I and Java
+
+610
+00:26:08,440 --> 00:26:11,590
+so when you say grep - I Java so each of
+
+611
+00:26:11,590 --> 00:26:13,840
+these processes is a JVM so what do you
+
+612
+00:26:13,840 --> 00:26:16,540
+see here this is one JVM what you see
+
+613
+00:26:16,540 --> 00:26:19,570
+here it's running Java or JDK from here
+
+614
+00:26:19,570 --> 00:26:21,940
+this is the name of the JVM which is OFM
+
+615
+00:26:21,940 --> 00:26:24,370
+so earlier we saw this there is a OFM
+
+616
+00:26:24,370 --> 00:26:26,470
+but important and interesting fact or
+
+617
+00:26:26,470 --> 00:26:29,740
+interesting thing is what is this here
+
+618
+00:26:29,740 --> 00:26:32,140
+this is the key lot of you guys hit
+
+619
+00:26:32,140 --> 00:26:34,960
+these problems which is palm-sized 128 m
+
+620
+00:26:34,960 --> 00:26:39,760
+max palm-sized what 3384 XM s 1 0 - 4 XM
+
+621
+00:26:39,760 --> 00:26:42,370
+x 1 0 - 4 so tell me what is palm-sized
+
+622
+00:26:42,370 --> 00:26:45,220
+what is difference between XM x s and
+
+623
+00:26:45,220 --> 00:26:47,679
+pump size what are the pump size and XM
+
+624
+00:26:47,679 --> 00:26:52,090
+s denotes what I should sing definitely
+
+625
+00:26:52,090 --> 00:26:54,070
+I feel I'm learning a lot great thank
+
+626
+00:26:54,070 --> 00:26:55,870
+you very much so tell me guys leave a
+
+627
+00:26:55,870 --> 00:26:57,190
+comment and tell me and if you don't
+
+628
+00:26:57,190 --> 00:26:58,660
+know just say I don't know and and
+
+629
+00:26:58,660 --> 00:27:00,970
+that's why I can go in detail about if
+
+630
+00:27:00,970 --> 00:27:03,250
+you don't know about this so this is and
+
+631
+00:27:03,250 --> 00:27:05,080
+this is all your cleaning parameters
+
+632
+00:27:05,080 --> 00:27:07,000
+this is where the maximum tuning will
+
+633
+00:27:07,000 --> 00:27:09,669
+happen around JVM or Java Virtual
+
+634
+00:27:09,669 --> 00:27:13,630
+Machine so going back to this is the
+
+635
+00:27:13,630 --> 00:27:16,480
+manage servers which you see now I'm
+
+636
+00:27:16,480 --> 00:27:18,669
+going to also tell you how does it look
+
+637
+00:27:18,669 --> 00:27:20,169
+like or file system look like very
+
+638
+00:27:20,169 --> 00:27:25,990
+quickly so I go on to EBS apps and right
+
+639
+00:27:25,990 --> 00:27:28,090
+now you this a dual file system - I am
+
+640
+00:27:28,090 --> 00:27:29,919
+setting it environment variable to say
+
+641
+00:27:29,919 --> 00:27:31,879
+source the run edition
+
+642
+00:27:31,879 --> 00:27:34,339
+again I'm not over what is a patchy
+
+643
+00:27:34,339 --> 00:27:36,879
+addiction or effects file edition but
+
+644
+00:27:36,879 --> 00:27:39,949
+there is a Fusion Middleware home in
+
+645
+00:27:39,949 --> 00:27:41,299
+e-business suite so I'm right now in
+
+646
+00:27:41,299 --> 00:27:43,249
+Fusion Middleware home and inside that
+
+647
+00:27:43,249 --> 00:27:46,190
+Fusion Middleware home I have my
+
+648
+00:27:46,190 --> 00:27:48,589
+WebLogic server this is my verb logic
+
+649
+00:27:48,589 --> 00:27:53,209
+home this is my actual TP or web server
+
+650
+00:27:53,209 --> 00:27:55,999
+home this is my under user projects I
+
+651
+00:27:55,999 --> 00:28:00,949
+have my domain this is my web gate home
+
+652
+00:28:00,949 --> 00:28:02,869
+if you installer and ticket with
+
+653
+00:28:02,869 --> 00:28:04,599
+identity and access management system
+
+654
+00:28:04,599 --> 00:28:07,969
+this is a common home so I'm going to go
+
+655
+00:28:07,969 --> 00:28:10,669
+into the user projects and inside that
+
+656
+00:28:10,669 --> 00:28:13,190
+domains and this is my domain name which
+
+657
+00:28:13,190 --> 00:28:16,190
+is eeap's abs underscore domain
+
+658
+00:28:16,190 --> 00:28:19,879
+underscore sid and incite that i have
+
+659
+00:28:19,879 --> 00:28:22,309
+been this is where my starts top of this
+
+660
+00:28:22,309 --> 00:28:24,859
+domain are going to be this is where my
+
+661
+00:28:24,859 --> 00:28:27,229
+servers are going to be so if I go under
+
+662
+00:28:27,229 --> 00:28:30,559
+servers folder and this is where my
+
+663
+00:28:30,559 --> 00:28:33,949
+admin server domain and these servers
+
+664
+00:28:33,949 --> 00:28:38,319
+are if I go back under config folder and
+
+665
+00:28:38,319 --> 00:28:40,549
+this is where the entire configuration
+
+666
+00:28:40,549 --> 00:28:43,909
+or WebLogic configuration will be under
+
+667
+00:28:43,909 --> 00:28:50,919
+here WebLogic config ok hold on VI
+
+668
+00:28:50,919 --> 00:28:53,029
+WebLogic dot XML
+
+669
+00:28:53,029 --> 00:28:56,959
+oh sorry config dot XML is my mistake so
+
+670
+00:28:56,959 --> 00:29:01,759
+it will be config dot XML so how you
+
+671
+00:29:01,759 --> 00:29:04,129
+know where is my admin server port you
+
+672
+00:29:04,129 --> 00:29:06,349
+go and search for look for this admin
+
+673
+00:29:06,349 --> 00:29:09,739
+server here and it's saying my machine
+
+674
+00:29:09,739 --> 00:29:12,559
+is this my listen 4701 3 it's listening
+
+675
+00:29:12,559 --> 00:29:14,749
+on address 1705 a cloud
+
+676
+00:29:14,749 --> 00:29:16,639
+Cayden academy.com like so I need to
+
+677
+00:29:16,639 --> 00:29:18,499
+just this and that's why you see this
+
+678
+00:29:18,499 --> 00:29:20,839
+I'm going directly by IP and this is the
+
+679
+00:29:20,839 --> 00:29:22,699
+port number seven zero one three four
+
+680
+00:29:22,699 --> 00:29:25,279
+slash console here ok so let's move on
+
+681
+00:29:25,279 --> 00:29:28,479
+now back to slide so this is about JVM
+
+682
+00:29:28,479 --> 00:29:30,619
+I've told you about WebLogic
+
+683
+00:29:30,619 --> 00:29:32,809
+configuration that where does WebLogic
+
+684
+00:29:32,809 --> 00:29:34,339
+configuration you set your environment
+
+685
+00:29:34,339 --> 00:29:36,799
+variable or an Edition go to another
+
+686
+00:29:36,799 --> 00:29:38,899
+environment variable or going directly
+
+687
+00:29:38,899 --> 00:29:41,869
+to do mean you go to EBS domain home
+
+688
+00:29:41,869 --> 00:29:45,020
+countries then you open config not XML
+
+689
+00:29:45,020 --> 00:29:47,840
+we'll file you will see file like admin
+
+690
+00:29:47,840 --> 00:29:49,520
+server look for admin server and listen
+
+691
+00:29:49,520 --> 00:29:51,830
+address and listen port number this is
+
+692
+00:29:51,830 --> 00:29:53,210
+the WebLogic domain I showed you earlier
+
+693
+00:29:53,210 --> 00:29:56,420
+this is how it look like this is the JVM
+
+694
+00:29:56,420 --> 00:29:59,650
+I told you earlier there is a XMS X MX
+
+695
+00:29:59,650 --> 00:30:02,540
+maximum size and other variable point
+
+696
+00:30:02,540 --> 00:30:06,200
+things on JVM so now comes the real crux
+
+697
+00:30:06,200 --> 00:30:08,660
+which is oh how this memory is being
+
+698
+00:30:08,660 --> 00:30:10,820
+used so whatever we saw in in earlier
+
+699
+00:30:10,820 --> 00:30:14,450
+this is JVM that you see here and we are
+
+700
+00:30:14,450 --> 00:30:16,490
+going to discuss next is important thing
+
+701
+00:30:16,490 --> 00:30:19,340
+this is where you need to learn so JVM
+
+702
+00:30:19,340 --> 00:30:21,770
+is divided in two or memory within the
+
+703
+00:30:21,770 --> 00:30:24,050
+JVM is divided into multiple parts and
+
+704
+00:30:24,050 --> 00:30:27,620
+two broad parts which is called as heap
+
+705
+00:30:27,620 --> 00:30:30,440
+and heap is nothing but collection of
+
+706
+00:30:30,440 --> 00:30:34,430
+young generation and old generation ways
+
+707
+00:30:34,430 --> 00:30:36,560
+another one is permanent germination
+
+708
+00:30:36,560 --> 00:30:38,720
+which is for other purpose and we'll
+
+709
+00:30:38,720 --> 00:30:41,420
+cover that in a minute what these are if
+
+710
+00:30:41,420 --> 00:30:43,700
+you look at the below diagram below that
+
+711
+00:30:43,700 --> 00:30:45,920
+younger generation is further divided
+
+712
+00:30:45,920 --> 00:30:49,370
+into three parts called Eden s 0 which
+
+713
+00:30:49,370 --> 00:30:53,750
+is survivor 0 and survivor 1 and things
+
+714
+00:30:53,750 --> 00:30:56,990
+as name suggests if and we'll cover that
+
+715
+00:30:56,990 --> 00:30:59,600
+in a minute as well so there are two
+
+716
+00:30:59,600 --> 00:31:01,880
+main areas one is called as permanent
+
+717
+00:31:01,880 --> 00:31:04,910
+generation which is used by JVM so JVM
+
+718
+00:31:04,910 --> 00:31:06,650
+internally uses a metadata and some
+
+719
+00:31:06,650 --> 00:31:08,870
+files so permanent generation is
+
+720
+00:31:08,870 --> 00:31:13,040
+reserved for that so if you have lot of
+
+721
+00:31:13,040 --> 00:31:15,260
+program if you have a big memory big
+
+722
+00:31:15,260 --> 00:31:17,720
+application you may also need to tweak
+
+723
+00:31:17,720 --> 00:31:20,960
+the perm size or maximum size as well
+
+724
+00:31:20,960 --> 00:31:23,000
+but this is permanent this is not where
+
+725
+00:31:23,000 --> 00:31:25,520
+your objects live this is not very of
+
+726
+00:31:25,520 --> 00:31:27,560
+program object lives this is the program
+
+727
+00:31:27,560 --> 00:31:29,630
+which is reserved by JVM and this is
+
+728
+00:31:29,630 --> 00:31:32,150
+where the permanent space or metadata of
+
+729
+00:31:32,150 --> 00:31:34,970
+Java classes being exist heap is
+
+730
+00:31:34,970 --> 00:31:36,770
+actually the area which is young plus
+
+731
+00:31:36,770 --> 00:31:39,200
+all generate old generation and this is
+
+732
+00:31:39,200 --> 00:31:41,630
+where the objects which your program
+
+733
+00:31:41,630 --> 00:31:43,670
+uses or the business logic uses or
+
+734
+00:31:43,670 --> 00:31:45,800
+ebusiness suite uses or any custom
+
+735
+00:31:45,800 --> 00:31:48,200
+application uses they need to they need
+
+736
+00:31:48,200 --> 00:31:50,420
+a space they use it from heap which is
+
+737
+00:31:50,420 --> 00:31:53,750
+young plus old generation making sense
+
+738
+00:31:53,750 --> 00:31:58,210
+so so collection of XML
+
+739
+00:31:58,210 --> 00:32:04,270
+Plus or so XMS is the Eden plus survival
+
+740
+00:32:04,270 --> 00:32:07,630
+zero propels survival one and and
+
+741
+00:32:07,630 --> 00:32:09,790
+tenured all this collection what you see
+
+742
+00:32:09,790 --> 00:32:13,390
+here from here XMS this is the area so
+
+743
+00:32:13,390 --> 00:32:15,930
+what you saw on earlier in one of the
+
+744
+00:32:15,930 --> 00:32:17,920
+diagrams of one of the screenshots here
+
+745
+00:32:17,920 --> 00:32:23,620
+or let me go back XMS yeah so this so
+
+746
+00:32:23,620 --> 00:32:26,410
+this means that your heap will begin
+
+747
+00:32:26,410 --> 00:32:29,020
+with 1 gig of memory and this is the
+
+748
+00:32:29,020 --> 00:32:32,590
+area which is here then it can grow up
+
+749
+00:32:32,590 --> 00:32:35,320
+to 1 0 to 4 it can grow up to so the in
+
+750
+00:32:35,320 --> 00:32:37,450
+disk in our case that means these two
+
+751
+00:32:37,450 --> 00:32:40,120
+areas are saying my minimum and maximum
+
+752
+00:32:40,120 --> 00:32:41,760
+are same for heap
+
+753
+00:32:41,760 --> 00:32:46,740
+similarly palm-sized this is here so my
+
+754
+00:32:46,740 --> 00:32:50,140
+palm size it started with 128 MB I can
+
+755
+00:32:50,140 --> 00:32:57,130
+grow up to 384 MB so now when you resize
+
+756
+00:32:57,130 --> 00:33:00,190
+this permanent jump pummelled generation
+
+757
+00:33:00,190 --> 00:33:01,930
+size and if you resize it quite often
+
+758
+00:33:01,930 --> 00:33:03,880
+it's an expensive affair it takes a lot
+
+759
+00:33:03,880 --> 00:33:06,850
+of time to resize or it impacts your
+
+760
+00:33:06,850 --> 00:33:08,620
+performance so if you have a bigger
+
+761
+00:33:08,620 --> 00:33:10,240
+application if you have a application
+
+762
+00:33:10,240 --> 00:33:12,100
+which is memory hungry like some
+
+763
+00:33:12,100 --> 00:33:13,480
+applications within e-business suite
+
+764
+00:33:13,480 --> 00:33:16,150
+it's always good practice to keep pump
+
+765
+00:33:16,150 --> 00:33:19,210
+size same as maximum size so that your
+
+766
+00:33:19,210 --> 00:33:22,360
+CPU or your JVM doesn't spend time in
+
+767
+00:33:22,360 --> 00:33:25,900
+changing these spaces also as I said
+
+768
+00:33:25,900 --> 00:33:27,460
+young generation is further divided into
+
+769
+00:33:27,460 --> 00:33:29,800
+two parts and in answer to server as
+
+770
+00:33:29,800 --> 00:33:32,440
+five spaces so what happens when a new
+
+771
+00:33:32,440 --> 00:33:35,740
+object so when when you when you access
+
+772
+00:33:35,740 --> 00:33:36,940
+something or when your application
+
+773
+00:33:36,940 --> 00:33:39,370
+access something and they need a space
+
+774
+00:33:39,370 --> 00:33:43,600
+or they need to bring some data from in
+
+775
+00:33:43,600 --> 00:33:45,580
+the code from the database or some other
+
+776
+00:33:45,580 --> 00:33:48,940
+place into the memory of the GBM the
+
+777
+00:33:48,940 --> 00:33:51,610
+data first comes or that those object
+
+778
+00:33:51,610 --> 00:33:54,610
+comes into the Aden area and over a
+
+779
+00:33:54,610 --> 00:33:57,610
+period of time then something happens
+
+780
+00:33:57,610 --> 00:33:59,260
+and what that something is called as
+
+781
+00:33:59,260 --> 00:34:01,210
+garbage collection which I'm going to
+
+782
+00:34:01,210 --> 00:34:02,830
+cover that in a minute
+
+783
+00:34:02,830 --> 00:34:06,400
+so then the Aden space is full or at a
+
+784
+00:34:06,400 --> 00:34:08,710
+particular regular interval there is
+
+785
+00:34:08,710 --> 00:34:10,420
+program called garbage collection and
+
+786
+00:34:10,420 --> 00:34:12,880
+when the garbage collection is
+
+787
+00:34:12,880 --> 00:34:15,940
+then our scenarios in which garbage
+
+788
+00:34:15,940 --> 00:34:17,469
+collection in Iran is when there's not
+
+789
+00:34:17,469 --> 00:34:21,940
+enough space and JVM needs memory to do
+
+790
+00:34:21,940 --> 00:34:25,210
+more code so garbage collection is run
+
+791
+00:34:25,210 --> 00:34:27,040
+so let's look at garbage collection what
+
+792
+00:34:27,040 --> 00:34:28,870
+is garbage collection guys am I making
+
+793
+00:34:28,870 --> 00:34:30,699
+sense just give me a thumbs up or thumbs
+
+794
+00:34:30,699 --> 00:34:32,679
+down or let me know and give me a little
+
+795
+00:34:32,679 --> 00:34:34,239
+hearts as well is it making sense what
+
+796
+00:34:34,239 --> 00:34:36,219
+is garbage collection what is the
+
+797
+00:34:36,219 --> 00:34:38,050
+previous slide that we covered here I'll
+
+798
+00:34:38,050 --> 00:34:40,710
+take a sip of water
+
+799
+00:34:49,210 --> 00:34:56,760
+okay let me take hi MA Jean welcome here
+
+800
+00:34:56,760 --> 00:34:58,750
+thank you very much guys for these
+
+801
+00:34:58,750 --> 00:35:01,359
+little hearts thank you very much and
+
+802
+00:35:01,359 --> 00:35:03,369
+these means a lot to me this inspired me
+
+803
+00:35:03,369 --> 00:35:05,589
+to do a more and more so and also if you
+
+804
+00:35:05,589 --> 00:35:07,329
+like this don't forget to share with
+
+805
+00:35:07,329 --> 00:35:08,849
+your colleagues and friends as well I
+
+806
+00:35:08,849 --> 00:35:11,170
+used to sing don't know about palm-sized
+
+807
+00:35:11,170 --> 00:35:13,569
+and XM s don't worry we'll go back to
+
+808
+00:35:13,569 --> 00:35:15,010
+this slide one more time I don't know
+
+809
+00:35:15,010 --> 00:35:17,380
+and palm-sized is where the WebLogic
+
+810
+00:35:17,380 --> 00:35:20,819
+class package are loaded absolutely
+
+811
+00:35:20,819 --> 00:35:23,349
+unfamiliar with optimal tuning for the
+
+812
+00:35:23,349 --> 00:35:26,680
+different servers in JVM and you so this
+
+813
+00:35:26,680 --> 00:35:29,230
+is where palm-sized is where you have
+
+814
+00:35:29,230 --> 00:35:31,720
+the metadata of the class metadata of
+
+815
+00:35:31,720 --> 00:35:32,319
+the class
+
+816
+00:35:32,319 --> 00:35:37,630
+not exactly the yeah okay so coming back
+
+817
+00:35:37,630 --> 00:35:39,250
+to garbage collection and this is very
+
+818
+00:35:39,250 --> 00:35:41,800
+important this is where a lot of tuning
+
+819
+00:35:41,800 --> 00:35:43,089
+especially with the memory hungry
+
+820
+00:35:43,089 --> 00:35:44,770
+application so garbage collection is
+
+821
+00:35:44,770 --> 00:35:47,020
+nothing but process of looking at
+
+822
+00:35:47,020 --> 00:35:49,150
+objects in heap and we told you earlier
+
+823
+00:35:49,150 --> 00:35:51,069
+what is heap heap was nothing but old
+
+824
+00:35:51,069 --> 00:35:53,079
+generation and new generation or young
+
+825
+00:35:53,079 --> 00:35:56,260
+generation in the old generation area so
+
+826
+00:35:56,260 --> 00:35:58,270
+process of looking at the heap objecting
+
+827
+00:35:58,270 --> 00:36:01,990
+here and deleting the unused one so if
+
+828
+00:36:01,990 --> 00:36:05,950
+any spit any object is no more you in
+
+829
+00:36:05,950 --> 00:36:08,650
+use then deleted to clear some space and
+
+830
+00:36:08,650 --> 00:36:11,349
+there are two type of GCS or garbage
+
+831
+00:36:11,349 --> 00:36:13,119
+collection we call some one is called as
+
+832
+00:36:13,119 --> 00:36:16,240
+- GC and second is called as major GC
+
+833
+00:36:16,240 --> 00:36:19,059
+now when a young generation fills up a
+
+834
+00:36:19,059 --> 00:36:21,730
+minor GC is kicked in so I told you
+
+835
+00:36:21,730 --> 00:36:23,559
+earlier what is young generation the
+
+836
+00:36:23,559 --> 00:36:25,390
+area space you see on the left hand side
+
+837
+00:36:25,390 --> 00:36:30,549
+which is new sighs sorry the area which
+
+838
+00:36:30,549 --> 00:36:36,760
+is some part of of the heap so when that
+
+839
+00:36:36,760 --> 00:36:39,640
+fills up then minor GC kicks in and what
+
+840
+00:36:39,640 --> 00:36:41,290
+happens when minor thing - GC kicks in
+
+841
+00:36:41,290 --> 00:36:44,140
+the application threads stop application
+
+842
+00:36:44,140 --> 00:36:47,230
+Hanks or halts comes to a halt for that
+
+843
+00:36:47,230 --> 00:36:50,410
+GC to finish so we call it stop the
+
+844
+00:36:50,410 --> 00:36:53,710
+world event it stops everything so
+
+845
+00:36:53,710 --> 00:36:55,510
+imagine you are in middle of if
+
+846
+00:36:55,510 --> 00:36:57,520
+application is running doing something
+
+847
+00:36:57,520 --> 00:36:59,950
+and the minor G C comes application will
+
+848
+00:36:59,950 --> 00:37:02,109
+come to a halt but your
+
+849
+00:37:02,109 --> 00:37:04,450
+objective should be to keep that GC of
+
+850
+00:37:04,450 --> 00:37:07,420
+finish as quickly as possible then
+
+851
+00:37:07,420 --> 00:37:09,099
+there's a another one which is major GC
+
+852
+00:37:09,099 --> 00:37:11,619
+which cleans up unused objects in the
+
+853
+00:37:11,619 --> 00:37:14,079
+old generation area
+
+854
+00:37:14,079 --> 00:37:18,309
+so major GC also like young like minor
+
+855
+00:37:18,309 --> 00:37:23,529
+GC stop applications and it basically
+
+856
+00:37:23,529 --> 00:37:26,799
+also stops applications so objective
+
+857
+00:37:26,799 --> 00:37:29,339
+should be to minimize that time
+
+858
+00:37:29,339 --> 00:37:32,769
+application works or spends on running a
+
+859
+00:37:32,769 --> 00:37:35,380
+major GC and ideally try to be keep it
+
+860
+00:37:35,380 --> 00:37:39,339
+between three to five seconds yeah
+
+861
+00:37:39,339 --> 00:37:42,509
+so now GC can be of type serial parallel
+
+862
+00:37:42,509 --> 00:37:45,009
+CMS and g1 I'm not going to go into
+
+863
+00:37:45,009 --> 00:37:46,509
+detail here but if you want further
+
+864
+00:37:46,509 --> 00:37:48,460
+detail leave a comment I'm going to give
+
+865
+00:37:48,460 --> 00:37:50,200
+you the references on where you can read
+
+866
+00:37:50,200 --> 00:37:53,440
+further again we cover in one of the
+
+867
+00:37:53,440 --> 00:37:55,089
+other performance tuning our training on
+
+868
+00:37:55,089 --> 00:37:57,249
+for ab CBS as well as on WebLogic these
+
+869
+00:37:57,249 --> 00:38:01,989
+these go in detail ok so what now if you
+
+870
+00:38:01,989 --> 00:38:03,400
+are working on a performance issue what
+
+871
+00:38:03,400 --> 00:38:05,529
+your objective should be to you the time
+
+872
+00:38:05,529 --> 00:38:08,739
+spend in GC to be at least or minimum or
+
+873
+00:38:08,739 --> 00:38:12,190
+less than 5% of execution type of the
+
+874
+00:38:12,190 --> 00:38:16,420
+full JVM also the Jeep JVM heap size did
+
+875
+00:38:16,420 --> 00:38:19,359
+determine so the heap size of the JVM
+
+876
+00:38:19,359 --> 00:38:20,920
+which is collection of young and old
+
+877
+00:38:20,920 --> 00:38:23,950
+generation that determines how long and
+
+878
+00:38:23,950 --> 00:38:28,299
+how often the GC should run also if
+
+879
+00:38:28,299 --> 00:38:31,299
+there is a large heap full GC is going
+
+880
+00:38:31,299 --> 00:38:35,589
+to be slower but it's going to be less
+
+881
+00:38:35,589 --> 00:38:39,369
+frequent so the size if you if you make
+
+882
+00:38:39,369 --> 00:38:41,230
+it too big it it's going to be slower
+
+883
+00:38:41,230 --> 00:38:43,509
+the GC is going to take longer but it it
+
+884
+00:38:43,509 --> 00:38:47,650
+will be less frequent so what happens if
+
+885
+00:38:47,650 --> 00:38:50,739
+GC is full and after sorry if the JVM
+
+886
+00:38:50,739 --> 00:38:53,049
+heap is full and even even after running
+
+887
+00:38:53,049 --> 00:38:55,509
+garbage collection it can't find any
+
+888
+00:38:55,509 --> 00:38:58,569
+space and all the objects aren't in use
+
+889
+00:38:58,569 --> 00:39:00,970
+that's when you get errors like
+
+890
+00:39:00,970 --> 00:39:02,589
+java.lang out of memory error you might
+
+891
+00:39:02,589 --> 00:39:04,599
+have seen a lot of these Java lying out
+
+892
+00:39:04,599 --> 00:39:10,059
+of memory errors as well then if you
+
+893
+00:39:10,059 --> 00:39:12,160
+want to see how much time is being spent
+
+894
+00:39:12,160 --> 00:39:14,060
+by the application
+
+895
+00:39:14,060 --> 00:39:17,750
+or the JVM in order for the GC or during
+
+896
+00:39:17,750 --> 00:39:19,550
+the GC time then you can meet there's an
+
+897
+00:39:19,550 --> 00:39:23,120
+option in when you start the GBM so this
+
+898
+00:39:23,120 --> 00:39:25,430
+like this here you put one more option
+
+899
+00:39:25,430 --> 00:39:27,470
+here in one of the environment variables
+
+900
+00:39:27,470 --> 00:39:31,220
+and you put - verbose GC to find out how
+
+901
+00:39:31,220 --> 00:39:33,200
+much time is being spent on GC so this
+
+902
+00:39:33,200 --> 00:39:35,270
+is how you do so this is just a nutshell
+
+903
+00:39:35,270 --> 00:39:37,550
+about just to do a quick recap before I
+
+904
+00:39:37,550 --> 00:39:39,110
+take one or two questions and we'll move
+
+905
+00:39:39,110 --> 00:39:41,690
+on so JVM there are two main areas palm
+
+906
+00:39:41,690 --> 00:39:45,350
+gen and heap and heap is young plus old
+
+907
+00:39:45,350 --> 00:39:47,960
+generation there's a within young
+
+908
+00:39:47,960 --> 00:39:49,610
+generation this is a Eden and two
+
+909
+00:39:49,610 --> 00:39:51,740
+survivors so basically the objects move
+
+910
+00:39:51,740 --> 00:39:53,600
+from one survivor to another survival
+
+911
+00:39:53,600 --> 00:39:56,270
+before and still ye being used then they
+
+912
+00:39:56,270 --> 00:39:58,340
+go to the old generation as the cleanup
+
+913
+00:39:58,340 --> 00:40:00,890
+words garbage collection process of
+
+914
+00:40:00,890 --> 00:40:04,100
+cleaning up the unused objects there are
+
+915
+00:40:04,100 --> 00:40:07,610
+two type minor and major and objective
+
+916
+00:40:07,610 --> 00:40:10,670
+should be to minimize the JVM time spent
+
+917
+00:40:10,670 --> 00:40:14,540
+in in running the GC and else otherwise
+
+918
+00:40:14,540 --> 00:40:17,450
+you might get out of memory errors so
+
+919
+00:40:17,450 --> 00:40:19,670
+before we move on to the next one let's
+
+920
+00:40:19,670 --> 00:40:21,350
+look at one or two questions and then
+
+921
+00:40:21,350 --> 00:40:24,110
+I'll move on to are you guys
+
+922
+00:40:24,110 --> 00:40:27,380
+understanding learning getting value on
+
+923
+00:40:27,380 --> 00:40:30,860
+that let me see okay good thanks give me
+
+924
+00:40:30,860 --> 00:40:32,900
+a little Hertz and tell me you're
+
+925
+00:40:32,900 --> 00:40:35,090
+enjoying this session or not I can see a
+
+926
+00:40:35,090 --> 00:40:37,430
+lot of you guys here when GC runs user
+
+927
+00:40:37,430 --> 00:40:39,020
+will be terminated from application no
+
+928
+00:40:39,020 --> 00:40:41,630
+user will not be terminated user will
+
+929
+00:40:41,630 --> 00:40:44,330
+continue it just they might see some
+
+930
+00:40:44,330 --> 00:40:46,460
+short a certain performance hits in
+
+931
+00:40:46,460 --> 00:40:49,730
+terms of it might be it might wait for a
+
+932
+00:40:49,730 --> 00:40:51,620
+few seconds or you might see or
+
+933
+00:40:51,620 --> 00:40:52,760
+everything frozen
+
+934
+00:40:52,760 --> 00:40:54,560
+that's how but user will never be
+
+935
+00:40:54,560 --> 00:40:55,970
+terminated or user will not terminate
+
+936
+00:40:55,970 --> 00:41:00,050
+from here okay let's move on so what is
+
+937
+00:41:00,050 --> 00:41:03,320
+so what is heap dump you will hear that
+
+938
+00:41:03,320 --> 00:41:05,780
+word coming again and again the guys are
+
+939
+00:41:05,780 --> 00:41:07,520
+saying oh can you do the heap dump so
+
+940
+00:41:07,520 --> 00:41:10,000
+heap dump is nothing but process of
+
+941
+00:41:10,000 --> 00:41:12,860
+dumping the entire memory allocation
+
+942
+00:41:12,860 --> 00:41:15,320
+within a JVM whatever is going on right
+
+943
+00:41:15,320 --> 00:41:17,300
+now with the JVM you dump that that's
+
+944
+00:41:17,300 --> 00:41:20,780
+called as heap dump so you are going to
+
+945
+00:41:20,780 --> 00:41:23,180
+do heap dump analysis mainly when you
+
+946
+00:41:23,180 --> 00:41:26,030
+get out of memory errors or memory leak
+
+947
+00:41:26,030 --> 00:41:26,990
+in the application
+
+948
+00:41:26,990 --> 00:41:28,610
+how you're going to identify whether the
+
+949
+00:41:28,610 --> 00:41:30,260
+same memory leak or if it's out of
+
+950
+00:41:30,260 --> 00:41:32,150
+memory issue you will see in the log
+
+951
+00:41:32,150 --> 00:41:34,430
+file is out of memory or if you increase
+
+952
+00:41:34,430 --> 00:41:36,080
+the memory and again and again you are
+
+953
+00:41:36,080 --> 00:41:37,730
+seeing out of memory so let's suppose
+
+954
+00:41:37,730 --> 00:41:39,619
+you have increased from one get two to
+
+955
+00:41:39,619 --> 00:41:41,030
+being and you still get out of memory
+
+956
+00:41:41,030 --> 00:41:42,860
+error that means hey that means there is
+
+957
+00:41:42,860 --> 00:41:47,210
+a memory leak and so you dump that heap
+
+958
+00:41:47,210 --> 00:41:48,950
+dump and it'll tell you or it will give
+
+959
+00:41:48,950 --> 00:41:50,510
+you a hint whether there's a memory leak
+
+960
+00:41:50,510 --> 00:41:51,310
+or not
+
+961
+00:41:51,310 --> 00:41:55,369
+so heap dump is different from thread
+
+962
+00:41:55,369 --> 00:41:57,410
+dump again another important thing don't
+
+963
+00:41:57,410 --> 00:41:59,450
+makes heap dump is for memory thread
+
+964
+00:41:59,450 --> 00:42:01,250
+dump is for thread and we'll see that in
+
+965
+00:42:01,250 --> 00:42:05,570
+a minute so how you can take the heap
+
+966
+00:42:05,570 --> 00:42:05,869
+dump
+
+967
+00:42:05,869 --> 00:42:08,240
+there are various parameters and one of
+
+968
+00:42:08,240 --> 00:42:09,920
+the parameter you can add it in with in
+
+969
+00:42:09,920 --> 00:42:12,560
+GBM start up and you say xxxx heap dump
+
+970
+00:42:12,560 --> 00:42:15,440
+on out of memory and then you say heap
+
+971
+00:42:15,440 --> 00:42:17,330
+dump path and you specify where should
+
+972
+00:42:17,330 --> 00:42:20,210
+it generate that file so you put that
+
+973
+00:42:20,210 --> 00:42:24,770
+and so you can do it so on on the
+
+974
+00:42:24,770 --> 00:42:27,140
+startup in an environment variable so
+
+975
+00:42:27,140 --> 00:42:28,940
+when it does and any out of memory
+
+976
+00:42:28,940 --> 00:42:31,940
+happens the heap dump will be
+
+977
+00:42:31,940 --> 00:42:34,550
+automatically on the time or you can use
+
+978
+00:42:34,550 --> 00:42:36,770
+an application like third party or
+
+979
+00:42:36,770 --> 00:42:39,650
+external part or tool like J map or also
+
+980
+00:42:39,650 --> 00:42:41,210
+there's a another one which is Jake on
+
+981
+00:42:41,210 --> 00:42:42,980
+so these are gray or graphical user
+
+982
+00:42:42,980 --> 00:42:46,670
+interface so once it's dump is done you
+
+983
+00:42:46,670 --> 00:42:48,650
+need to read it and how you route read
+
+984
+00:42:48,650 --> 00:42:50,330
+again there are tools like Eclipse
+
+985
+00:42:50,330 --> 00:42:52,850
+memory analyzer or J hat or IBM or IBM
+
+986
+00:42:52,850 --> 00:42:54,710
+heap analyzer again good point in
+
+987
+00:42:54,710 --> 00:42:55,760
+e-business suite if you're hitting
+
+988
+00:42:55,760 --> 00:42:57,619
+problem like ebusiness suite because
+
+989
+00:42:57,619 --> 00:42:59,980
+it's commercially of the self
+
+990
+00:42:59,980 --> 00:43:01,910
+application you don't need to worry
+
+991
+00:43:01,910 --> 00:43:04,100
+about it you give it to a business suite
+
+992
+00:43:04,100 --> 00:43:05,840
+or the product support team
+
+993
+00:43:05,840 --> 00:43:07,369
+they will look out look it for you
+
+994
+00:43:07,369 --> 00:43:09,800
+however if you develop your custom
+
+995
+00:43:09,800 --> 00:43:11,150
+application on top of ebusiness suite
+
+996
+00:43:11,150 --> 00:43:12,980
+then you might have to look at this
+
+997
+00:43:12,980 --> 00:43:14,510
+application again give it to the
+
+998
+00:43:14,510 --> 00:43:15,980
+developer they might they will give you
+
+999
+00:43:15,980 --> 00:43:16,430
+a hint
+
+1000
+00:43:16,430 --> 00:43:19,089
+or they will tell you
+
+1001
+00:43:20,200 --> 00:43:22,990
+okay then there is a next one as I said
+
+1002
+00:43:22,990 --> 00:43:25,990
+is javis tech trees and threat dump
+
+1003
+00:43:25,990 --> 00:43:27,730
+again thread dump is different from a
+
+1004
+00:43:27,730 --> 00:43:29,650
+stack trace and also thread up is
+
+1005
+00:43:29,650 --> 00:43:33,520
+different from heap dump so state trees
+
+1006
+00:43:33,520 --> 00:43:35,680
+is it's nothing but a user-friendly
+
+1007
+00:43:35,680 --> 00:43:39,160
+snapshot of threads which monitors and
+
+1008
+00:43:39,160 --> 00:43:42,040
+including monitors in JVM so JVM has
+
+1009
+00:43:42,040 --> 00:43:45,309
+threads and monitors so the snapshot of
+
+1010
+00:43:45,309 --> 00:43:48,250
+of that at any given point in time is
+
+1011
+00:43:48,250 --> 00:43:50,349
+called a stack trace it helps in
+
+1012
+00:43:50,349 --> 00:43:53,109
+troubleshooting hanging or spinning java
+
+1013
+00:43:53,109 --> 00:43:54,579
+applications so some of you guys were
+
+1014
+00:43:54,579 --> 00:43:57,430
+saying oh my application hangs or taking
+
+1015
+00:43:57,430 --> 00:43:59,260
+longer than it should or sometimes we
+
+1016
+00:43:59,260 --> 00:44:01,540
+notice that performance issue or my J my
+
+1017
+00:44:01,540 --> 00:44:06,369
+JVM or my processes reach 200% CPU so in
+
+1018
+00:44:06,369 --> 00:44:08,170
+that case you should run Java stack
+
+1019
+00:44:08,170 --> 00:44:10,990
+trace similarly sometimes you will get a
+
+1020
+00:44:10,990 --> 00:44:12,849
+warning state in application says and
+
+1021
+00:44:12,849 --> 00:44:16,270
+this tie back to the error everything we
+
+1022
+00:44:16,270 --> 00:44:17,799
+are discussing about is the error from
+
+1023
+00:44:17,799 --> 00:44:20,440
+the webinar that we discussed at the
+
+1024
+00:44:20,440 --> 00:44:22,450
+start so what happens there's a thread
+
+1025
+00:44:22,450 --> 00:44:25,690
+dump so if there are stuck threads then
+
+1026
+00:44:25,690 --> 00:44:27,549
+you might want to do read dump which is
+
+1027
+00:44:27,549 --> 00:44:29,740
+nothing but snapshot of all the threads
+
+1028
+00:44:29,740 --> 00:44:32,470
+in the application at that point now
+
+1029
+00:44:32,470 --> 00:44:35,980
+stack trip sorry it's a typo it's a
+
+1030
+00:44:35,980 --> 00:44:37,750
+stack trace will not show memory
+
+1031
+00:44:37,750 --> 00:44:39,369
+distribution for memory if you're in
+
+1032
+00:44:39,369 --> 00:44:40,990
+memory you need to go back to the heap
+
+1033
+00:44:40,990 --> 00:44:44,680
+dump if you want ten dump or stack trace
+
+1034
+00:44:44,680 --> 00:44:47,410
+then you pick it here now again how do
+
+1035
+00:44:47,410 --> 00:44:50,619
+you create a stack trace you run you
+
+1036
+00:44:50,619 --> 00:44:54,849
+simply say kill as you signal quit
+
+1037
+00:44:54,849 --> 00:44:56,890
+signal to the JVM so you need to find
+
+1038
+00:44:56,890 --> 00:44:58,599
+out what is the JVM how do you find out
+
+1039
+00:44:58,599 --> 00:45:01,299
+GBM again you do psu X and now if you
+
+1040
+00:45:01,299 --> 00:45:04,299
+see here on this here screen update PSU
+
+1041
+00:45:04,299 --> 00:45:07,270
+X and grab for Java and I found out
+
+1042
+00:45:07,270 --> 00:45:08,770
+let's suppose I need to find out J
+
+1043
+00:45:08,770 --> 00:45:11,380
+process ID for JV of form server I'll
+
+1044
+00:45:11,380 --> 00:45:14,619
+simply do that and six six four four is
+
+1045
+00:45:14,619 --> 00:45:17,829
+to the process ID so once I know the
+
+1046
+00:45:17,829 --> 00:45:19,630
+process ID I'll simply is a kill - three
+
+1047
+00:45:19,630 --> 00:45:22,329
+and process ID and there are one or two
+
+1048
+00:45:22,329 --> 00:45:24,040
+different type of kill as well you can
+
+1049
+00:45:24,040 --> 00:45:28,750
+even do that now output will be written
+
+1050
+00:45:28,750 --> 00:45:31,119
+in ASCII format and simply use any
+
+1051
+00:45:31,119 --> 00:45:34,150
+format like editor or
+
+1052
+00:45:34,150 --> 00:45:37,660
+VI or notepad to open that stake trace
+
+1053
+00:45:37,660 --> 00:45:40,720
+or third um okay so just to do a quick
+
+1054
+00:45:40,720 --> 00:45:43,810
+recap on what we looked at so we said
+
+1055
+00:45:43,810 --> 00:45:45,700
+there is a heap dump which is the dump
+
+1056
+00:45:45,700 --> 00:45:48,160
+of memory there is a set dump which is a
+
+1057
+00:45:48,160 --> 00:45:50,470
+dump of thread at that point in JVM
+
+1058
+00:45:50,470 --> 00:45:54,609
+stack trace which is a snapshot of
+
+1059
+00:45:54,609 --> 00:45:58,510
+threads as well as monitors in JVM so
+
+1060
+00:45:58,510 --> 00:46:00,340
+coming back to the main question
+
+1061
+00:46:00,340 --> 00:46:02,380
+oh I'm hitting this problem how should I
+
+1062
+00:46:02,380 --> 00:46:04,960
+troubleshoot so now first of all if
+
+1063
+00:46:04,960 --> 00:46:07,180
+there's a warning you need to look into
+
+1064
+00:46:07,180 --> 00:46:10,930
+the application log file so that warning
+
+1065
+00:46:10,930 --> 00:46:12,910
+could be for multiple reasons so make
+
+1066
+00:46:12,910 --> 00:46:14,680
+sure you look at the managed server log
+
+1067
+00:46:14,680 --> 00:46:15,099
+file
+
+1068
+00:46:15,099 --> 00:46:17,560
+now first you to find out and where
+
+1069
+00:46:17,560 --> 00:46:19,510
+these log files will be visible give me
+
+1070
+00:46:19,510 --> 00:46:22,440
+one second guys so let me swap my screen
+
+1071
+00:46:22,440 --> 00:46:26,590
+and let me take one any question is
+
+1072
+00:46:26,590 --> 00:46:29,950
+there's no question no oh okay so there
+
+1073
+00:46:29,950 --> 00:46:31,810
+is a question from Mozilla saying my
+
+1074
+00:46:31,810 --> 00:46:33,970
+report server is hanging very often
+
+1075
+00:46:33,970 --> 00:46:36,690
+often so first of all there are some
+
+1076
+00:46:36,690 --> 00:46:39,310
+magic if you are your report server is
+
+1077
+00:46:39,310 --> 00:46:40,750
+hanging first of all which version of
+
+1078
+00:46:40,750 --> 00:46:43,869
+e-business suite you are working on also
+
+1079
+00:46:43,869 --> 00:46:47,290
+check that are there any performance
+
+1080
+00:46:47,290 --> 00:46:49,020
+patches available because Oracle
+
+1081
+00:46:49,020 --> 00:46:51,990
+e-business suite team gives you a
+
+1082
+00:46:51,990 --> 00:46:54,580
+performance patches are quite regularly
+
+1083
+00:46:54,580 --> 00:46:56,349
+so make sure you have those performance
+
+1084
+00:46:56,349 --> 00:46:59,859
+patches or not but if you tell a little
+
+1085
+00:46:59,859 --> 00:47:01,119
+bit more detail in terms of which
+
+1086
+00:47:01,119 --> 00:47:02,859
+ebusiness suite version it is what path
+
+1087
+00:47:02,859 --> 00:47:05,260
+sets you have we should be able to add a
+
+1088
+00:47:05,260 --> 00:47:07,540
+little bit or give a little bit more
+
+1089
+00:47:07,540 --> 00:47:10,000
+value or such on my Oracle support there
+
+1090
+00:47:10,000 --> 00:47:11,500
+are performance patches of way available
+
+1091
+00:47:11,500 --> 00:47:13,839
+for reports which should not is saying
+
+1092
+00:47:13,839 --> 00:47:15,490
+some of us missed the session can we
+
+1093
+00:47:15,490 --> 00:47:17,440
+have the presentation public so that we
+
+1094
+00:47:17,440 --> 00:47:19,630
+can download and go through so don't
+
+1095
+00:47:19,630 --> 00:47:21,550
+worry you watch the replay so replay
+
+1096
+00:47:21,550 --> 00:47:22,900
+will be available on the same page which
+
+1097
+00:47:22,900 --> 00:47:25,240
+is Katun academy.com first eby's flour
+
+1098
+00:47:25,240 --> 00:47:28,599
+0eb is sorry cloud-like 13k toning
+
+1099
+00:47:28,599 --> 00:47:30,790
+academy.com ford slash cloud-like 13
+
+1100
+00:47:30,790 --> 00:47:32,770
+which not go back to that and and ask
+
+1101
+00:47:32,770 --> 00:47:36,040
+again so let me hold on let me see the
+
+1102
+00:47:36,040 --> 00:47:39,700
+whatever stock yeah so let me swap okay
+
+1103
+00:47:39,700 --> 00:47:41,080
+so this is what I was talking about
+
+1104
+00:47:41,080 --> 00:47:43,720
+right now state is running shutdown
+
+1105
+00:47:43,720 --> 00:47:47,320
+running running running so I have 4 J 5
+
+1106
+00:47:47,320 --> 00:47:47,800
+J
+
+1107
+00:47:47,800 --> 00:47:50,110
+I'm running and one is down and here if
+
+1108
+00:47:50,110 --> 00:47:51,880
+there's any problem you will see warning
+
+1109
+00:47:51,880 --> 00:47:53,350
+here so he will see his status as a
+
+1110
+00:47:53,350 --> 00:47:54,940
+warning and if you're in a situation
+
+1111
+00:47:54,940 --> 00:47:57,460
+like that look at make a note of which
+
+1112
+00:47:57,460 --> 00:48:00,490
+application it is and then look at sorry
+
+1113
+00:48:00,490 --> 00:48:02,970
+which man is over is this oayk or here
+
+1114
+00:48:02,970 --> 00:48:04,840
+so the ones will you know the
+
+1115
+00:48:04,840 --> 00:48:06,760
+application then you go to the oayk or
+
+1116
+00:48:06,760 --> 00:48:08,770
+managed server log file so where are
+
+1117
+00:48:08,770 --> 00:48:10,990
+those log files we told you that it will
+
+1118
+00:48:10,990 --> 00:48:14,350
+be under domain home so right now we
+
+1119
+00:48:14,350 --> 00:48:17,200
+this is my domain home inside inside
+
+1120
+00:48:17,200 --> 00:48:19,990
+that I'll go to servers an inside server
+
+1121
+00:48:19,990 --> 00:48:21,820
+I'll go to the appropriate server in
+
+1122
+00:48:21,820 --> 00:48:23,290
+which where I'm hitting this performance
+
+1123
+00:48:23,290 --> 00:48:25,420
+problem or the warning so I'll go to way
+
+1124
+00:48:25,420 --> 00:48:29,080
+code and then logs and within logs do LS
+
+1125
+00:48:29,080 --> 00:48:31,590
+- ltr' and this should be out file and
+
+1126
+00:48:31,590 --> 00:48:34,000
+this should be a diagnostic file so
+
+1127
+00:48:34,000 --> 00:48:35,410
+these are the two files you should focus
+
+1128
+00:48:35,410 --> 00:48:38,860
+out and diagnostic so in out file most
+
+1129
+00:48:38,860 --> 00:48:40,300
+probably it will be in if it's out of
+
+1130
+00:48:40,300 --> 00:48:42,490
+memory it will be in out file output
+
+1131
+00:48:42,490 --> 00:48:46,090
+file and right now I don't think I'm
+
+1132
+00:48:46,090 --> 00:48:48,600
+hitting any problem no there's no error
+
+1133
+00:48:48,600 --> 00:48:51,460
+there's no memory error so otherwise you
+
+1134
+00:48:51,460 --> 00:48:52,900
+will get the warning here this is what
+
+1135
+00:48:52,900 --> 00:48:56,650
+you will see like so the warning could
+
+1136
+00:48:56,650 --> 00:48:58,330
+be for multiple reasons and you can't
+
+1137
+00:48:58,330 --> 00:48:59,800
+predict by telling oh I'm getting a
+
+1138
+00:48:59,800 --> 00:49:01,930
+warning it could be for multiple reasons
+
+1139
+00:49:01,930 --> 00:49:04,960
+so this question was asked by forgot
+
+1140
+00:49:04,960 --> 00:49:06,640
+name of the gentleman in the webinar so
+
+1141
+00:49:06,640 --> 00:49:09,460
+it could be JDBC connection issues so
+
+1142
+00:49:09,460 --> 00:49:12,130
+have a look at so what is JDBC I told
+
+1143
+00:49:12,130 --> 00:49:15,040
+you earlier that okay here this
+
+1144
+00:49:15,040 --> 00:49:16,510
+application needs to talk to the
+
+1145
+00:49:16,510 --> 00:49:18,190
+database or WebLogic needs to talk to
+
+1146
+00:49:18,190 --> 00:49:19,780
+the database and that database
+
+1147
+00:49:19,780 --> 00:49:24,610
+connectivity is is this JDBC connection
+
+1148
+00:49:24,610 --> 00:49:29,010
+issue one so if you see error like Oh
+
+1149
+00:49:29,010 --> 00:49:31,690
+pool connection Oracle GBPC driver if
+
+1150
+00:49:31,690 --> 00:49:32,950
+you see something like that that means
+
+1151
+00:49:32,950 --> 00:49:36,670
+it's a JDBC issue or you can see stuck
+
+1152
+00:49:36,670 --> 00:49:38,980
+thread so other application will tell
+
+1153
+00:49:38,980 --> 00:49:41,170
+here stuck threads so you will see the
+
+1154
+00:49:41,170 --> 00:49:43,360
+message as stuck thread so you click or
+
+1155
+00:49:43,360 --> 00:49:45,250
+you do the thread dump and thread dump
+
+1156
+00:49:45,250 --> 00:49:48,370
+you will you see which where exactly the
+
+1157
+00:49:48,370 --> 00:49:50,560
+stuck thread is waiting on again there
+
+1158
+00:49:50,560 --> 00:49:53,560
+are lot of known issues with respect to
+
+1159
+00:49:53,560 --> 00:49:55,570
+e business suite so make sure you have
+
+1160
+00:49:55,570 --> 00:49:57,250
+all the performance patches applicable
+
+1161
+00:49:57,250 --> 00:50:01,420
+on that so this is this was
+
+1162
+00:50:01,420 --> 00:50:03,730
+one question and as I said if you want
+
+1163
+00:50:03,730 --> 00:50:06,220
+to watch all other questions which have
+
+1164
+00:50:06,220 --> 00:50:07,540
+answered in the webinar if you have to
+
+1165
+00:50:07,540 --> 00:50:09,310
+go through the WebLogic 12c
+
+1166
+00:50:09,310 --> 00:50:11,440
+multi-tenancy micro container partitions
+
+1167
+00:50:11,440 --> 00:50:13,480
+again the replays available on Titan
+
+1168
+00:50:13,480 --> 00:50:16,270
+Academy Comfort / web-browsing 0 - again
+
+1169
+00:50:16,270 --> 00:50:17,620
+we are not going to keep this replay for
+
+1170
+00:50:17,620 --> 00:50:19,930
+long and so I'm going to take few more
+
+1171
+00:50:19,930 --> 00:50:21,580
+one more questions and see if there's
+
+1172
+00:50:21,580 --> 00:50:24,430
+any question but there were a lot of
+
+1173
+00:50:24,430 --> 00:50:26,200
+other questions being asked and I think
+
+1174
+00:50:26,200 --> 00:50:27,850
+looking at the time I didn't expect that
+
+1175
+00:50:27,850 --> 00:50:29,980
+it's going to take that too long so I'll
+
+1176
+00:50:29,980 --> 00:50:31,930
+I probably should view this remaining
+
+1177
+00:50:31,930 --> 00:50:33,940
+questions in our private Facebook group
+
+1178
+00:50:33,940 --> 00:50:35,710
+and I will tell you what that group is
+
+1179
+00:50:35,710 --> 00:50:36,940
+will be discussed there so remaining
+
+1180
+00:50:36,940 --> 00:50:38,020
+questions I'm going to take it in
+
+1181
+00:50:38,020 --> 00:50:40,270
+private Facebook group so Dave jeath and
+
+1182
+00:50:40,270 --> 00:50:42,310
+green that asks the same question what
+
+1183
+00:50:42,310 --> 00:50:44,770
+if host one hosting the admin server
+
+1184
+00:50:44,770 --> 00:50:46,960
+crashes so I'll quickly tell you that
+
+1185
+00:50:46,960 --> 00:50:49,090
+admin server is a singleton service
+
+1186
+00:50:49,090 --> 00:50:52,120
+which can run only on one node so what
+
+1187
+00:50:52,120 --> 00:50:53,890
+if that node goes down how do we
+
+1188
+00:50:53,890 --> 00:50:56,350
+failover how do the admin server is
+
+1189
+00:50:56,350 --> 00:50:58,240
+going to work what what is going to
+
+1190
+00:50:58,240 --> 00:50:59,770
+happen with remaining manage servers
+
+1191
+00:50:59,770 --> 00:51:01,840
+what will happen to the classified min
+
+1192
+00:51:01,840 --> 00:51:04,210
+server goes down and we also looked at
+
+1193
+00:51:04,210 --> 00:51:06,790
+the clustering in the webinar which is
+
+1194
+00:51:06,790 --> 00:51:08,710
+horizontal versus vertical clustering
+
+1195
+00:51:08,710 --> 00:51:11,560
+then there was a concept we discussed
+
+1196
+00:51:11,560 --> 00:51:13,690
+about virtual IP and where is it used
+
+1197
+00:51:13,690 --> 00:51:15,760
+what should I be any in admin server
+
+1198
+00:51:15,760 --> 00:51:17,890
+also how does admin server
+
+1199
+00:51:17,890 --> 00:51:20,530
+high-availability works there's also a
+
+1200
+00:51:20,530 --> 00:51:22,240
+question from vedanta bout certification
+
+1201
+00:51:22,240 --> 00:51:24,640
+when is there a certification for web
+
+1202
+00:51:24,640 --> 00:51:26,410
+logic or not so there are certification
+
+1203
+00:51:26,410 --> 00:51:28,210
+I'm going to tell a little bit more in
+
+1204
+00:51:28,210 --> 00:51:29,790
+detail there's a question from Syed
+
+1205
+00:51:29,790 --> 00:51:33,070
+Sahib sameen can I configure a load
+
+1206
+00:51:33,070 --> 00:51:36,880
+balancer between the WebLogic and HTTP
+
+1207
+00:51:36,880 --> 00:51:39,340
+server sorry WebLogic and end-user so
+
+1208
+00:51:39,340 --> 00:51:41,710
+this is the architecture which said you
+
+1209
+00:51:41,710 --> 00:51:44,140
+have users going from the firewall to
+
+1210
+00:51:44,140 --> 00:51:46,090
+the load balancer to the web server to
+
+1211
+00:51:46,090 --> 00:51:47,350
+the WebLogic
+
+1212
+00:51:47,350 --> 00:51:49,990
+so this is the on right hand side yes
+
+1213
+00:51:49,990 --> 00:51:52,540
+few users load balancer HTTP server and
+
+1214
+00:51:52,540 --> 00:51:54,700
+web logic so the question was is that
+
+1215
+00:51:54,700 --> 00:51:58,000
+Oracle HTTP server or OTD also we
+
+1216
+00:51:58,000 --> 00:51:59,440
+discussed in the webinar is that
+
+1217
+00:51:59,440 --> 00:52:02,410
+mandatory so that question again I'm
+
+1218
+00:52:02,410 --> 00:52:04,990
+going to pick that also if you're
+
+1219
+00:52:04,990 --> 00:52:06,850
+putting load balancer what is Oracle's
+
+1220
+00:52:06,850 --> 00:52:08,740
+recommendations for these load balancers
+
+1221
+00:52:08,740 --> 00:52:11,740
+so as I said go and have a look at it
+
+1222
+00:52:11,740 --> 00:52:15,230
+WebLogic zero two and salumi Dean also
+
+1223
+00:52:15,230 --> 00:52:16,700
+how to connect to the JDBC or data
+
+1224
+00:52:16,700 --> 00:52:19,040
+sources what is Gridlink what is multi
+
+1225
+00:52:19,040 --> 00:52:21,800
+data source so this is also supposed to
+
+1226
+00:52:21,800 --> 00:52:23,750
+cover which is how do you connect to the
+
+1227
+00:52:23,750 --> 00:52:27,590
+database what the JDBC sees so I'm going
+
+1228
+00:52:27,590 --> 00:52:29,000
+to discuss this all this in this
+
+1229
+00:52:29,000 --> 00:52:31,100
+community which is catered in
+
+1230
+00:52:31,100 --> 00:52:34,010
+academy.com /join FB if you're not part
+
+1231
+00:52:34,010 --> 00:52:36,290
+of this I would highly recommend you to
+
+1232
+00:52:36,290 --> 00:52:38,770
+be part of this be part of this
+
+1233
+00:52:38,770 --> 00:52:41,840
+community I'm going to cover that apart
+
+1234
+00:52:41,840 --> 00:52:44,330
+from that we also have a worship group
+
+1235
+00:52:44,330 --> 00:52:46,250
+it's what we have a separate whatsapp
+
+1236
+00:52:46,250 --> 00:52:48,230
+group for paid members this is for free
+
+1237
+00:52:48,230 --> 00:52:50,000
+members if you want to discuss and
+
+1238
+00:52:50,000 --> 00:52:51,970
+communicate Kate Undine academy.com
+
+1239
+00:52:51,970 --> 00:52:56,270
+/what self also if you're a DBA I would
+
+1240
+00:52:56,270 --> 00:52:58,420
+love you to be if you're a DBA or
+
+1241
+00:52:58,420 --> 00:53:02,050
+interested in cloud either DBA or cloud
+
+1242
+00:53:02,050 --> 00:53:06,500
+we are doing a free live webinar on this
+
+1243
+00:53:06,500 --> 00:53:09,500
+Saturday which is on 12th where 12th of
+
+1244
+00:53:09,500 --> 00:53:12,290
+May we were able to cover everything
+
+1245
+00:53:12,290 --> 00:53:14,359
+like why you learn cloud what is cloud
+
+1246
+00:53:14,359 --> 00:53:15,890
+computing what is the cloud service
+
+1247
+00:53:15,890 --> 00:53:18,920
+models SAS pass idlest what are the
+
+1248
+00:53:18,920 --> 00:53:21,590
+cloud deployment models then be able to
+
+1249
+00:53:21,590 --> 00:53:23,359
+look at how do you build your first
+
+1250
+00:53:23,359 --> 00:53:26,000
+Oracle database on cloud not in
+
+1251
+00:53:26,000 --> 00:53:28,160
+infrastructure and service but in plate
+
+1252
+00:53:28,160 --> 00:53:30,830
+formatted service how do can you create
+
+1253
+00:53:30,830 --> 00:53:34,100
+it under 10 minutes or so or everything
+
+1254
+00:53:34,100 --> 00:53:37,970
+up and running within 30 minutes then 12
+
+1255
+00:53:37,970 --> 00:53:39,320
+point checklist to go from complete
+
+1256
+00:53:39,320 --> 00:53:41,270
+beginner to expert if you're a DBA
+
+1257
+00:53:41,270 --> 00:53:43,280
+you'll get tons of value if you're not a
+
+1258
+00:53:43,280 --> 00:53:45,859
+DBA you will still learn but focused on
+
+1259
+00:53:45,859 --> 00:53:48,080
+cloud so the URL is ketone academy.com
+
+1260
+00:53:48,080 --> 00:53:50,869
+forward slash cloud zero - so with that
+
+1261
+00:53:50,869 --> 00:53:53,540
+as I said go and make sure you become
+
+1262
+00:53:53,540 --> 00:53:55,460
+part of this community and let me take
+
+1263
+00:53:55,460 --> 00:53:57,320
+few questions if there's any question if
+
+1264
+00:53:57,320 --> 00:53:59,690
+I need to or if there's any but I think
+
+1265
+00:53:59,690 --> 00:54:01,400
+I've covered all the questions let me
+
+1266
+00:54:01,400 --> 00:54:05,680
+know if you found value in this webinar
+
+1267
+00:54:05,680 --> 00:54:08,150
+so if you found okay I'm just telling to
+
+1268
+00:54:08,150 --> 00:54:10,490
+my wife are my kids I'm just about to
+
+1269
+00:54:10,490 --> 00:54:12,950
+finish this webinar so let me know if
+
+1270
+00:54:12,950 --> 00:54:15,470
+you have any questions and and give me a
+
+1271
+00:54:15,470 --> 00:54:18,140
+thumbs up or did you find value should
+
+1272
+00:54:18,140 --> 00:54:20,150
+we continue doing that what should be
+
+1273
+00:54:20,150 --> 00:54:22,700
+the next topic we should do so next week
+
+1274
+00:54:22,700 --> 00:54:25,040
+I'm planning to do either on ebusiness
+
+1275
+00:54:25,040 --> 00:54:27,680
+suite or or on plow
+
+1276
+00:54:27,680 --> 00:54:29,779
+networking last time I asked this
+
+1277
+00:54:29,779 --> 00:54:30,890
+question there were a lot of questions
+
+1278
+00:54:30,890 --> 00:54:33,680
+came about cloud networking what is
+
+1279
+00:54:33,680 --> 00:54:35,449
+virtual cloud network what is SSH
+
+1280
+00:54:35,449 --> 00:54:37,459
+connection what is fast connect what is
+
+1281
+00:54:37,459 --> 00:54:39,289
+Reuters what is gateway what is class
+
+1282
+00:54:39,289 --> 00:54:41,989
+IPs what is a so if you're interested in
+
+1283
+00:54:41,989 --> 00:54:45,829
+that let me know thank you very much for
+
+1284
+00:54:45,829 --> 00:54:48,140
+these Hertz means a lot to me and don't
+
+1285
+00:54:48,140 --> 00:54:49,489
+forget to share with your friends and
+
+1286
+00:54:49,489 --> 00:54:52,309
+colleagues every Tuesday we cover how to
+
+1287
+00:54:52,309 --> 00:54:56,869
+recover basically a topic in Oracle and
+
+1288
+00:54:56,869 --> 00:55:02,719
+so make sure you ask and and you tell it
+
+1289
+00:55:02,719 --> 00:55:06,979
+tell it to others with that ok let me
+
+1290
+00:55:06,979 --> 00:55:08,959
+take thank you each one of you for being
+
+1291
+00:55:08,959 --> 00:55:11,269
+here and spending some time with me and
+
+1292
+00:55:11,269 --> 00:55:13,849
+so next week either I'm going to wait
+
+1293
+00:55:13,849 --> 00:55:15,199
+for comments either were able to cover
+
+1294
+00:55:15,199 --> 00:55:17,779
+networking in cloud or which is Oracle
+
+1295
+00:55:17,779 --> 00:55:20,420
+cloud infrastructure so things like or I
+
+1296
+00:55:20,420 --> 00:55:22,219
+might cover the Blodgett or I might
+
+1297
+00:55:22,219 --> 00:55:28,160
+cover DVR ebusiness suite or ab CB o so
+
+1298
+00:55:28,160 --> 00:55:29,689
+AJ saying I'm eagerly waiting for that
+
+1299
+00:55:29,689 --> 00:55:31,819
+network session so AJ of great yeah so
+
+1300
+00:55:31,819 --> 00:55:33,859
+networking one and the lot of questions
+
+1301
+00:55:33,859 --> 00:55:35,719
+come coming on networking as well so
+
+1302
+00:55:35,719 --> 00:55:37,729
+with probably most probably chances are
+
+1303
+00:55:37,729 --> 00:55:39,619
+networking will be lot of value in that
+
+1304
+00:55:39,619 --> 00:55:42,589
+I learned a lot in last 3-4 weeks about
+
+1305
+00:55:42,589 --> 00:55:44,839
+networking in order to prepare for that
+
+1306
+00:55:44,839 --> 00:55:46,939
+webinar or networking sessions or things
+
+1307
+00:55:46,939 --> 00:55:51,739
+like subnet things like internet gateway
+
+1308
+00:55:51,739 --> 00:55:54,829
+a dynamic routing gateway VPN fast
+
+1309
+00:55:54,829 --> 00:55:58,339
+connect virtual cloud network and so on
+
+1310
+00:55:58,339 --> 00:56:01,999
+thank you guys are with that thanks for
+
+1311
+00:56:01,999 --> 00:56:04,670
+more - and with that ba bye take care
+
+1312
+00:56:04,670 --> 00:56:06,469
+and as I said don't forget to share it
+
+1313
+00:56:06,469 --> 00:56:08,839
+with your friends and colleagues and be
+
+1314
+00:56:08,839 --> 00:56:10,880
+part of that group which is Facebook
+
+1315
+00:56:10,880 --> 00:56:12,589
+group we are going to take up follow up
+
+1316
+00:56:12,589 --> 00:56:14,900
+questions related to this um Kay tuning
+
+1317
+00:56:14,900 --> 00:56:18,319
+academy.com /join FB I'll see you next
+
+1318
+00:56:18,319 --> 00:56:21,729
+week same time bye for now
+

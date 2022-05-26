@@ -1,0 +1,704 @@
+﻿1
+00:00:00,120 --> 00:00:02,280
+welcome back to this another lesson and
+
+2
+00:00:02,280 --> 00:00:04,380
+in this lesson we will look at WebLogic
+
+3
+00:00:04,380 --> 00:00:06,420
+server installation and that's where the
+
+4
+00:00:06,420 --> 00:00:08,069
+real hands-on will start so we are
+
+5
+00:00:08,069 --> 00:00:09,570
+actually going to install the WebLogic
+
+6
+00:00:09,570 --> 00:00:12,120
+server so first of all there are two
+
+7
+00:00:12,120 --> 00:00:13,980
+type of installation in WebLogic server
+
+8
+00:00:13,980 --> 00:00:17,490
+you can either do a typical install or a
+
+9
+00:00:17,490 --> 00:00:19,439
+custom install and this is a screenshot
+
+10
+00:00:19,439 --> 00:00:21,779
+from an 11g our screens might differ
+
+11
+00:00:21,779 --> 00:00:24,570
+slightly between 11g and per se so right
+
+12
+00:00:24,570 --> 00:00:27,300
+now what I am Telling unless I specified
+
+13
+00:00:27,300 --> 00:00:29,670
+it's for 11g version of the blodgett now
+
+14
+00:00:29,670 --> 00:00:31,439
+as at the time of recording these videos
+
+15
+00:00:31,439 --> 00:00:34,950
+which is apparently 2018 the latest
+
+16
+00:00:34,950 --> 00:00:37,739
+version is 12c we are covering both 11g
+
+17
+00:00:37,739 --> 00:00:39,719
+as well as 2lc because lot of customers
+
+18
+00:00:39,719 --> 00:00:41,700
+are still on 11g lot of Fusion
+
+19
+00:00:41,700 --> 00:00:43,559
+Middleware customers are still on 11g of
+
+20
+00:00:43,559 --> 00:00:46,260
+logic so you can either install typical
+
+21
+00:00:46,260 --> 00:00:49,260
+which will install most of the component
+
+22
+00:00:49,260 --> 00:00:52,170
+or you can do a custom install and when
+
+23
+00:00:52,170 --> 00:00:53,789
+you select custom stall you can choose
+
+24
+00:00:53,789 --> 00:00:55,730
+which components you want to install
+
+25
+00:00:55,730 --> 00:00:58,829
+then if you're doing Fusion Middleware
+
+26
+00:00:58,829 --> 00:01:00,359
+installation like if you're doing it for
+
+27
+00:01:00,359 --> 00:01:02,550
+so ah Oh BIA web central access manager
+
+28
+00:01:02,550 --> 00:01:05,220
+identity manager and so on you typically
+
+29
+00:01:05,220 --> 00:01:07,860
+need to select or you select one with
+
+30
+00:01:07,860 --> 00:01:10,290
+coherence so when you download WebLogic
+
+31
+00:01:10,290 --> 00:01:12,090
+WebLogic comes a standalone route logic
+
+32
+00:01:12,090 --> 00:01:14,430
+or verb logic with coherence so make
+
+33
+00:01:14,430 --> 00:01:16,380
+sure you select web logic with covenants
+
+34
+00:01:16,380 --> 00:01:18,869
+and coherence is nothing but a data T of
+
+35
+00:01:18,869 --> 00:01:22,290
+layer which you will leverage the data
+
+36
+00:01:22,290 --> 00:01:23,729
+that you pull from the database you
+
+37
+00:01:23,729 --> 00:01:26,400
+store on the application tier under
+
+38
+00:01:26,400 --> 00:01:29,790
+coherence layer so this is too typical
+
+39
+00:01:29,790 --> 00:01:32,100
+to installation if you're doing custom
+
+40
+00:01:32,100 --> 00:01:34,290
+install you select cursor install and
+
+41
+00:01:34,290 --> 00:01:36,590
+you choose the component that you want
+
+42
+00:01:36,590 --> 00:01:38,970
+so you can pick up and then remove
+
+43
+00:01:38,970 --> 00:01:41,430
+things that you do not want as I said
+
+44
+00:01:41,430 --> 00:01:41,939
+earlier
+
+45
+00:01:41,939 --> 00:01:43,740
+coherence is mandatory if you're doing
+
+46
+00:01:43,740 --> 00:01:46,020
+for Fusion Middleware protect now so
+
+47
+00:01:46,020 --> 00:01:48,720
+that was about what kind of installation
+
+48
+00:01:48,720 --> 00:01:51,810
+type you can get then in which mode you
+
+49
+00:01:51,810 --> 00:01:55,710
+can install you can install you either
+
+50
+00:01:55,710 --> 00:02:00,119
+using graphical user interface or using
+
+51
+00:02:00,119 --> 00:02:02,490
+interactive both graphical user
+
+52
+00:02:02,490 --> 00:02:04,409
+interface or command line
+
+53
+00:02:04,409 --> 00:02:08,848
+so either interactive or graphical user
+
+54
+00:02:08,848 --> 00:02:12,599
+interface so so graphical user interface
+
+55
+00:02:12,599 --> 00:02:13,590
+is available both on
+
+56
+00:02:13,590 --> 00:02:16,620
+for Windows and for Linux or you can
+
+57
+00:02:16,620 --> 00:02:19,470
+also use console in console is again
+
+58
+00:02:19,470 --> 00:02:21,480
+interactive like graphical but it's a
+
+59
+00:02:21,480 --> 00:02:23,670
+text-based this is no GUI or graphical
+
+60
+00:02:23,670 --> 00:02:25,080
+user interface it's console it's a
+
+61
+00:02:25,080 --> 00:02:27,269
+text-based again available in both
+
+62
+00:02:27,269 --> 00:02:28,170
+Windows and Linux
+
+63
+00:02:28,170 --> 00:02:30,989
+so what you do all you do you say - mode
+
+64
+00:02:30,989 --> 00:02:34,170
+is equal to console then you can also do
+
+65
+00:02:34,170 --> 00:02:36,959
+a silent install and silent is non
+
+66
+00:02:36,959 --> 00:02:40,260
+interactive it's only available from a
+
+67
+00:02:40,260 --> 00:02:45,060
+package installer so what you do you say
+
+68
+00:02:45,060 --> 00:02:47,220
+- mode is equal to silent and then you
+
+69
+00:02:47,220 --> 00:02:50,040
+say silent underscore XML and then you
+
+70
+00:02:50,040 --> 00:02:53,730
+give path of the XML file now in 20 the
+
+71
+00:02:53,730 --> 00:02:56,340
+step is or the option or the parameter
+
+72
+00:02:56,340 --> 00:02:58,200
+for silent XML file is slightly
+
+73
+00:02:58,200 --> 00:02:59,940
+different or you have a response file in
+
+74
+00:02:59,940 --> 00:03:02,849
+11g so it will see this is I'm talking
+
+75
+00:03:02,849 --> 00:03:06,120
+about 11g you have an XML file in 12c
+
+76
+00:03:06,120 --> 00:03:08,160
+it's a response file the option is
+
+77
+00:03:08,160 --> 00:03:09,930
+slightly different but you have all
+
+78
+00:03:09,930 --> 00:03:12,060
+three more into LC and 11g the command
+
+79
+00:03:12,060 --> 00:03:13,709
+might be slightly different so you have
+
+80
+00:03:13,709 --> 00:03:15,870
+a graphical which is interactive and GUI
+
+81
+00:03:15,870 --> 00:03:16,230
+based
+
+82
+00:03:16,230 --> 00:03:18,329
+you have a console which is interactive
+
+83
+00:03:18,329 --> 00:03:20,519
+and text-based silent which is non
+
+84
+00:03:20,519 --> 00:03:22,230
+interactive which means you provide all
+
+85
+00:03:22,230 --> 00:03:24,359
+the details that you need to that logic
+
+86
+00:03:24,359 --> 00:03:27,150
+expect like a middle way home or
+
+87
+00:03:27,150 --> 00:03:29,400
+WebLogic home or whatever component to
+
+88
+00:03:29,400 --> 00:03:32,190
+select or way to install should we
+
+89
+00:03:32,190 --> 00:03:34,139
+automatically download patches from
+
+90
+00:03:34,139 --> 00:03:36,120
+Oracle or not all these you already
+
+91
+00:03:36,120 --> 00:03:38,760
+provided in an XML file and then you
+
+92
+00:03:38,760 --> 00:03:41,340
+pass this XML file with the installation
+
+93
+00:03:41,340 --> 00:03:44,819
+that's called as self install so how you
+
+94
+00:03:44,819 --> 00:03:46,650
+do silently store again we have a step
+
+95
+00:03:46,650 --> 00:03:48,389
+by step activity guide covered for you
+
+96
+00:03:48,389 --> 00:03:50,280
+so make sure wherever you're watching
+
+97
+00:03:50,280 --> 00:03:52,859
+this under that area you should have a
+
+98
+00:03:52,859 --> 00:03:55,680
+step by step activity guide so you pre
+
+99
+00:03:55,680 --> 00:03:58,200
+the XML file with the entry like this so
+
+100
+00:03:58,200 --> 00:03:59,040
+what it's saying
+
+101
+00:03:59,040 --> 00:04:01,799
+so some parameter some settings you can
+
+102
+00:04:01,799 --> 00:04:05,970
+change in this so you say select and say
+
+103
+00:04:05,970 --> 00:04:09,540
+oh this is my BA home which is my middle
+
+104
+00:04:09,540 --> 00:04:11,819
+way home this is the directory in which
+
+105
+00:04:11,819 --> 00:04:13,280
+I am going to install my WebLogic server
+
+106
+00:04:13,280 --> 00:04:16,048
+these are components or products I'm
+
+107
+00:04:16,048 --> 00:04:18,149
+selecting core components I'm selecting
+
+108
+00:04:18,149 --> 00:04:20,700
+this is my way of mine Java Virtual
+
+109
+00:04:20,700 --> 00:04:23,190
+Machine or JVM is installed this is my
+
+110
+00:04:23,190 --> 00:04:26,400
+node manager port number and and so on
+
+111
+00:04:26,400 --> 00:04:27,479
+so this is all about
+
+112
+00:04:27,479 --> 00:04:30,569
+the XML file that you select then use
+
+113
+00:04:30,569 --> 00:04:33,449
+silent install and you provide the XML
+
+114
+00:04:33,449 --> 00:04:36,900
+file path in as an option so some of the
+
+115
+00:04:36,900 --> 00:04:40,169
+good things which you must know so make
+
+116
+00:04:40,169 --> 00:04:42,539
+sure if you're installing any UNIX avoid
+
+117
+00:04:42,539 --> 00:04:44,699
+don't do it from root user and do it
+
+118
+00:04:44,699 --> 00:04:46,560
+from non root user maybe create a user
+
+119
+00:04:46,560 --> 00:04:49,949
+like Oracle or some other user then if
+
+120
+00:04:49,949 --> 00:04:51,509
+you are installing the WebLogic server
+
+121
+00:04:51,509 --> 00:04:53,400
+for fusion middleware product I only
+
+122
+00:04:53,400 --> 00:04:55,710
+said you need coherence and why you need
+
+123
+00:04:55,710 --> 00:04:58,499
+coherence because some or a lot of
+
+124
+00:04:58,499 --> 00:05:00,930
+fusion will middleware product uses
+
+125
+00:05:00,930 --> 00:05:04,560
+coherence for cluster communication so
+
+126
+00:05:04,560 --> 00:05:06,930
+like things like sois or oracle access
+
+127
+00:05:06,930 --> 00:05:10,520
+manager some components use coherence so
+
+128
+00:05:10,520 --> 00:05:12,569
+other thing to remember is very
+
+129
+00:05:12,569 --> 00:05:14,310
+installing you install WebLogic and you
+
+130
+00:05:14,310 --> 00:05:16,379
+install fusion will be a component make
+
+131
+00:05:16,379 --> 00:05:18,659
+sure you install using same user both
+
+132
+00:05:18,659 --> 00:05:21,659
+these components now the logic when you
+
+133
+00:05:21,659 --> 00:05:23,699
+install it expect jdk to be already
+
+134
+00:05:23,699 --> 00:05:26,039
+installed and make sure the JDK version
+
+135
+00:05:26,039 --> 00:05:28,770
+you are using or planning to use is
+
+136
+00:05:28,770 --> 00:05:31,339
+certified with the WebLogic server and
+
+137
+00:05:31,339 --> 00:05:33,539
+there's a certification metric that
+
+138
+00:05:33,539 --> 00:05:35,819
+comes if you can't find it reach of the
+
+139
+00:05:35,819 --> 00:05:37,620
+support drop an email to supported key
+
+140
+00:05:37,620 --> 00:05:39,569
+Tony Academy comm team will help you
+
+141
+00:05:39,569 --> 00:05:41,189
+depending on which version of the logic
+
+142
+00:05:41,189 --> 00:05:43,469
+you want or you can google it and you
+
+143
+00:05:43,469 --> 00:05:46,259
+will see that and such for Oracle
+
+144
+00:05:46,259 --> 00:05:48,149
+WebLogic server tells your 11g or
+
+145
+00:05:48,149 --> 00:05:49,409
+whatever words in you're looking for
+
+146
+00:05:49,409 --> 00:05:53,060
+certification metrics then by default
+
+147
+00:05:53,060 --> 00:05:56,159
+when WebLogic server installs it unzips
+
+148
+00:05:56,159 --> 00:05:58,139
+the entire SAR file into a temporary
+
+149
+00:05:58,139 --> 00:06:00,060
+area and then install from there and
+
+150
+00:06:00,060 --> 00:06:03,270
+create a staging area in under tamp now
+
+151
+00:06:03,270 --> 00:06:04,860
+sometimes you may not have enough temp
+
+152
+00:06:04,860 --> 00:06:08,039
+or the temp might be used by a
+
+153
+00:06:08,039 --> 00:06:10,439
+permission might not be usually you
+
+154
+00:06:10,439 --> 00:06:11,939
+should have all the right permission but
+
+155
+00:06:11,939 --> 00:06:13,560
+sometimes that same file might be
+
+156
+00:06:13,560 --> 00:06:16,529
+written by or not enough space so during
+
+157
+00:06:16,529 --> 00:06:17,729
+the station you can provide an option
+
+158
+00:06:17,729 --> 00:06:21,960
+like - D Java dot IO dot TMP di a-- and
+
+159
+00:06:21,960 --> 00:06:23,789
+you can specify any other temporary file
+
+160
+00:06:23,789 --> 00:06:26,310
+so that it's rather than using forward
+
+161
+00:06:26,310 --> 00:06:28,979
+slash then it's good to use some other
+
+162
+00:06:28,979 --> 00:06:32,639
+location so that's all about WebLogic
+
+163
+00:06:32,639 --> 00:06:34,529
+overview now in the next lesson be able
+
+164
+00:06:34,529 --> 00:06:36,209
+to look at how to install and configure
+
+165
+00:06:36,209 --> 00:06:38,940
+WebLogic server 12c let's look go and
+
+166
+00:06:38,940 --> 00:06:41,220
+quickly wrap up this lesson would be
+
+167
+00:06:41,220 --> 00:06:44,100
+so we looked at installation types we
+
+168
+00:06:44,100 --> 00:06:46,230
+looked at typical and custom then we
+
+169
+00:06:46,230 --> 00:06:48,360
+looked at custom installation in that
+
+170
+00:06:48,360 --> 00:06:49,980
+installation mode which is graphical
+
+171
+00:06:49,980 --> 00:06:53,370
+console and silent and in silent used to
+
+172
+00:06:53,370 --> 00:06:55,920
+create XML file and pass on this file we
+
+173
+00:06:55,920 --> 00:06:58,110
+also looked at good things to know now I
+
+174
+00:06:58,110 --> 00:06:59,880
+will see you next lesson will be look at
+
+175
+00:06:59,880 --> 00:07:02,370
+how to install and configure WebLogic
+
+176
+00:07:02,370 --> 00:07:06,860
+server 12c i'll see you in next lesson
+

@@ -1,0 +1,680 @@
+﻿1
+00:00:00,060 --> 00:00:02,399
+so welcome back to this another lesson
+
+2
+00:00:02,399 --> 00:00:03,899
+and in this lesson we are going a little
+
+3
+00:00:03,899 --> 00:00:05,850
+bit deep into admin and manage servers
+
+4
+00:00:05,850 --> 00:00:08,099
+earlier we looked at obvious I said
+
+5
+00:00:08,099 --> 00:00:10,080
+there is a server of to type admin and
+
+6
+00:00:10,080 --> 00:00:12,090
+manage servers we took we have it
+
+7
+00:00:12,090 --> 00:00:14,580
+briefly touched on Java Virtual Machine
+
+8
+00:00:14,580 --> 00:00:16,859
+or JVM and now let's look at what is
+
+9
+00:00:16,859 --> 00:00:19,410
+admin server so admin server in a domain
+
+10
+00:00:19,410 --> 00:00:21,930
+there can be only one and always one
+
+11
+00:00:21,930 --> 00:00:24,119
+admin server and there is a one-to-one
+
+12
+00:00:24,119 --> 00:00:26,340
+relationship between domain and admin
+
+13
+00:00:26,340 --> 00:00:28,590
+server the admin server will always be
+
+14
+00:00:28,590 --> 00:00:31,199
+tied to that domain so admin server is a
+
+15
+00:00:31,199 --> 00:00:33,480
+server that is used to manage a domain
+
+16
+00:00:33,480 --> 00:00:35,910
+if you need to make any modifications it
+
+17
+00:00:35,910 --> 00:00:39,989
+is done through admin server so if you
+
+18
+00:00:39,989 --> 00:00:42,030
+need to manage any resources or other
+
+19
+00:00:42,030 --> 00:00:44,070
+servers like manage servers that all
+
+20
+00:00:44,070 --> 00:00:46,200
+done through admin server and if
+
+21
+00:00:46,200 --> 00:00:47,730
+configuration changes will done through
+
+22
+00:00:47,730 --> 00:00:49,649
+admin server so admin server is always
+
+23
+00:00:49,649 --> 00:00:51,989
+tied to the same many servers admin
+
+24
+00:00:51,989 --> 00:00:54,739
+server can across domains
+
+25
+00:00:54,739 --> 00:00:59,399
+similarly each domain can only have one
+
+26
+00:00:59,399 --> 00:01:01,230
+admin server and it can't connect to any
+
+27
+00:01:01,230 --> 00:01:04,379
+other admin server it can only connect
+
+28
+00:01:04,379 --> 00:01:06,570
+to its own admin server a domain can
+
+29
+00:01:06,570 --> 00:01:08,820
+only connect to its own admin server so
+
+30
+00:01:08,820 --> 00:01:11,970
+it's used to manage a domain it there
+
+31
+00:01:11,970 --> 00:01:14,909
+will be only one and only one admin
+
+32
+00:01:14,909 --> 00:01:15,360
+server
+
+33
+00:01:15,360 --> 00:01:17,520
+it's a singleton service which means you
+
+34
+00:01:17,520 --> 00:01:19,590
+can't run it in active active cluster
+
+35
+00:01:19,590 --> 00:01:21,360
+like we do in manage server will go deep
+
+36
+00:01:21,360 --> 00:01:23,340
+into this clustering and single done
+
+37
+00:01:23,340 --> 00:01:24,840
+service when we look at high
+
+38
+00:01:24,840 --> 00:01:26,790
+availability for now as if it's a single
+
+39
+00:01:26,790 --> 00:01:28,860
+internal service which means it can run
+
+40
+00:01:28,860 --> 00:01:33,420
+on at any given point in time on only on
+
+41
+00:01:33,420 --> 00:01:35,189
+one server you can migrate from one
+
+42
+00:01:35,189 --> 00:01:37,939
+server to another server however only
+
+43
+00:01:37,939 --> 00:01:40,500
+active at any one point in one server
+
+44
+00:01:40,500 --> 00:01:44,250
+other might be down out passive it can
+
+45
+00:01:44,250 --> 00:01:47,479
+only spend or manage one domain and
+
+46
+00:01:47,479 --> 00:01:50,250
+technically you can deploy a service on
+
+47
+00:01:50,250 --> 00:01:52,950
+top of our application on top of it
+
+48
+00:01:52,950 --> 00:01:55,560
+admin server but it's highly recommended
+
+49
+00:01:55,560 --> 00:01:57,960
+not to deploy in product production or
+
+50
+00:01:57,960 --> 00:02:01,380
+in normal deployment of void deploying
+
+51
+00:02:01,380 --> 00:02:04,020
+application on top of admin server
+
+52
+00:02:04,020 --> 00:02:05,759
+because it's a singleton service also
+
+53
+00:02:05,759 --> 00:02:07,979
+the primary purpose of this admin server
+
+54
+00:02:07,979 --> 00:02:13,200
+is to start or host the management part
+
+55
+00:02:13,200 --> 00:02:15,330
+then you have a managed server it's
+
+56
+00:02:15,330 --> 00:02:17,280
+similar to admin server but the role of
+
+57
+00:02:17,280 --> 00:02:19,410
+managed server is to run the
+
+58
+00:02:19,410 --> 00:02:21,599
+applications or host applications you
+
+59
+00:02:21,599 --> 00:02:24,480
+can have 0 to n minus servers then it's
+
+60
+00:02:24,480 --> 00:02:26,879
+independent to other servers other
+
+61
+00:02:26,879 --> 00:02:29,069
+servers or other manage servers unless
+
+62
+00:02:29,069 --> 00:02:30,660
+they are part of cluster which means
+
+63
+00:02:30,660 --> 00:02:32,940
+they can run independent to each other
+
+64
+00:02:32,940 --> 00:02:34,830
+other servers they can talk they can
+
+65
+00:02:34,830 --> 00:02:38,480
+independently run manage servers with
+
+66
+00:02:38,480 --> 00:02:41,209
+independent to other manage servers and
+
+67
+00:02:41,209 --> 00:02:43,860
+applications are deployed so let's
+
+68
+00:02:43,860 --> 00:02:45,420
+suppose you deploying a so application
+
+69
+00:02:45,420 --> 00:02:48,330
+or obiee application or Identity Manager
+
+70
+00:02:48,330 --> 00:02:50,160
+application access manager application
+
+71
+00:02:50,160 --> 00:02:53,040
+or for that reason Oracle management
+
+72
+00:02:53,040 --> 00:02:56,910
+server for DBS or or any fusion
+
+73
+00:02:56,910 --> 00:02:58,980
+applications they will be deployed and
+
+74
+00:02:58,980 --> 00:03:04,920
+running its own manage servers so how
+
+75
+00:03:04,920 --> 00:03:06,630
+admin and manage servers are related to
+
+76
+00:03:06,630 --> 00:03:07,110
+each other
+
+77
+00:03:07,110 --> 00:03:09,120
+so what happens is admin server will
+
+78
+00:03:09,120 --> 00:03:12,090
+have all the configurations however
+
+79
+00:03:12,090 --> 00:03:14,340
+managed server will also maintain a
+
+80
+00:03:14,340 --> 00:03:16,769
+replica of that sub configuration in its
+
+81
+00:03:16,769 --> 00:03:20,130
+own repository so each managed server
+
+82
+00:03:20,130 --> 00:03:22,319
+will have a local copy which it pulls
+
+83
+00:03:22,319 --> 00:03:24,690
+out down from the admin server and every
+
+84
+00:03:24,690 --> 00:03:28,590
+time it starts and for some reason if it
+
+85
+00:03:28,590 --> 00:03:32,730
+can't access the admin server at the
+
+86
+00:03:32,730 --> 00:03:37,380
+start of the managed server it will use
+
+87
+00:03:37,380 --> 00:03:40,530
+its local copy which means only for the
+
+88
+00:03:40,530 --> 00:03:42,600
+first time in the life cycle so when you
+
+89
+00:03:42,600 --> 00:03:44,100
+create a managed server after that when
+
+90
+00:03:44,100 --> 00:03:46,440
+you start only that time first time the
+
+91
+00:03:46,440 --> 00:03:48,030
+admin server should be up and running
+
+92
+00:03:48,030 --> 00:03:50,010
+because it needs to collect or retrieve
+
+93
+00:03:50,010 --> 00:03:51,600
+all the files from the admin server and
+
+94
+00:03:51,600 --> 00:03:55,049
+store it in so own local repository so
+
+95
+00:03:55,049 --> 00:04:00,060
+that's called as first time only for for
+
+96
+00:04:00,060 --> 00:04:02,040
+starting of manage servers the admin
+
+97
+00:04:02,040 --> 00:04:04,319
+server should be up and running after
+
+98
+00:04:04,319 --> 00:04:06,120
+that it will use if admin server is not
+
+99
+00:04:06,120 --> 00:04:08,790
+up and after it start up admin server
+
+100
+00:04:08,790 --> 00:04:10,709
+can go down and manage server will
+
+101
+00:04:10,709 --> 00:04:13,349
+continue to run its own on its own it
+
+102
+00:04:13,349 --> 00:04:15,120
+doesn't need an admin server after the
+
+103
+00:04:15,120 --> 00:04:18,060
+startup and later also if you let's
+
+104
+00:04:18,060 --> 00:04:19,560
+suppose you shut down and in admin
+
+105
+00:04:19,560 --> 00:04:21,659
+server is not available next time you
+
+106
+00:04:21,659 --> 00:04:23,370
+can still next time you can start it
+
+107
+00:04:23,370 --> 00:04:25,650
+means a many server without an admin
+
+108
+00:04:25,650 --> 00:04:26,580
+server
+
+109
+00:04:26,580 --> 00:04:28,379
+and that is called as managed server
+
+110
+00:04:28,379 --> 00:04:31,710
+independence or MSI mode in blahblah
+
+111
+00:04:31,710 --> 00:04:34,669
+jerk MSI where a managed server can be
+
+112
+00:04:34,669 --> 00:04:37,919
+managed or started independent to the
+
+113
+00:04:37,919 --> 00:04:40,830
+admin server so let's suppose you've
+
+114
+00:04:40,830 --> 00:04:42,719
+started the admins a managed server
+
+115
+00:04:42,719 --> 00:04:45,870
+without an admin server and some
+
+116
+00:04:45,870 --> 00:04:47,550
+configurations of chains with the admin
+
+117
+00:04:47,550 --> 00:04:49,530
+server which many server is not yet
+
+118
+00:04:49,530 --> 00:04:52,860
+aware of and then what I will happen the
+
+119
+00:04:52,860 --> 00:04:54,539
+minute you start the admin server admin
+
+120
+00:04:54,539 --> 00:04:56,520
+server will again push those changes
+
+121
+00:04:56,520 --> 00:04:58,800
+onto the managed server if it's related
+
+122
+00:04:58,800 --> 00:05:02,520
+to add manage server or next time cycle
+
+123
+00:05:02,520 --> 00:05:04,560
+of manage server manager will pull these
+
+124
+00:05:04,560 --> 00:05:09,270
+changes from the admin server so this is
+
+125
+00:05:09,270 --> 00:05:12,659
+called as manage server independence so
+
+126
+00:05:12,659 --> 00:05:14,039
+just to do a quick recap you have an
+
+127
+00:05:14,039 --> 00:05:15,780
+admin server you have a managed server
+
+128
+00:05:15,780 --> 00:05:18,060
+and admin server is for administration
+
+129
+00:05:18,060 --> 00:05:19,860
+purpose managed server is where the
+
+130
+00:05:19,860 --> 00:05:21,029
+applications are learned
+
+131
+00:05:21,029 --> 00:05:23,219
+then the managed server and admits of
+
+132
+00:05:23,219 --> 00:05:25,259
+are related to each of them they talk to
+
+133
+00:05:25,259 --> 00:05:27,810
+each other through a concept called or a
+
+134
+00:05:27,810 --> 00:05:31,409
+utility called node manager for starting
+
+135
+00:05:31,409 --> 00:05:33,210
+stopping only guys I repeat I starting
+
+136
+00:05:33,210 --> 00:05:35,340
+stopping that - only from console so
+
+137
+00:05:35,340 --> 00:05:36,960
+I'll pop that while I'll cover those
+
+138
+00:05:36,960 --> 00:05:39,690
+things in little bit later however admin
+
+139
+00:05:39,690 --> 00:05:41,190
+server can talk directly to the managed
+
+140
+00:05:41,190 --> 00:05:45,960
+server and but many server can also
+
+141
+00:05:45,960 --> 00:05:48,360
+manage itself without an admin server
+
+142
+00:05:48,360 --> 00:05:50,930
+after after once first time startup
+
+143
+00:05:50,930 --> 00:05:52,979
+however you wouldn't be able to make any
+
+144
+00:05:52,979 --> 00:05:55,199
+changes you can start stop and run the
+
+145
+00:05:55,199 --> 00:05:58,069
+application on top of a managed server
+
+146
+00:05:58,069 --> 00:06:00,870
+independent to the admin server it even
+
+147
+00:06:00,870 --> 00:06:02,879
+if while running let's suppose if you
+
+148
+00:06:02,879 --> 00:06:04,500
+have so application which is deployed in
+
+149
+00:06:04,500 --> 00:06:07,050
+many server admin server goes down only
+
+150
+00:06:07,050 --> 00:06:09,029
+you won't be able to change the
+
+151
+00:06:09,029 --> 00:06:10,500
+configuration you won't be able to come
+
+152
+00:06:10,500 --> 00:06:12,659
+change any configuration however your
+
+153
+00:06:12,659 --> 00:06:14,339
+users will continue to run your their
+
+154
+00:06:14,339 --> 00:06:16,379
+applications there will be no impact on
+
+155
+00:06:16,379 --> 00:06:19,020
+the end users because managed server is
+
+156
+00:06:19,020 --> 00:06:20,339
+still enough up and running
+
+157
+00:06:20,339 --> 00:06:22,580
+that's called as - our independence mode
+
+158
+00:06:22,580 --> 00:06:24,960
+so headed to the next lesson we will
+
+159
+00:06:24,960 --> 00:06:28,469
+look at clusters in 11g and new feature
+
+160
+00:06:28,469 --> 00:06:30,719
+or infancy which is called as dynamic
+
+161
+00:06:30,719 --> 00:06:33,449
+clusters which is used for elasticity or
+
+162
+00:06:33,449 --> 00:06:37,770
+automatic upscaling of servers will also
+
+163
+00:06:37,770 --> 00:06:39,599
+look at dynamic clusters server
+
+164
+00:06:39,599 --> 00:06:40,420
+templates
+
+165
+00:06:40,420 --> 00:06:42,610
+and data sources in the next lessons
+
+166
+00:06:42,610 --> 00:06:46,020
+hydral to the next lesson way we cover
+
+167
+00:06:46,020 --> 00:06:48,250
+clusters and dynamic clusters and
+
+168
+00:06:48,250 --> 00:06:51,400
+dynamic servers in WebLogic 12c as well
+
+169
+00:06:51,400 --> 00:06:54,820
+as some component in 11g so i'll see you
+
+170
+00:06:54,820 --> 00:06:58,409
+in next lesson
+

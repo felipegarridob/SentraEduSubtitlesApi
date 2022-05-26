@@ -1,0 +1,544 @@
+﻿1
+00:00:00,030 --> 00:00:03,090
+welcome back to this lesson on WebLogic
+
+2
+00:00:03,090 --> 00:00:05,009
+domain in the previous lesson we looked
+
+3
+00:00:05,009 --> 00:00:06,600
+at the rules and responsibilities but
+
+4
+00:00:06,600 --> 00:00:08,340
+let's focus on now this is one of the
+
+5
+00:00:08,340 --> 00:00:10,080
+most important topic which is about
+
+6
+00:00:10,080 --> 00:00:13,410
+WebLogic domain and so domain is nothing
+
+7
+00:00:13,410 --> 00:00:17,539
+but a logical collection of resources or
+
+8
+00:00:17,539 --> 00:00:20,460
+servers and what are the resources what
+
+9
+00:00:20,460 --> 00:00:22,080
+are the servers be able to cover that in
+
+10
+00:00:22,080 --> 00:00:23,760
+a minute but what you see on the right
+
+11
+00:00:23,760 --> 00:00:25,920
+hand side image is nothing but a an
+
+12
+00:00:25,920 --> 00:00:28,050
+initiation server call a couple of
+
+13
+00:00:28,050 --> 00:00:31,619
+manage servers and resources or services
+
+14
+00:00:31,619 --> 00:00:34,440
+and then clusters all combined together
+
+15
+00:00:34,440 --> 00:00:36,630
+in a logical container is called as a
+
+16
+00:00:36,630 --> 00:00:39,840
+WebLogic domain or a domain so a domain
+
+17
+00:00:39,840 --> 00:00:42,480
+will always have one and mandatory one
+
+18
+00:00:42,480 --> 00:00:45,719
+admin server it can have 0 to n minus
+
+19
+00:00:45,719 --> 00:00:48,600
+servers so it can have you can create as
+
+20
+00:00:48,600 --> 00:00:50,370
+many many servers as you want
+
+21
+00:00:50,370 --> 00:00:52,440
+I think biggest I have seen is 246 or 2
+
+22
+00:00:52,440 --> 00:00:56,850
+to 250 roughly on to 264 I think it
+
+23
+00:00:56,850 --> 00:00:59,489
+could be more I worked on maximum on
+
+24
+00:00:59,489 --> 00:01:02,399
+that amount so you can have 0 to n minus
+
+25
+00:01:02,399 --> 00:01:04,860
+servers you can have 0 to n clusters
+
+26
+00:01:04,860 --> 00:01:06,990
+what is admin server what is managed
+
+27
+00:01:06,990 --> 00:01:07,320
+server
+
+28
+00:01:07,320 --> 00:01:09,030
+what is cluster you are going to look
+
+29
+00:01:09,030 --> 00:01:11,010
+that in a minute on that particular
+
+30
+00:01:11,010 --> 00:01:14,070
+topic then there are resources and
+
+31
+00:01:14,070 --> 00:01:17,369
+services so things like machine will see
+
+32
+00:01:17,369 --> 00:01:18,750
+what exactly is machine in coming
+
+33
+00:01:18,750 --> 00:01:21,240
+lessons it can have a network channel
+
+34
+00:01:21,240 --> 00:01:24,090
+through which data moves it could be
+
+35
+00:01:24,090 --> 00:01:26,040
+potent combination of port and protocol
+
+36
+00:01:26,040 --> 00:01:28,380
+you can have virtual hosts will see what
+
+37
+00:01:28,380 --> 00:01:31,049
+exactly is virtual host it can have G DB
+
+38
+00:01:31,049 --> 00:01:34,170
+C Java database connectivity or JMS Java
+
+39
+00:01:34,170 --> 00:01:36,060
+messaging server and so on so these are
+
+40
+00:01:36,060 --> 00:01:39,000
+resources and services then in tab
+
+41
+00:01:39,000 --> 00:01:41,939
+domain configuration is stored in a file
+
+42
+00:01:41,939 --> 00:01:44,399
+base repository and that file based
+
+43
+00:01:44,399 --> 00:01:46,140
+repository is called as or the location
+
+44
+00:01:46,140 --> 00:01:48,149
+is under domain who config configure and
+
+45
+00:01:48,149 --> 00:01:50,490
+examine what is domain whom we covered
+
+46
+00:01:50,490 --> 00:01:52,110
+it in module 1 or previous module we
+
+47
+00:01:52,110 --> 00:01:54,930
+looked at what exactly is to mean so
+
+48
+00:01:54,930 --> 00:01:56,579
+within the domain whom there is a full
+
+49
+00:01:56,579 --> 00:01:58,439
+to code country and within that config
+
+50
+00:01:58,439 --> 00:02:00,270
+folder you have a file called config dot
+
+51
+00:02:00,270 --> 00:02:03,119
+XML the entire configuration of that
+
+52
+00:02:03,119 --> 00:02:04,770
+entire domain is stored in this file
+
+53
+00:02:04,770 --> 00:02:06,530
+configuration file so that's about
+
+54
+00:02:06,530 --> 00:02:09,209
+WebLogic domain in high level will go
+
+55
+00:02:09,209 --> 00:02:12,030
+deep dive into these building blocks so
+
+56
+00:02:12,030 --> 00:02:13,860
+what I mean by build
+
+57
+00:02:13,860 --> 00:02:16,500
+block or deployment or topologies what
+
+58
+00:02:16,500 --> 00:02:19,590
+you have is these domains can be
+
+59
+00:02:19,590 --> 00:02:22,530
+organized in a particular format and we
+
+60
+00:02:22,530 --> 00:02:24,350
+will see that what the format is and
+
+61
+00:02:24,350 --> 00:02:27,900
+domain will have a domain home domain
+
+62
+00:02:27,900 --> 00:02:29,970
+will have a servers and within servers
+
+63
+00:02:29,970 --> 00:02:31,950
+you will have admin and manage servers
+
+64
+00:02:31,950 --> 00:02:34,710
+you will have clusters you will have
+
+65
+00:02:34,710 --> 00:02:36,870
+machines you will have doing directory
+
+66
+00:02:36,870 --> 00:02:38,940
+you will have the admin console so each
+
+67
+00:02:38,940 --> 00:02:41,610
+domain will have its own admin console
+
+68
+00:02:41,610 --> 00:02:43,890
+on the project console so this is all
+
+69
+00:02:43,890 --> 00:02:47,459
+about a domain let's quickly cover that
+
+70
+00:02:47,459 --> 00:02:50,910
+in for how domain topology or how domain
+
+71
+00:02:50,910 --> 00:02:53,610
+can be organized so you have left hand
+
+72
+00:02:53,610 --> 00:02:55,739
+side you see image which you have a web
+
+73
+00:02:55,739 --> 00:02:58,380
+logic server software installed and then
+
+74
+00:02:58,380 --> 00:03:01,080
+you run a utility called config dot SH
+
+75
+00:03:01,080 --> 00:03:03,840
+and from that utility you created domain
+
+76
+00:03:03,840 --> 00:03:07,860
+which is represented by domain 1 then
+
+77
+00:03:07,860 --> 00:03:10,980
+you rerun that domain configured SH one
+
+78
+00:03:10,980 --> 00:03:12,420
+more time and say I'm creating another
+
+79
+00:03:12,420 --> 00:03:14,580
+domain so you might have one domain for
+
+80
+00:03:14,580 --> 00:03:16,620
+a development environment another domain
+
+81
+00:03:16,620 --> 00:03:19,230
+for a test environment third domain for
+
+82
+00:03:19,230 --> 00:03:22,709
+Quality Assurance or QA moment so one
+
+83
+00:03:22,709 --> 00:03:24,630
+single WebLogic installation but
+
+84
+00:03:24,630 --> 00:03:25,890
+multiple domains
+
+85
+00:03:25,890 --> 00:03:28,440
+that's one topology or you can have
+
+86
+00:03:28,440 --> 00:03:34,769
+multiple each multiple installation so
+
+87
+00:03:34,769 --> 00:03:36,959
+you have machine one machine to machine
+
+88
+00:03:36,959 --> 00:03:38,640
+three or different am talking about
+
+89
+00:03:38,640 --> 00:03:40,620
+machine is um a word operating system or
+
+90
+00:03:40,620 --> 00:03:42,150
+virtual machine or virtual machines
+
+91
+00:03:42,150 --> 00:03:46,290
+which are a actual servers and on these
+
+92
+00:03:46,290 --> 00:03:49,410
+servers you have multiple web logic
+
+93
+00:03:49,410 --> 00:03:52,500
+installed and each you have single
+
+94
+00:03:52,500 --> 00:03:55,130
+domain covering multiple machines I
+
+95
+00:03:55,130 --> 00:03:57,720
+repeat one more time there are multiple
+
+96
+00:03:57,720 --> 00:04:00,440
+web logic servers and this is called as
+
+97
+00:04:00,440 --> 00:04:02,820
+horizontal clustering or high
+
+98
+00:04:02,820 --> 00:04:04,530
+availability we'll cover that in when we
+
+99
+00:04:04,530 --> 00:04:06,239
+look at the high will between disaster
+
+100
+00:04:06,239 --> 00:04:09,150
+covey we discuss about vertical and
+
+101
+00:04:09,150 --> 00:04:11,010
+horizontal clustering so this is
+
+102
+00:04:11,010 --> 00:04:13,140
+horizontal clustering in that year of a
+
+103
+00:04:13,140 --> 00:04:14,730
+logic server one WebLogic server two of
+
+104
+00:04:14,730 --> 00:04:16,350
+logics over three on three different
+
+105
+00:04:16,350 --> 00:04:19,680
+machines and my domain is being used of
+
+106
+00:04:19,680 --> 00:04:21,750
+single domain covering three of logic
+
+107
+00:04:21,750 --> 00:04:24,090
+servers will see that as well when we
+
+108
+00:04:24,090 --> 00:04:26,220
+cover in high so these are multiple ways
+
+109
+00:04:26,220 --> 00:04:27,720
+in which domain can be deployed
+
+110
+00:04:27,720 --> 00:04:32,040
+so so this is in all about topology on
+
+111
+00:04:32,040 --> 00:04:34,860
+domain we look at about domain home and
+
+112
+00:04:34,860 --> 00:04:36,300
+lot of other things like servers and
+
+113
+00:04:36,300 --> 00:04:38,520
+enemy server incoming less than or the
+
+114
+00:04:38,520 --> 00:04:40,650
+next lesson but for now let me do a
+
+115
+00:04:40,650 --> 00:04:41,970
+quick recap for this lesson
+
+116
+00:04:41,970 --> 00:04:44,040
+would we have you have a WebLogic domain
+
+117
+00:04:44,040 --> 00:04:45,600
+which is nothing but a logical
+
+118
+00:04:45,600 --> 00:04:48,780
+collection it has one admin server
+
+119
+00:04:48,780 --> 00:04:51,000
+mandate Creon always only one it can
+
+120
+00:04:51,000 --> 00:04:53,730
+have 0 2 and manage servers it can have
+
+121
+00:04:53,730 --> 00:04:56,430
+0 to n clusters it have other services
+
+122
+00:04:56,430 --> 00:04:58,620
+or resources like Machine Network
+
+123
+00:04:58,620 --> 00:05:00,810
+channel virtual host Java data is
+
+124
+00:05:00,810 --> 00:05:03,630
+connected JMS and so on the thumb free
+
+125
+00:05:03,630 --> 00:05:05,100
+edition is stored in a config dot XML
+
+126
+00:05:05,100 --> 00:05:07,860
+file it has these components as I said
+
+127
+00:05:07,860 --> 00:05:10,680
+just now and you can deploy or have one
+
+128
+00:05:10,680 --> 00:05:12,150
+verb logic software installation and
+
+129
+00:05:12,150 --> 00:05:14,220
+multiple domains or multiple member
+
+130
+00:05:14,220 --> 00:05:15,750
+logic software installations on multiple
+
+131
+00:05:15,750 --> 00:05:19,380
+machines but all using with having one
+
+132
+00:05:19,380 --> 00:05:21,210
+WebLogic domain so these are this is a
+
+133
+00:05:21,210 --> 00:05:23,340
+topology you can do now and on to the
+
+134
+00:05:23,340 --> 00:05:25,050
+next lesson we will look at the Blodgett
+
+135
+00:05:25,050 --> 00:05:27,030
+domain we go a little bit deep into the
+
+136
+00:05:27,030 --> 00:05:31,729
+domain so I will see you in next lesson
+

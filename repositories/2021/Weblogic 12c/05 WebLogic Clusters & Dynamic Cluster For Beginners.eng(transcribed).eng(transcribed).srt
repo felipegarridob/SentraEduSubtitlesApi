@@ -1,0 +1,908 @@
+﻿1
+00:00:00,060 --> 00:00:01,829
+so welcome back to this another lesson
+
+2
+00:00:01,829 --> 00:00:03,210
+and in this lesson we are going to look
+
+3
+00:00:03,210 --> 00:00:05,700
+at clusters and dynamic cluster briefly
+
+4
+00:00:05,700 --> 00:00:07,290
+in the previous lesson we looked at
+
+5
+00:00:07,290 --> 00:00:09,389
+servers will be looked at admin server
+
+6
+00:00:09,389 --> 00:00:12,269
+and managed server so let's look at what
+
+7
+00:00:12,269 --> 00:00:16,890
+does cluster represents so cluster is
+
+8
+00:00:16,890 --> 00:00:19,490
+nothing but a logical collection of or
+
+9
+00:00:19,490 --> 00:00:23,070
+collection or group of servers running
+
+10
+00:00:23,070 --> 00:00:26,090
+simultaneously and working together and
+
+11
+00:00:26,090 --> 00:00:31,859
+acting as a single or or acting as a one
+
+12
+00:00:31,859 --> 00:00:34,440
+server from a clients point of view I
+
+13
+00:00:34,440 --> 00:00:37,290
+repeat one more time cluster is nothing
+
+14
+00:00:37,290 --> 00:00:40,620
+but a collection of servers running as a
+
+15
+00:00:40,620 --> 00:00:42,780
+single unit from a client point of view
+
+16
+00:00:42,780 --> 00:00:46,140
+and which has more or less similar
+
+17
+00:00:46,140 --> 00:00:48,450
+configuration and similar applications
+
+18
+00:00:48,450 --> 00:00:50,969
+deployed so that if one much managed
+
+19
+00:00:50,969 --> 00:00:53,160
+server goes down another managed server
+
+20
+00:00:53,160 --> 00:00:55,489
+in the cluster can transparently
+
+21
+00:00:55,489 --> 00:00:58,620
+failover or sessions data from one
+
+22
+00:00:58,620 --> 00:01:00,750
+server to another and and for client a
+
+23
+00:01:00,750 --> 00:01:02,969
+they will never notice what happened or
+
+24
+00:01:02,969 --> 00:01:06,060
+if anything failed so cluster will help
+
+25
+00:01:06,060 --> 00:01:08,880
+in high availability or also in
+
+26
+00:01:08,880 --> 00:01:11,040
+scalability so let's suppose you have a
+
+27
+00:01:11,040 --> 00:01:13,320
+lot of load on a one application you can
+
+28
+00:01:13,320 --> 00:01:15,540
+put that application into cluster with
+
+29
+00:01:15,540 --> 00:01:17,880
+multiple servers all acting as one
+
+30
+00:01:17,880 --> 00:01:20,119
+single unit from a client point of view
+
+31
+00:01:20,119 --> 00:01:24,420
+for scalability or high availability so
+
+32
+00:01:24,420 --> 00:01:27,960
+so so server is nothing but a collection
+
+33
+00:01:27,960 --> 00:01:30,930
+of servers or cluster is nothing but
+
+34
+00:01:30,930 --> 00:01:32,729
+collection of servers running
+
+35
+00:01:32,729 --> 00:01:36,479
+simultaneously and acting as a single
+
+36
+00:01:36,479 --> 00:01:42,210
+unit from client point of view so you
+
+37
+00:01:42,210 --> 00:01:46,320
+can make changes to a cluster or a
+
+38
+00:01:46,320 --> 00:01:48,990
+member of a cluster by saying change
+
+39
+00:01:48,990 --> 00:01:51,960
+this configuration and say update this
+
+40
+00:01:51,960 --> 00:01:54,450
+configuration on all the cluster member
+
+41
+00:01:54,450 --> 00:01:55,829
+so either let's suppose you want to
+
+42
+00:01:55,829 --> 00:01:58,710
+deploy an application on a managed
+
+43
+00:01:58,710 --> 00:02:00,689
+server so rather than deploying on a
+
+44
+00:02:00,689 --> 00:02:02,700
+individual many servers you say deploy
+
+45
+00:02:02,700 --> 00:02:04,979
+on the cluster and all the members that
+
+46
+00:02:04,979 --> 00:02:07,020
+are part of that cluster will have that
+
+47
+00:02:07,020 --> 00:02:09,209
+application deployed so that's another
+
+48
+00:02:09,209 --> 00:02:12,569
+property of cluster so cluster is
+
+49
+00:02:12,569 --> 00:02:13,680
+nothing but collection of
+
+50
+00:02:13,680 --> 00:02:16,019
+- or more - servers technically you can
+
+51
+00:02:16,019 --> 00:02:17,819
+have a cluster with one - server only
+
+52
+00:02:17,819 --> 00:02:20,879
+but you might have more many servers but
+
+53
+00:02:20,879 --> 00:02:22,860
+having one cluster with one - server
+
+54
+00:02:22,860 --> 00:02:25,590
+doesn't give you benefit of high
+
+55
+00:02:25,590 --> 00:02:28,739
+availability or scalability but
+
+56
+00:02:28,739 --> 00:02:30,329
+technically even clerkly the cluster
+
+57
+00:02:30,329 --> 00:02:34,980
+with one managed service only so the
+
+58
+00:02:34,980 --> 00:02:36,989
+cluster members which are nothing but a
+
+59
+00:02:36,989 --> 00:02:38,489
+manage servers they can be on the same
+
+60
+00:02:38,489 --> 00:02:40,019
+machine or different machines and
+
+61
+00:02:40,019 --> 00:02:42,000
+there's a cluster communication which
+
+62
+00:02:42,000 --> 00:02:44,189
+could be unicast and multicast we'll see
+
+63
+00:02:44,189 --> 00:02:46,139
+that what is unicast and multicast when
+
+64
+00:02:46,139 --> 00:02:48,329
+we look at a high availability in its
+
+65
+00:02:48,329 --> 00:02:50,159
+dedicated module we'll see this cluster
+
+66
+00:02:50,159 --> 00:02:51,840
+communication we'll see the differences
+
+67
+00:02:51,840 --> 00:02:55,920
+between these two so that's cluster so
+
+68
+00:02:55,920 --> 00:02:57,269
+what you see in the diagram on the right
+
+69
+00:02:57,269 --> 00:03:01,700
+hand side is nothing but you have a
+
+70
+00:03:01,700 --> 00:03:04,680
+admin server which is on left hand side
+
+71
+00:03:04,680 --> 00:03:08,370
+and you have 4 on top and 4 on bottom
+
+72
+00:03:08,370 --> 00:03:10,290
+you have cluster 1 and cluster shows in
+
+73
+00:03:10,290 --> 00:03:11,700
+this domain you have one admin server
+
+74
+00:03:11,700 --> 00:03:15,359
+you have 8 manage servers for many
+
+75
+00:03:15,359 --> 00:03:17,430
+servers in cluster 1 and 4 - servers in
+
+76
+00:03:17,430 --> 00:03:20,819
+cluster - and the members within cluster
+
+77
+00:03:20,819 --> 00:03:23,940
+can can talk to each other using either
+
+78
+00:03:23,940 --> 00:03:26,299
+something called as unicast or multicast
+
+79
+00:03:26,299 --> 00:03:29,340
+the way the disputes so that's a cluster
+
+80
+00:03:29,340 --> 00:03:32,159
+then in Qin see there's a new concept
+
+81
+00:03:32,159 --> 00:03:35,099
+called dynamic cluster and dynamic
+
+82
+00:03:35,099 --> 00:03:38,099
+cluster is nothing but a cluster that
+
+83
+00:03:38,099 --> 00:03:41,579
+contains one or more dynamic servers I
+
+84
+00:03:41,579 --> 00:03:43,829
+repeat it's only in 12c it's not
+
+85
+00:03:43,829 --> 00:03:46,650
+available in 11g integration 12c dynamic
+
+86
+00:03:46,650 --> 00:03:48,599
+cluster is nothing but a cluster that
+
+87
+00:03:48,599 --> 00:03:51,569
+has one or more dynamic servers that
+
+88
+00:03:51,569 --> 00:03:53,099
+bring to the point what is dynamic
+
+89
+00:03:53,099 --> 00:03:55,280
+server we'll cover that in a minute
+
+90
+00:03:55,280 --> 00:04:00,810
+so in a dynamic cluster the servers are
+
+91
+00:04:00,810 --> 00:04:03,540
+scaled up automatically as the
+
+92
+00:04:03,540 --> 00:04:07,319
+application demands so I repeat the
+
+93
+00:04:07,319 --> 00:04:09,419
+servers in a dynamic cluster will
+
+94
+00:04:09,419 --> 00:04:11,840
+automatically scale up or add themselves
+
+95
+00:04:11,840 --> 00:04:14,250
+so that means when you're defining a
+
+96
+00:04:14,250 --> 00:04:16,380
+dynamic cluster you are saying this is
+
+97
+00:04:16,380 --> 00:04:19,529
+my minimum number of servers and it can
+
+98
+00:04:19,529 --> 00:04:23,279
+grow up to 12 15 18 20 many servers so
+
+99
+00:04:23,279 --> 00:04:25,110
+if your application requires right now -
+
+100
+00:04:25,110 --> 00:04:26,900
+it will be - if
+
+101
+00:04:26,900 --> 00:04:28,610
+your application later has load
+
+102
+00:04:28,610 --> 00:04:31,669
+increases you can those members or their
+
+103
+00:04:31,669 --> 00:04:33,680
+servers in the cluster in a dynamic
+
+104
+00:04:33,680 --> 00:04:35,660
+cluster can automatically increase based
+
+105
+00:04:35,660 --> 00:04:37,699
+on the configuration in the Newton so
+
+106
+00:04:37,699 --> 00:04:39,500
+that means it needs a port number it
+
+107
+00:04:39,500 --> 00:04:42,080
+needs some default mechanism to identify
+
+108
+00:04:42,080 --> 00:04:44,960
+what port number to run what JVM size to
+
+109
+00:04:44,960 --> 00:04:47,630
+run what name we should keep all those
+
+110
+00:04:47,630 --> 00:04:49,789
+things we can do so dynamic clusters
+
+111
+00:04:49,789 --> 00:04:53,210
+that's a property of dynamic cluster it
+
+112
+00:04:53,210 --> 00:04:55,070
+uses something called a server template
+
+113
+00:04:55,070 --> 00:04:59,380
+to create the dynamic servers so
+
+114
+00:04:59,380 --> 00:05:02,330
+template is nothing but a layer or or or
+
+115
+00:05:02,330 --> 00:05:05,449
+or a set of configurations that used to
+
+116
+00:05:05,449 --> 00:05:07,820
+create a dynamic server and dynamic
+
+117
+00:05:07,820 --> 00:05:11,990
+servers come or dynamic couple of
+
+118
+00:05:11,990 --> 00:05:14,840
+dynamic servers will make a cluster or a
+
+119
+00:05:14,840 --> 00:05:19,300
+dynamic cluster so server template uses
+
+120
+00:05:19,300 --> 00:05:21,710
+defines a configuration that will be
+
+121
+00:05:21,710 --> 00:05:25,910
+used when we create a dynamic server so
+
+122
+00:05:25,910 --> 00:05:27,410
+this is one example of that so you
+
+123
+00:05:27,410 --> 00:05:29,570
+that's a dynamic cluster so I didn't say
+
+124
+00:05:29,570 --> 00:05:31,340
+you creating a cluster from a bridging
+
+125
+00:05:31,340 --> 00:05:34,520
+console and you see you with a do and a
+
+126
+00:05:34,520 --> 00:05:36,380
+static cluster which is first and second
+
+127
+00:05:36,380 --> 00:05:39,020
+option right inside on the circle which
+
+128
+00:05:39,020 --> 00:05:41,270
+is dynamic cluster when you create the
+
+129
+00:05:41,270 --> 00:05:42,800
+dynamic cluster you will get a screen
+
+130
+00:05:42,800 --> 00:05:44,389
+like on one on the left hand side that
+
+131
+00:05:44,389 --> 00:05:46,430
+says what is the size of the dynamic
+
+132
+00:05:46,430 --> 00:05:47,990
+cluster size between two servers right
+
+133
+00:05:47,990 --> 00:05:52,880
+now it can grow up to eight service or
+
+134
+00:05:52,880 --> 00:05:55,010
+what is the name of the manager we will
+
+135
+00:05:55,010 --> 00:05:57,320
+say dynamic cluster zero one and then -
+
+136
+00:05:57,320 --> 00:06:00,169
+and it will say one two three four or
+
+137
+00:06:00,169 --> 00:06:01,870
+name
+
+138
+00:06:01,870 --> 00:06:04,789
+so that's name of the manage servers or
+
+139
+00:06:04,789 --> 00:06:08,229
+dynamic servers in the cluster then
+
+140
+00:06:08,229 --> 00:06:10,370
+dynamic servers are nothing but a
+
+141
+00:06:10,370 --> 00:06:13,490
+servers that gets created by using the
+
+142
+00:06:13,490 --> 00:06:17,060
+server template by dynamic cluster so
+
+143
+00:06:17,060 --> 00:06:19,130
+dynamic cluster will tell based on the
+
+144
+00:06:19,130 --> 00:06:21,530
+load will dictate hit create a more -
+
+145
+00:06:21,530 --> 00:06:23,750
+more many servers but out of type
+
+146
+00:06:23,750 --> 00:06:26,240
+dynamic which using a template which
+
+147
+00:06:26,240 --> 00:06:27,979
+will automatically may be created and
+
+148
+00:06:27,979 --> 00:06:30,289
+what do you see you could if the
+
+149
+00:06:30,289 --> 00:06:32,389
+application can create or the domain can
+
+150
+00:06:32,389 --> 00:06:34,250
+create automatically or you as an
+
+151
+00:06:34,250 --> 00:06:35,930
+administrator can go and create these
+
+152
+00:06:35,930 --> 00:06:39,500
+dynamic servers but they'll be using a
+
+153
+00:06:39,500 --> 00:06:40,610
+template or
+
+154
+00:06:40,610 --> 00:06:44,449
+our template so what what do you see in
+
+155
+00:06:44,449 --> 00:06:45,889
+the console have already created a
+
+156
+00:06:45,889 --> 00:06:48,169
+dynamic cluster and that in the dynamic
+
+157
+00:06:48,169 --> 00:06:50,960
+cluster we created a two servers or
+
+158
+00:06:50,960 --> 00:06:52,460
+dynamic servers so cluster when you
+
+159
+00:06:52,460 --> 00:06:54,379
+create a cluster and when you define it
+
+160
+00:06:54,379 --> 00:06:55,610
+at that time it will create these
+
+161
+00:06:55,610 --> 00:06:57,800
+dynamic servers so what you see type
+
+162
+00:06:57,800 --> 00:07:00,680
+dynamic that means there is a these
+
+163
+00:07:00,680 --> 00:07:03,289
+there in this domain there as one admin
+
+164
+00:07:03,289 --> 00:07:05,000
+server in to many servers and these two
+
+165
+00:07:05,000 --> 00:07:08,199
+more many servers are dynamic servers
+
+166
+00:07:08,199 --> 00:07:11,840
+created by a dynamic cluster and then
+
+167
+00:07:11,840 --> 00:07:13,400
+you have a server template I said
+
+168
+00:07:13,400 --> 00:07:15,830
+earlier just now that for this dynamic
+
+169
+00:07:15,830 --> 00:07:17,569
+service to be created it needs a
+
+170
+00:07:17,569 --> 00:07:20,569
+template from using Mita to create this
+
+171
+00:07:20,569 --> 00:07:22,849
+dynamic servers so templates are nothing
+
+172
+00:07:22,849 --> 00:07:25,689
+but it enables to define a common
+
+173
+00:07:25,689 --> 00:07:28,310
+non-default attribute which means oh
+
+174
+00:07:28,310 --> 00:07:30,529
+what should be the name so in this case
+
+175
+00:07:30,529 --> 00:07:32,779
+if the previous example if you take the
+
+176
+00:07:32,779 --> 00:07:35,659
+known the non default attribute in this
+
+177
+00:07:35,659 --> 00:07:38,240
+case is prefix server name prefix which
+
+178
+00:07:38,240 --> 00:07:41,960
+is dynamic cluster 0 1 - it will dictate
+
+179
+00:07:41,960 --> 00:07:45,919
+that this is how so it enables to define
+
+180
+00:07:45,919 --> 00:07:48,349
+a common non-default attribute which
+
+181
+00:07:48,349 --> 00:07:53,050
+could be 0 1 0 2 0 3 0 4 and so on then
+
+182
+00:07:53,050 --> 00:07:55,759
+server templates are used to create the
+
+183
+00:07:55,759 --> 00:07:58,400
+dynamic clusters the members in the
+
+184
+00:07:58,400 --> 00:08:00,979
+dynamic cluster will be using or dynamic
+
+185
+00:08:00,979 --> 00:08:02,659
+cluster will be using a server template
+
+186
+00:08:02,659 --> 00:08:05,839
+to create a dynamic server and you can
+
+187
+00:08:05,839 --> 00:08:08,360
+create your own templates by using going
+
+188
+00:08:08,360 --> 00:08:10,400
+to the WebLogic console and the clusters
+
+189
+00:08:10,400 --> 00:08:11,870
+you can say server template and you can
+
+190
+00:08:11,870 --> 00:08:13,789
+create new template if you don't create
+
+191
+00:08:13,789 --> 00:08:15,800
+any template it will otherwise use the
+
+192
+00:08:15,800 --> 00:08:17,240
+default template in order to create
+
+193
+00:08:17,240 --> 00:08:20,419
+these dynamic servers so that's all
+
+194
+00:08:20,419 --> 00:08:23,629
+about the servers clusters we'll look at
+
+195
+00:08:23,629 --> 00:08:26,629
+the other topics like GD b c and j ms g
+
+196
+00:08:26,629 --> 00:08:28,460
+DB c stands for Java database
+
+197
+00:08:28,460 --> 00:08:30,529
+connectivity if an application needs to
+
+198
+00:08:30,529 --> 00:08:32,510
+talk to the database it will use JDBC
+
+199
+00:08:32,510 --> 00:08:33,669
+and there are three different type of
+
+200
+00:08:33,669 --> 00:08:36,919
+JDBC generate griddling and multi data
+
+201
+00:08:36,919 --> 00:08:39,110
+source we will see that and JMS in the
+
+202
+00:08:39,110 --> 00:08:41,779
+next lesson so let me do it quickly cap
+
+203
+00:08:41,779 --> 00:08:43,429
+in this lesson we looked at the cluster
+
+204
+00:08:43,429 --> 00:08:45,560
+which is nothing but collection of two
+
+205
+00:08:45,560 --> 00:08:48,199
+or more servers on which you have an
+
+206
+00:08:48,199 --> 00:08:50,959
+application deployed on both the servers
+
+207
+00:08:50,959 --> 00:08:53,120
+and from time point of view they are
+
+208
+00:08:53,120 --> 00:08:55,540
+acting as a single unit
+
+209
+00:08:55,540 --> 00:08:57,740
+cluster numbers can be a different host
+
+210
+00:08:57,740 --> 00:09:00,770
+or same host and they communicate of
+
+211
+00:09:00,770 --> 00:09:02,690
+members in the cluster communicate to
+
+212
+00:09:02,690 --> 00:09:04,700
+each other using something called as
+
+213
+00:09:04,700 --> 00:09:07,250
+either a unicast or multicast what are
+
+214
+00:09:07,250 --> 00:09:08,360
+these be able to look at in high
+
+215
+00:09:08,360 --> 00:09:10,160
+availability then there's a dynamic
+
+216
+00:09:10,160 --> 00:09:13,580
+cluster which is nothing but clustered
+
+217
+00:09:13,580 --> 00:09:15,560
+that gets created that have members
+
+218
+00:09:15,560 --> 00:09:17,450
+automatically grow or shrink based on
+
+219
+00:09:17,450 --> 00:09:21,410
+the load and those members are called as
+
+220
+00:09:21,410 --> 00:09:22,820
+dynamic servers because they are
+
+221
+00:09:22,820 --> 00:09:24,560
+dynamically created by the dynamic
+
+222
+00:09:24,560 --> 00:09:28,220
+cluster and they use or being created
+
+223
+00:09:28,220 --> 00:09:30,710
+using a server template and you can
+
+224
+00:09:30,710 --> 00:09:32,540
+define your own server template so
+
+225
+00:09:32,540 --> 00:09:34,970
+that's about clusters in this let's
+
+226
+00:09:34,970 --> 00:09:36,830
+handle to the next way we look at GD BC
+
+227
+00:09:36,830 --> 00:09:41,650
+and Jamie's I'll see you in next lesson
+

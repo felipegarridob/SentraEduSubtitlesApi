@@ -1,0 +1,632 @@
+﻿1
+00:00:07,220 --> 00:00:10,469
+hi everyone again so in the previous
+
+2
+00:00:10,469 --> 00:00:13,679
+video I covered theory part on what is
+
+3
+00:00:13,679 --> 00:00:16,350
+Oracle HTTP server and WebLogic
+
+4
+00:00:16,350 --> 00:00:19,350
+integration look like and we looked at
+
+5
+00:00:19,350 --> 00:00:23,070
+modern score WL underscore OHS in this
+
+6
+00:00:23,070 --> 00:00:25,350
+video I'm going to cover or do a
+
+7
+00:00:25,350 --> 00:00:27,599
+hands-on on witches WebLogic server
+
+8
+00:00:27,599 --> 00:00:30,179
+integration so let's jump on to the
+
+9
+00:00:30,179 --> 00:00:32,640
+server first I'm going to first look at
+
+10
+00:00:32,640 --> 00:00:35,130
+the browser on where I'll be accessing
+
+11
+00:00:35,130 --> 00:00:38,280
+an Oracle HTTP server page and WebLogic
+
+12
+00:00:38,280 --> 00:00:42,390
+server URL and then we'll configure on
+
+13
+00:00:42,390 --> 00:00:45,660
+the server integration between OHS and
+
+14
+00:00:45,660 --> 00:00:47,910
+web logic and then finally access those
+
+15
+00:00:47,910 --> 00:00:51,180
+configuration on the browser so let's
+
+16
+00:00:51,180 --> 00:00:54,180
+jump on to the server now so if you look
+
+17
+00:00:54,180 --> 00:00:56,940
+at the server i'm currently connecting
+
+18
+00:00:56,940 --> 00:00:59,070
+to the browser and i'm trying to access
+
+19
+00:00:59,070 --> 00:01:03,000
+first the oracle HTTP server page which
+
+20
+00:01:03,000 --> 00:01:06,450
+is IM dot k 21 technologies comm forward
+
+21
+00:01:06,450 --> 00:01:09,360
+slash seven seven seven seven this is
+
+22
+00:01:09,360 --> 00:01:11,750
+where my Oracle HTTP server is running
+
+23
+00:01:11,750 --> 00:01:14,640
+so this is showing that this an Oracle
+
+24
+00:01:14,640 --> 00:01:17,310
+HTTP server page and if I type forward
+
+25
+00:01:17,310 --> 00:01:19,590
+slash console since there is nothing
+
+26
+00:01:19,590 --> 00:01:22,110
+configured it's saying or there's no
+
+27
+00:01:22,110 --> 00:01:24,390
+forward slash console configured I'm
+
+28
+00:01:24,390 --> 00:01:27,360
+getting the requested URL not found so
+
+29
+00:01:27,360 --> 00:01:32,360
+if I look at the server right now so
+
+30
+00:01:32,360 --> 00:01:35,310
+because I'm accessing forceless console
+
+31
+00:01:35,310 --> 00:01:37,560
+the entry should come into the access
+
+32
+00:01:37,560 --> 00:01:40,320
+log so let's look at in my server the
+
+33
+00:01:40,320 --> 00:01:43,259
+diagnostic log so if I go to the
+
+34
+00:01:43,259 --> 00:01:48,960
+diagnostics and then logs and then OHS
+
+35
+00:01:48,960 --> 00:01:51,720
+which is one so we covered in one of our
+
+36
+00:01:51,720 --> 00:01:54,450
+previous videos the log file and
+
+37
+00:01:54,450 --> 00:01:58,320
+configuration file so if I'm doing tale
+
+38
+00:01:58,320 --> 00:02:01,829
+minus F on access log so X is log is the
+
+39
+00:02:01,829 --> 00:02:05,430
+file in which any request that goes to
+
+40
+00:02:05,430 --> 00:02:07,860
+the Oracle HTTP server are recorded so
+
+41
+00:02:07,860 --> 00:02:10,889
+the location is this is my Oracle
+
+42
+00:02:10,889 --> 00:02:13,890
+instance then you have Diagnostics
+
+43
+00:02:13,890 --> 00:02:19,230
+logs OHS and OHS one so I'm doing tail -
+
+44
+00:02:19,230 --> 00:02:24,210
+F and access log and where I cried
+
+45
+00:02:24,210 --> 00:02:27,510
+accessing console so let's put few
+
+46
+00:02:27,510 --> 00:02:29,880
+enters here and then forwards less
+
+47
+00:02:29,880 --> 00:02:34,230
+console and I get console so it says
+
+48
+00:02:34,230 --> 00:02:36,720
+it's coming from this IP this is my
+
+49
+00:02:36,720 --> 00:02:39,360
+client IP this is the date on which I
+
+50
+00:02:39,360 --> 00:02:42,300
+have attempted this the method of
+
+51
+00:02:42,300 --> 00:02:44,670
+accessing this page is get so there's a
+
+52
+00:02:44,670 --> 00:02:47,580
+get and post and head so it's a get
+
+53
+00:02:47,580 --> 00:02:51,300
+forward slash console and 404 is the
+
+54
+00:02:51,300 --> 00:02:54,290
+HTTP code which is page not found and
+
+55
+00:02:54,290 --> 00:02:57,830
+190 is the I think it's a byte or size
+
+56
+00:02:57,830 --> 00:03:02,640
+so this page is not found now I start
+
+57
+00:03:02,640 --> 00:03:06,320
+another one and then this time I type
+
+58
+00:03:06,320 --> 00:03:09,120
+but seven thousand one which is my
+
+59
+00:03:09,120 --> 00:03:10,920
+WebLogic console that's where my
+
+60
+00:03:10,920 --> 00:03:13,440
+WebLogic console is running and I can
+
+61
+00:03:13,440 --> 00:03:18,420
+access this console next I'm going to do
+
+62
+00:03:18,420 --> 00:03:20,940
+is I'm going to configure that so that
+
+63
+00:03:20,940 --> 00:03:24,390
+this forms less console from my HTTP
+
+64
+00:03:24,390 --> 00:03:26,850
+server is also accessible so that I
+
+65
+00:03:26,850 --> 00:03:28,709
+don't have to go to seven thousand one
+
+66
+00:03:28,709 --> 00:03:31,200
+port or the WebLogic server so in order
+
+67
+00:03:31,200 --> 00:03:34,940
+to achieve that I'll first go to my
+
+68
+00:03:34,940 --> 00:03:36,980
+configuration folder where my
+
+69
+00:03:36,980 --> 00:03:41,549
+configurations are for mod WL OHS that's
+
+70
+00:03:41,549 --> 00:03:45,180
+under Oracle instance which is this
+
+71
+00:03:45,180 --> 00:03:48,390
+folder and then config and then OHS
+
+72
+00:03:48,390 --> 00:03:52,620
+which is one and this is the file which
+
+73
+00:03:52,620 --> 00:03:54,120
+I'm going to modify so I'll take a
+
+74
+00:03:54,120 --> 00:03:56,670
+backup of this file mod WL underscore
+
+75
+00:03:56,670 --> 00:04:01,709
+witch's sorry this mod underscore WL OHS
+
+76
+00:04:01,709 --> 00:04:06,360
+underscore conf underscore re and I'll
+
+77
+00:04:06,360 --> 00:04:11,970
+do open up more WL which is conf and I
+
+78
+00:04:11,970 --> 00:04:15,269
+will say uncomment this and uncomment
+
+79
+00:04:15,269 --> 00:04:18,000
+this and here I am going to change the
+
+80
+00:04:18,000 --> 00:04:23,130
+host team my host name where WebLogic is
+
+81
+00:04:23,130 --> 00:04:27,110
+running is I am dot k21
+
+82
+00:04:27,110 --> 00:04:30,420
+technologies dot-com and the port number
+
+83
+00:04:30,420 --> 00:04:34,710
+is 7,001 I'll come in from here this
+
+84
+00:04:34,710 --> 00:04:37,980
+forward slash remove this and I'll leave
+
+85
+00:04:37,980 --> 00:04:45,480
+path cream or so I'll say opium in CTL
+
+86
+00:04:45,480 --> 00:04:48,090
+stop all to stop my Oracle HTTP server
+
+87
+00:04:48,090 --> 00:04:52,470
+and I'll do then do Oracle opium in CTL
+
+88
+00:04:52,470 --> 00:04:54,660
+start all so in order for this
+
+89
+00:04:54,660 --> 00:04:57,720
+configuration to take into effect I need
+
+90
+00:04:57,720 --> 00:05:01,169
+to restart my Oracle HTTP server so that
+
+91
+00:05:01,169 --> 00:05:04,080
+the updated mod WOL OHS comes into
+
+92
+00:05:04,080 --> 00:05:06,960
+effect ok so that didn't work and I
+
+93
+00:05:06,960 --> 00:05:08,970
+think I know the reason I should have
+
+94
+00:05:08,970 --> 00:05:11,010
+changed here instead of WebLogic should
+
+95
+00:05:11,010 --> 00:05:13,919
+have been console so the reason is I did
+
+96
+00:05:13,919 --> 00:05:20,160
+a typo here so to be console let's stop
+
+97
+00:05:20,160 --> 00:05:23,360
+or restart the Oracle HTTP server again
+
+98
+00:05:23,360 --> 00:05:26,520
+so I'm starting the server again so now
+
+99
+00:05:26,520 --> 00:05:28,650
+restarted the Oracle HTTP server with
+
+100
+00:05:28,650 --> 00:05:31,590
+the correct entry and now let's look at
+
+101
+00:05:31,590 --> 00:05:34,919
+the Oracle so now if you see it's seven
+
+102
+00:05:34,919 --> 00:05:37,590
+seven seven seven forward slash console
+
+103
+00:05:37,590 --> 00:05:39,960
+and I'm still able to access the same
+
+104
+00:05:39,960 --> 00:05:43,050
+console for WebLogic through Oracle HTTP
+
+105
+00:05:43,050 --> 00:05:45,510
+server so I'll enter now username
+
+106
+00:05:45,510 --> 00:05:48,860
+WebLogic and password as welcome one or
+
+107
+00:05:48,860 --> 00:05:51,390
+the password that is for the blodge ik
+
+108
+00:05:51,390 --> 00:05:54,930
+and I can access this I am dot K 21
+
+109
+00:05:54,930 --> 00:05:57,990
+technologies comm four slash console now
+
+110
+00:05:57,990 --> 00:06:00,390
+this is seven seven seven seven which is
+
+111
+00:06:00,390 --> 00:06:03,150
+the Oracle HTTP listener port and this
+
+112
+00:06:03,150 --> 00:06:05,430
+is what it's configured now now some
+
+113
+00:06:05,430 --> 00:06:08,010
+applications expect you to have the
+
+114
+00:06:08,010 --> 00:06:10,470
+plug-in enabled and this is that
+
+115
+00:06:10,470 --> 00:06:12,360
+configuration which I earlier showed
+
+116
+00:06:12,360 --> 00:06:18,650
+into the video so you go to the advanced
+
+117
+00:06:18,650 --> 00:06:24,180
+and you say WebLogic plug-in enabled so
+
+118
+00:06:24,180 --> 00:06:26,910
+this parameter specifies of the weather
+
+119
+00:06:26,910 --> 00:06:30,150
+server uses WL proxy client IP header
+
+120
+00:06:30,150 --> 00:06:32,280
+which is recommended if server instance
+
+121
+00:06:32,280 --> 00:06:34,350
+will receive requests from plug c plugin
+
+122
+00:06:34,350 --> 00:06:37,080
+yeah so this is a recommended setting
+
+123
+00:06:37,080 --> 00:06:39,840
+sometime allah console will work but
+
+124
+00:06:39,840 --> 00:06:40,800
+there are a lot of a plane
+
+125
+00:06:40,800 --> 00:06:42,930
+occasions which don't work if you don't
+
+126
+00:06:42,930 --> 00:06:46,500
+have this plug-in selected so you select
+
+127
+00:06:46,500 --> 00:06:49,379
+the plug-in for on to the server in our
+
+128
+00:06:49,379 --> 00:06:52,169
+case we have enabled on admin server but
+
+129
+00:06:52,169 --> 00:06:54,930
+you go and change it on the respective
+
+130
+00:06:54,930 --> 00:06:57,870
+server to which your forwarding request
+
+131
+00:06:57,870 --> 00:07:00,479
+from Oracle HTTP server so let's suppose
+
+132
+00:07:00,479 --> 00:07:02,789
+I'm configuring to so I inflow from my
+
+133
+00:07:02,789 --> 00:07:04,710
+study B server I'll go to the sewer
+
+134
+00:07:04,710 --> 00:07:07,379
+manage server under advanced and I'll
+
+135
+00:07:07,379 --> 00:07:11,340
+enable this HTTP or plug-in which is
+
+136
+00:07:11,340 --> 00:07:14,909
+this WebLogic plug-in enable this so
+
+137
+00:07:14,909 --> 00:07:17,909
+this completes the hand-sewn on how to
+
+138
+00:07:17,909 --> 00:07:20,460
+configure Oracle HTTP server as a
+
+139
+00:07:20,460 --> 00:07:23,430
+reverse proxy for application or for
+
+140
+00:07:23,430 --> 00:07:25,830
+WebLogic server and that we are going to
+
+141
+00:07:25,830 --> 00:07:28,949
+use quite actively in our Oracle Fusion
+
+142
+00:07:28,949 --> 00:07:31,560
+Middleware so just to recap on in this
+
+143
+00:07:31,560 --> 00:07:34,009
+video we looked at how to configure
+
+144
+00:07:34,009 --> 00:07:37,229
+Oracle HTTP server as a reverse proxy
+
+145
+00:07:37,229 --> 00:07:40,259
+for WebLogic server where we modified
+
+146
+00:07:40,259 --> 00:07:43,979
+mod underscore WL underscore OHS conf to
+
+147
+00:07:43,979 --> 00:07:47,520
+include or forward any request coming to
+
+148
+00:07:47,520 --> 00:07:50,580
+forward slash console to HTTP server to
+
+149
+00:07:50,580 --> 00:07:53,819
+the Oracle WebLogic server in the next
+
+150
+00:07:53,819 --> 00:07:55,680
+video we're going to look at how the
+
+151
+00:07:55,680 --> 00:07:58,590
+same configuration is configured on
+
+152
+00:07:58,590 --> 00:08:01,889
+Oracle EBS 12.2 so hit on to the next
+
+153
+00:08:01,889 --> 00:08:04,380
+video to look at the configuration
+
+154
+00:08:04,380 --> 00:08:08,069
+setting in Oracle EBS 12.2 for Oracle
+
+155
+00:08:08,069 --> 00:08:10,949
+HTTP server and how these configurations
+
+156
+00:08:10,949 --> 00:08:13,560
+are pointing applications deployed on
+
+157
+00:08:13,560 --> 00:08:19,550
+Oracle WebLogic domain for EBS 12.2
+
+158
+00:08:24,370 --> 00:08:26,430
+you
+

@@ -1,0 +1,1464 @@
+﻿1
+00:00:00,030 --> 00:00:02,040
+so welcome back to another lesson in
+
+2
+00:00:02,040 --> 00:00:05,009
+this WebLogic training and in this
+
+3
+00:00:05,009 --> 00:00:07,230
+lesson we are going to look at data
+
+4
+00:00:07,230 --> 00:00:10,110
+source and Jamie's Java messaging server
+
+5
+00:00:10,110 --> 00:00:12,900
+but before that let me do a quick recap
+
+6
+00:00:12,900 --> 00:00:15,630
+on what we have covered so far so we
+
+7
+00:00:15,630 --> 00:00:18,449
+started with oracle weblogic 12c and 11g
+
+8
+00:00:18,449 --> 00:00:20,640
+where i mentioned that these are the
+
+9
+00:00:20,640 --> 00:00:22,800
+topics that we are going to cover so a
+
+10
+00:00:22,800 --> 00:00:24,810
+Giunta for this entire module including
+
+11
+00:00:24,810 --> 00:00:27,210
+multi-tenancy which is yet to come
+
+12
+00:00:27,210 --> 00:00:29,369
+then we'll go after that we'll go into
+
+13
+00:00:29,369 --> 00:00:32,340
+installation of WebLogic both 12c as
+
+14
+00:00:32,340 --> 00:00:36,510
+well as 11g so we discussed about what
+
+15
+00:00:36,510 --> 00:00:38,250
+is the verb logic server what are the
+
+16
+00:00:38,250 --> 00:00:39,930
+administration tasks for the logic
+
+17
+00:00:39,930 --> 00:00:42,690
+admins what the tools available for web
+
+18
+00:00:42,690 --> 00:00:44,879
+logic admins so things like admin
+
+19
+00:00:44,879 --> 00:00:47,160
+console fusion will control the logic
+
+20
+00:00:47,160 --> 00:00:49,410
+scripting tool restful management
+
+21
+00:00:49,410 --> 00:00:51,480
+resources we'll see all these incoming
+
+22
+00:00:51,480 --> 00:00:53,910
+modules then we looked at the logic
+
+23
+00:00:53,910 --> 00:00:55,379
+domain which is one of the most
+
+24
+00:00:55,379 --> 00:00:57,270
+important thing which is nothing but a
+
+25
+00:00:57,270 --> 00:00:59,449
+logical collection of servers and
+
+26
+00:00:59,449 --> 00:01:03,090
+associated resources for that then what
+
+27
+00:01:03,090 --> 00:01:05,069
+are things come consist of within a
+
+28
+00:01:05,069 --> 00:01:07,890
+domain in which way domain can be
+
+29
+00:01:07,890 --> 00:01:09,570
+deployed which is one installation
+
+30
+00:01:09,570 --> 00:01:14,460
+multiple domain or one domain but
+
+31
+00:01:14,460 --> 00:01:16,979
+multiple installations we also looked at
+
+32
+00:01:16,979 --> 00:01:19,290
+what is domain home what is some of the
+
+33
+00:01:19,290 --> 00:01:21,630
+key important files within domain home
+
+34
+00:01:21,630 --> 00:01:24,390
+then we looked at servers we also looked
+
+35
+00:01:24,390 --> 00:01:26,549
+at two different type of servers which
+
+36
+00:01:26,549 --> 00:01:28,619
+is had been in manage servers we also
+
+37
+00:01:28,619 --> 00:01:30,750
+looked at the Java Virtual Machine or
+
+38
+00:01:30,750 --> 00:01:33,689
+JVM we looked at what is the minimum
+
+39
+00:01:33,689 --> 00:01:36,689
+memory what is the maximum memory then
+
+40
+00:01:36,689 --> 00:01:39,270
+within admin server we said admin server
+
+41
+00:01:39,270 --> 00:01:41,430
+is a singleton service and managed
+
+42
+00:01:41,430 --> 00:01:44,490
+server is a app service or managed
+
+43
+00:01:44,490 --> 00:01:46,409
+server is a server on which you deploy
+
+44
+00:01:46,409 --> 00:01:49,100
+your applications or custom applications
+
+45
+00:01:49,100 --> 00:01:52,740
+we also discussed about the association
+
+46
+00:01:52,740 --> 00:01:54,420
+between admin and manage servers and
+
+47
+00:01:54,420 --> 00:01:58,409
+what are clusters and within how does
+
+48
+00:01:58,409 --> 00:02:00,090
+cluster communicate to each other I
+
+49
+00:02:00,090 --> 00:02:02,340
+mentioned that in the coming modules we
+
+50
+00:02:02,340 --> 00:02:04,530
+also have high availability will we look
+
+51
+00:02:04,530 --> 00:02:04,890
+at
+
+52
+00:02:04,890 --> 00:02:06,960
+unicast and multicast cluster
+
+53
+00:02:06,960 --> 00:02:10,288
+communication then the new concept
+
+54
+00:02:10,288 --> 00:02:12,810
+introduced in WebLogic 12c that's called
+
+55
+00:02:12,810 --> 00:02:13,620
+as dan
+
+56
+00:02:13,620 --> 00:02:15,599
+make clusters we're good to go deep into
+
+57
+00:02:15,599 --> 00:02:18,450
+these dynamic clusters or in what
+
+58
+00:02:18,450 --> 00:02:21,150
+components support in what don't sub
+
+59
+00:02:21,150 --> 00:02:23,430
+component not support will come cover
+
+60
+00:02:23,430 --> 00:02:26,340
+that in subsequent modules as well then
+
+61
+00:02:26,340 --> 00:02:30,329
+we looked at within dynamic cluster the
+
+62
+00:02:30,329 --> 00:02:32,879
+servers that created in dynamic cluster
+
+63
+00:02:32,879 --> 00:02:35,220
+is called as dynamic service which are
+
+64
+00:02:35,220 --> 00:02:37,290
+based on a server template so this is
+
+65
+00:02:37,290 --> 00:02:39,299
+what we covered in the previous lesson
+
+66
+00:02:39,299 --> 00:02:42,540
+now let's look at JDBC or data sources
+
+67
+00:02:42,540 --> 00:02:46,079
+so when WebLogic server is an
+
+68
+00:02:46,079 --> 00:02:48,959
+application server that hosts or deploy
+
+69
+00:02:48,959 --> 00:02:51,299
+application on top of that however the
+
+70
+00:02:51,299 --> 00:02:53,430
+data for that application goes into the
+
+71
+00:02:53,430 --> 00:02:56,340
+database and the way or how an
+
+72
+00:02:56,340 --> 00:02:58,769
+application server connects to the
+
+73
+00:02:58,769 --> 00:03:00,840
+database or how WebLogic connects to the
+
+74
+00:03:00,840 --> 00:03:03,810
+database is using JDBC that stands for
+
+75
+00:03:03,810 --> 00:03:07,859
+Java database connectivity now so what
+
+76
+00:03:07,859 --> 00:03:10,620
+you do you create a data source and how
+
+77
+00:03:10,620 --> 00:03:12,120
+to create a data source be able to look
+
+78
+00:03:12,120 --> 00:03:13,920
+in a minute and there are different
+
+79
+00:03:13,920 --> 00:03:15,659
+types of data sources we'll look in that
+
+80
+00:03:15,659 --> 00:03:16,140
+as well
+
+81
+00:03:16,140 --> 00:03:21,150
+so the way to connect or the the way
+
+82
+00:03:21,150 --> 00:03:22,769
+WebLogic server connection to a database
+
+83
+00:03:22,769 --> 00:03:26,130
+it uses JDBC there are different type of
+
+84
+00:03:26,130 --> 00:03:28,980
+data sources and one of them is generic
+
+85
+00:03:28,980 --> 00:03:31,799
+data source which will be used if you
+
+86
+00:03:31,799 --> 00:03:34,260
+have a database like single node
+
+87
+00:03:34,260 --> 00:03:36,030
+database of single instance database
+
+88
+00:03:36,030 --> 00:03:38,459
+which could be an Oracle database my my
+
+89
+00:03:38,459 --> 00:03:40,620
+sequel database or any other databases
+
+90
+00:03:40,620 --> 00:03:42,720
+you will have you will create genre data
+
+91
+00:03:42,720 --> 00:03:45,930
+sources then you also can create a grid
+
+92
+00:03:45,930 --> 00:03:47,489
+link data source and what that grid
+
+93
+00:03:47,489 --> 00:03:49,049
+links data source will come into picture
+
+94
+00:03:49,049 --> 00:03:51,900
+is when you have it Oracle database with
+
+95
+00:03:51,900 --> 00:03:54,510
+rack or stands for real application
+
+96
+00:03:54,510 --> 00:03:56,639
+cluster now if you're not familiar with
+
+97
+00:03:56,639 --> 00:03:58,530
+Iraq you need to understand just one
+
+98
+00:03:58,530 --> 00:04:00,780
+high level that it's nothing but same
+
+99
+00:04:00,780 --> 00:04:03,660
+database but running two instances on
+
+100
+00:04:03,660 --> 00:04:06,480
+two machines for high availability so
+
+101
+00:04:06,480 --> 00:04:08,849
+you put a grid link data source which
+
+102
+00:04:08,849 --> 00:04:11,699
+will connect from the Balaji to first
+
+103
+00:04:11,699 --> 00:04:15,299
+node and also second node and as new
+
+104
+00:04:15,299 --> 00:04:18,149
+node of database connects or become part
+
+105
+00:04:18,149 --> 00:04:21,060
+of rack cluster the generic data source
+
+106
+00:04:21,060 --> 00:04:24,270
+will automatically add or remove as and
+
+107
+00:04:24,270 --> 00:04:27,270
+when a rack database node being
+
+108
+00:04:27,270 --> 00:04:30,539
+added at the back end or removed so grid
+
+109
+00:04:30,539 --> 00:04:32,520
+link data source if you're part of
+
+110
+00:04:32,520 --> 00:04:34,289
+Oracle Fusion Middleware we're also
+
+111
+00:04:34,289 --> 00:04:36,150
+going to go deep into this grid link
+
+112
+00:04:36,150 --> 00:04:37,620
+data source when we look at high
+
+113
+00:04:37,620 --> 00:04:40,229
+availability module then there is a
+
+114
+00:04:40,229 --> 00:04:44,000
+multi data source which is same as
+
+115
+00:04:44,000 --> 00:04:47,220
+multiple versions or multiple genetic
+
+116
+00:04:47,220 --> 00:04:47,970
+data sources
+
+117
+00:04:47,970 --> 00:04:51,720
+we'll make a grid or multi data source
+
+118
+00:04:51,720 --> 00:04:54,479
+what will have same metadata source will
+
+119
+00:04:54,479 --> 00:04:56,610
+again come into picture when you have a
+
+120
+00:04:56,610 --> 00:04:59,069
+rank database so suppose you have two
+
+121
+00:04:59,069 --> 00:05:02,280
+node rack database or real application
+
+122
+00:05:02,280 --> 00:05:04,349
+cluster database or three node rack
+
+123
+00:05:04,349 --> 00:05:07,560
+database each instance of rack database
+
+124
+00:05:07,560 --> 00:05:09,990
+will have a generic data source and
+
+125
+00:05:09,990 --> 00:05:12,060
+collection of these generic data sources
+
+126
+00:05:12,060 --> 00:05:13,860
+will have a multi data source assume
+
+127
+00:05:13,860 --> 00:05:16,500
+that one pipe then going into three
+
+128
+00:05:16,500 --> 00:05:17,849
+different pipe or two different pipe
+
+129
+00:05:17,849 --> 00:05:20,099
+based on number of rack database nodes
+
+130
+00:05:20,099 --> 00:05:22,229
+that together will make a multi data
+
+131
+00:05:22,229 --> 00:05:23,940
+source we'll see that as well when we
+
+132
+00:05:23,940 --> 00:05:25,800
+look at high availability so these are
+
+133
+00:05:25,800 --> 00:05:27,599
+three different ways of did or three
+
+134
+00:05:27,599 --> 00:05:29,190
+different type of data sources that you
+
+135
+00:05:29,190 --> 00:05:32,250
+can create now multi data source and a
+
+136
+00:05:32,250 --> 00:05:35,400
+grid link both are for rack grid link is
+
+137
+00:05:35,400 --> 00:05:37,919
+a little bit more advanced feature and
+
+138
+00:05:37,919 --> 00:05:40,020
+depending on the WebLogic version which
+
+139
+00:05:40,020 --> 00:05:41,820
+you are using it you may have to pay
+
+140
+00:05:41,820 --> 00:05:43,710
+some extra license fee for to use that
+
+141
+00:05:43,710 --> 00:05:46,229
+feature however the license fee is
+
+142
+00:05:46,229 --> 00:05:51,060
+outside scope of this this course so but
+
+143
+00:05:51,060 --> 00:05:53,219
+it could be free as well the advantage
+
+144
+00:05:53,219 --> 00:05:55,830
+of using grid link is when the any
+
+145
+00:05:55,830 --> 00:05:58,469
+back-end database node gets added or
+
+146
+00:05:58,469 --> 00:06:01,229
+removed from a rack cluster of the
+
+147
+00:06:01,229 --> 00:06:03,750
+database the applica
+
+148
+00:06:03,750 --> 00:06:05,580
+the WebLogic server will automatically
+
+149
+00:06:05,580 --> 00:06:08,430
+add or remove because it's a grid link
+
+150
+00:06:08,430 --> 00:06:09,960
+so Gridlink have that feature
+
+151
+00:06:09,960 --> 00:06:12,150
+now these configurations are stored
+
+152
+00:06:12,150 --> 00:06:15,210
+under domain home config JDBC so entire
+
+153
+00:06:15,210 --> 00:06:17,340
+domain as we discussed earlier this it's
+
+154
+00:06:17,340 --> 00:06:18,810
+something called as a domain home all
+
+155
+00:06:18,810 --> 00:06:21,090
+the configurations will go inside domain
+
+156
+00:06:21,090 --> 00:06:24,960
+home config and JDBC folder so let's
+
+157
+00:06:24,960 --> 00:06:27,810
+connect to the web logic console of 12c
+
+158
+00:06:27,810 --> 00:06:29,430
+and see how does it look like and be
+
+159
+00:06:29,430 --> 00:06:31,080
+able to go and quickly create a database
+
+160
+00:06:31,080 --> 00:06:34,020
+if possible or and where these we'll see
+
+161
+00:06:34,020 --> 00:06:35,849
+also see where these files are stored on
+
+162
+00:06:35,849 --> 00:06:40,289
+the file system so I am on the console
+
+163
+00:06:40,289 --> 00:06:40,710
+here
+
+164
+00:06:40,710 --> 00:06:43,560
+and this is a change Center which means
+
+165
+00:06:43,560 --> 00:06:45,600
+if I need to make any modifications and
+
+166
+00:06:45,600 --> 00:06:49,140
+if my WebLogic domain is configured in a
+
+167
+00:06:49,140 --> 00:06:50,070
+production mode
+
+168
+00:06:50,070 --> 00:06:51,810
+we'll see that what is the production
+
+169
+00:06:51,810 --> 00:06:53,610
+mode in a minute or in subsequent
+
+170
+00:06:53,610 --> 00:06:56,160
+lessons but for now assume that in order
+
+171
+00:06:56,160 --> 00:06:57,660
+for me to make any changes in this
+
+172
+00:06:57,660 --> 00:07:00,510
+console I need to enable a lock which
+
+173
+00:07:00,510 --> 00:07:03,060
+I've already done and then I you go to
+
+174
+00:07:03,060 --> 00:07:05,880
+services and go to data sources and from
+
+175
+00:07:05,880 --> 00:07:08,310
+here from data sources you go and create
+
+176
+00:07:08,310 --> 00:07:11,160
+a new data source so you drop down and
+
+177
+00:07:11,160 --> 00:07:13,620
+say what kind of data sources you want
+
+178
+00:07:13,620 --> 00:07:15,630
+now because it's it well see there are
+
+179
+00:07:15,630 --> 00:07:17,550
+two more data services being added which
+
+180
+00:07:17,550 --> 00:07:19,740
+is proxy data source and UCP and we'll
+
+181
+00:07:19,740 --> 00:07:22,290
+be I'll be adding that as a bonus lesson
+
+182
+00:07:22,290 --> 00:07:24,780
+on these two additional data sources so
+
+183
+00:07:24,780 --> 00:07:27,660
+we let we have going to country create a
+
+184
+00:07:27,660 --> 00:07:29,940
+generic data source and in generic data
+
+185
+00:07:29,940 --> 00:07:31,710
+source you will give the name so we will
+
+186
+00:07:31,710 --> 00:07:36,020
+say that JDBC for example DB one and
+
+187
+00:07:36,020 --> 00:07:40,320
+scope again we could look at scope in
+
+188
+00:07:40,320 --> 00:07:42,720
+subsequent lesson in this in this module
+
+189
+00:07:42,720 --> 00:07:46,470
+we're Skoob feature but introduced
+
+190
+00:07:46,470 --> 00:07:48,600
+because multi-tenancy feature or
+
+191
+00:07:48,600 --> 00:07:50,640
+multi-tenancy feature introduced into NC
+
+192
+00:07:50,640 --> 00:07:54,240
+now jndi name will be the name used by
+
+193
+00:07:54,240 --> 00:07:57,620
+the application to use this database so
+
+194
+00:07:57,620 --> 00:08:00,300
+instead of application will not use this
+
+195
+00:08:00,300 --> 00:08:04,500
+name called JDBC DB one the application
+
+196
+00:08:04,500 --> 00:08:07,860
+if needs to access this JDBC it's going
+
+197
+00:08:07,860 --> 00:08:10,410
+to use this jndi name here so we will
+
+198
+00:08:10,410 --> 00:08:12,600
+specify some J&D a name and you specify
+
+199
+00:08:12,600 --> 00:08:15,090
+with what database you want to connect
+
+200
+00:08:15,090 --> 00:08:17,580
+and then in subsequent screens you need
+
+201
+00:08:17,580 --> 00:08:19,590
+to provide the database hostname port
+
+202
+00:08:19,590 --> 00:08:21,810
+number and configuration and other
+
+203
+00:08:21,810 --> 00:08:23,970
+details for connecting to the specific
+
+204
+00:08:23,970 --> 00:08:25,680
+database and you finish a complete
+
+205
+00:08:25,680 --> 00:08:27,860
+successfully and that's how you create
+
+206
+00:08:27,860 --> 00:08:30,570
+JDBC we'll go into these details when we
+
+207
+00:08:30,570 --> 00:08:32,940
+go and look at in if you're looking this
+
+208
+00:08:32,940 --> 00:08:34,710
+infusion will be a training then you are
+
+209
+00:08:34,710 --> 00:08:36,419
+going to look in and we go deep dive
+
+210
+00:08:36,419 --> 00:08:40,500
+into this in in the sewer module or
+
+211
+00:08:40,500 --> 00:08:42,570
+we'll see some of these JDBC s depending
+
+212
+00:08:42,570 --> 00:08:44,340
+on where you're looking will go in
+
+213
+00:08:44,340 --> 00:08:48,620
+detail about this ma this JDBC
+
+214
+00:08:48,890 --> 00:08:51,470
+now if you look at the configuration
+
+215
+00:08:51,470 --> 00:08:53,750
+file where these configurations are or
+
+216
+00:08:53,750 --> 00:08:55,430
+where with this configuration we'll go
+
+217
+00:08:55,430 --> 00:08:57,620
+we are it's going to go into domain home
+
+218
+00:08:57,620 --> 00:09:04,339
+and then config folder and inside that
+
+219
+00:09:04,339 --> 00:09:05,779
+config folder you will have all the
+
+220
+00:09:05,779 --> 00:09:07,820
+configurations of WebLogic domain will
+
+221
+00:09:07,820 --> 00:09:09,829
+be under domain home conflict inside
+
+222
+00:09:09,829 --> 00:09:11,750
+that they'll be a folder called JDBC and
+
+223
+00:09:11,750 --> 00:09:13,790
+that's where my Java database
+
+224
+00:09:13,790 --> 00:09:16,310
+configurations are this config dot XML
+
+225
+00:09:16,310 --> 00:09:18,140
+files the main configuration for entire
+
+226
+00:09:18,140 --> 00:09:20,269
+domain my gdb sees will be here and
+
+227
+00:09:20,269 --> 00:09:22,519
+because I don't have any JDBC or any
+
+228
+00:09:22,519 --> 00:09:24,649
+database connection right now in this
+
+229
+00:09:24,649 --> 00:09:26,450
+domain because there is no domain here
+
+230
+00:09:26,450 --> 00:09:28,399
+are details configured in that's why I
+
+231
+00:09:28,399 --> 00:09:30,350
+don't see any configuration let's
+
+232
+00:09:30,350 --> 00:09:32,420
+connect to another WebLogic domain or
+
+233
+00:09:32,420 --> 00:09:35,180
+another machine that has this JDBC and
+
+234
+00:09:35,180 --> 00:09:37,010
+we'll connects with that machine and see
+
+235
+00:09:37,010 --> 00:09:38,930
+how does it look like so I'm connecting
+
+236
+00:09:38,930 --> 00:09:41,540
+to another WebLogic domain and now in
+
+237
+00:09:41,540 --> 00:09:44,140
+that which this is a 12-11 GData
+
+238
+00:09:44,140 --> 00:09:46,430
+WebLogic server so our web project
+
+239
+00:09:46,430 --> 00:09:49,100
+console here under data sources I have
+
+240
+00:09:49,100 --> 00:09:52,279
+all these JDBC s so if I connect to the
+
+241
+00:09:52,279 --> 00:09:54,860
+putti to the backend server or let me
+
+242
+00:09:54,860 --> 00:09:56,600
+connect to this one of the NC you how
+
+243
+00:09:56,600 --> 00:09:58,420
+does it look like so I'm connecting to
+
+244
+00:09:58,420 --> 00:10:01,339
+Oracle access manager datasource and I
+
+245
+00:10:01,339 --> 00:10:03,440
+can look at connection pool will give me
+
+246
+00:10:03,440 --> 00:10:05,630
+information like this is my database
+
+247
+00:10:05,630 --> 00:10:08,269
+hostname this is my port number this is
+
+248
+00:10:08,269 --> 00:10:11,510
+my service name it's using using or
+
+249
+00:10:11,510 --> 00:10:13,010
+connecting using a user called dev
+
+250
+00:10:13,010 --> 00:10:16,040
+underscore om and shown where this or
+
+251
+00:10:16,040 --> 00:10:18,529
+what all servers WebLogic server can use
+
+252
+00:10:18,529 --> 00:10:20,449
+this JDBC that will be available under
+
+253
+00:10:20,449 --> 00:10:23,089
+targets which means this gdb C is
+
+254
+00:10:23,089 --> 00:10:25,610
+targeted to admin server or empathy
+
+255
+00:10:25,610 --> 00:10:29,570
+manager and om cluster so what you see
+
+256
+00:10:29,570 --> 00:10:31,970
+here this is my this is being targeted
+
+257
+00:10:31,970 --> 00:10:34,490
+so this JDBC can only be used by admin
+
+258
+00:10:34,490 --> 00:10:34,970
+server
+
+259
+00:10:34,970 --> 00:10:37,880
+oh Emily C manager and om cluster if my
+
+260
+00:10:37,880 --> 00:10:40,339
+bi server will try to connect that or
+
+261
+00:10:40,339 --> 00:10:44,449
+use this Jane di or this JDBC then which
+
+262
+00:10:44,449 --> 00:10:48,019
+using JDBC OMD this if not it won't be
+
+263
+00:10:48,019 --> 00:10:49,670
+able to do that because it will say hey
+
+264
+00:10:49,670 --> 00:10:52,970
+no debate no JDBC connection found
+
+265
+00:10:52,970 --> 00:10:56,449
+because this gdb C is targeted only on
+
+266
+00:10:56,449 --> 00:10:58,790
+selective admin and managed server and
+
+267
+00:10:58,790 --> 00:11:01,370
+cluster not to all servers now if we
+
+268
+00:11:01,370 --> 00:11:02,810
+look at the same thing for config
+
+269
+00:11:02,810 --> 00:11:04,790
+which in point of view so I'll connect
+
+270
+00:11:04,790 --> 00:11:18,969
+to another server no this is wrong so
+
+271
+00:11:30,850 --> 00:11:33,650
+I'm going to into this domain where my
+
+272
+00:11:33,650 --> 00:11:36,560
+domain are the domain that has JDBC I'll
+
+273
+00:11:36,560 --> 00:11:40,029
+go into same domain home config and then
+
+274
+00:11:40,029 --> 00:11:43,400
+JDBC so under config folder I will also
+
+275
+00:11:43,400 --> 00:11:46,490
+have JDBC and now if you see here each
+
+276
+00:11:46,490 --> 00:11:49,190
+JDBC that I have in the back end here so
+
+277
+00:11:49,190 --> 00:11:52,279
+each JDBC or each data source here so
+
+278
+00:11:52,279 --> 00:11:53,779
+they are around 17 of them
+
+279
+00:11:53,779 --> 00:11:56,960
+I should have 17 or so files here one
+
+280
+00:11:56,960 --> 00:11:59,240
+each representing a data source so now
+
+281
+00:11:59,240 --> 00:12:01,580
+if you are hitting any problem and you
+
+282
+00:12:01,580 --> 00:12:02,990
+want to know where the database is
+
+283
+00:12:02,990 --> 00:12:05,029
+connect or where this JDBC is connecting
+
+284
+00:12:05,029 --> 00:12:08,810
+to I can go to OEM deep DB JDBC and open
+
+285
+00:12:08,810 --> 00:12:11,300
+it and you'll tell me my hostname port
+
+286
+00:12:11,300 --> 00:12:13,820
+number and service name this is my
+
+287
+00:12:13,820 --> 00:12:16,670
+database username password is stored in
+
+288
+00:12:16,670 --> 00:12:20,660
+an encrypted AES algorithm base or AES
+
+289
+00:12:20,660 --> 00:12:23,780
+it uses AES encryption method to encrypt
+
+290
+00:12:23,780 --> 00:12:26,420
+the password for this schema and on the
+
+291
+00:12:26,420 --> 00:12:29,720
+on the the WebLogic server so that's
+
+292
+00:12:29,720 --> 00:12:33,110
+about weblog that's about JDBC now let's
+
+293
+00:12:33,110 --> 00:12:35,089
+look at one more topic before we hadn´t
+
+294
+00:12:35,089 --> 00:12:36,440
+to the next lesson
+
+295
+00:12:36,440 --> 00:12:40,280
+so JMS and Jamis is in a simple terms
+
+296
+00:12:40,280 --> 00:12:42,920
+nothing but Java messaging server which
+
+297
+00:12:42,920 --> 00:12:46,600
+is now which enables or JMS enables
+
+298
+00:12:46,600 --> 00:12:49,100
+applications or multiple applications or
+
+299
+00:12:49,100 --> 00:12:51,320
+different applications to s
+
+300
+00:12:51,320 --> 00:12:53,300
+synchronously communicate with each
+
+301
+00:12:53,300 --> 00:12:55,790
+other using messages so I have an
+
+302
+00:12:55,790 --> 00:12:58,040
+application one and it needs to send a
+
+303
+00:12:58,040 --> 00:12:59,779
+message to another application you use
+
+304
+00:12:59,779 --> 00:13:02,839
+JMS by s and conversely sending these
+
+305
+00:13:02,839 --> 00:13:06,230
+messages across each other and WebLogic
+
+306
+00:13:06,230 --> 00:13:09,589
+support that JMS implementation now Jim
+
+307
+00:13:09,589 --> 00:13:13,280
+the applications in within within
+
+308
+00:13:13,280 --> 00:13:16,600
+WebLogic server or JMS it can
+
+309
+00:13:16,600 --> 00:13:19,630
+Jamis blind or JMS server or both so
+
+310
+00:13:19,630 --> 00:13:21,550
+within that it can act both Jamie's
+
+311
+00:13:21,550 --> 00:13:25,480
+client and Jamie's server now the
+
+312
+00:13:25,480 --> 00:13:29,350
+application that's sending or that's
+
+313
+00:13:29,350 --> 00:13:32,380
+sending the message will be become a
+
+314
+00:13:32,380 --> 00:13:34,779
+producer and the application that
+
+315
+00:13:34,779 --> 00:13:36,790
+collects that message will become a
+
+316
+00:13:36,790 --> 00:13:39,550
+consumer within JMS client server
+
+317
+00:13:39,550 --> 00:13:42,720
+architecture and WebLogic supports JMS
+
+318
+00:13:42,720 --> 00:13:46,060
+1.1 specification so and how do you
+
+319
+00:13:46,060 --> 00:13:48,190
+create Jamis again you depending on
+
+320
+00:13:48,190 --> 00:13:49,990
+which WebLogic server you are there
+
+321
+00:13:49,990 --> 00:13:54,130
+might be slight differences or or slight
+
+322
+00:13:54,130 --> 00:13:56,139
+navigation path difference you again go
+
+323
+00:13:56,139 --> 00:13:58,990
+back to the WebLogic domain and here you
+
+324
+00:13:58,990 --> 00:14:01,569
+should have messaging and jamester what
+
+325
+00:14:01,569 --> 00:14:03,699
+you see here the logic domain messaging
+
+326
+00:14:03,699 --> 00:14:05,889
+JMS server and this little bit more as
+
+327
+00:14:05,889 --> 00:14:07,839
+well however if you are listening this
+
+328
+00:14:07,839 --> 00:14:09,910
+be able to cover in in WebLogic course
+
+329
+00:14:09,910 --> 00:14:12,009
+so depending on if you're listening this
+
+330
+00:14:12,009 --> 00:14:13,810
+in WebLogic we are going to go deep into
+
+331
+00:14:13,810 --> 00:14:16,839
+this JMS a little bit further if you're
+
+332
+00:14:16,839 --> 00:14:18,279
+listening it in Fusion Middleware
+
+333
+00:14:18,279 --> 00:14:20,769
+or so ah we'll go slightly when we look
+
+334
+00:14:20,769 --> 00:14:23,800
+at so uh store that's when we are going
+
+335
+00:14:23,800 --> 00:14:25,569
+to touch base again a little bit more
+
+336
+00:14:25,569 --> 00:14:28,209
+about JMS but this is how you go and
+
+337
+00:14:28,209 --> 00:14:31,000
+create JMS from here so let me do a
+
+338
+00:14:31,000 --> 00:14:32,829
+quick recap on this lesson just on a
+
+339
+00:14:32,829 --> 00:14:36,550
+quick JDBC is nothing but a way to
+
+340
+00:14:36,550 --> 00:14:38,949
+connect from WebLogic server to the
+
+341
+00:14:38,949 --> 00:14:41,589
+database intel 11g there are three ways
+
+342
+00:14:41,589 --> 00:14:43,870
+to connect which is a generic grid link
+
+343
+00:14:43,870 --> 00:14:46,060
+and multi data source into NC there are
+
+344
+00:14:46,060 --> 00:14:48,160
+two more which we got added which you've
+
+345
+00:14:48,160 --> 00:14:50,319
+solved just the earlier and we able to
+
+346
+00:14:50,319 --> 00:14:52,089
+cover that I'm going to add a bonus
+
+347
+00:14:52,089 --> 00:14:54,730
+lesson in a minute on within in this
+
+348
+00:14:54,730 --> 00:14:57,910
+module multi data source and griddling
+
+349
+00:14:57,910 --> 00:15:00,399
+are both for rack database that send for
+
+350
+00:15:00,399 --> 00:15:02,709
+real application cluster and the
+
+351
+00:15:02,709 --> 00:15:04,449
+configurations are stored in domain home
+
+352
+00:15:04,449 --> 00:15:07,389
+config JDBC JMS it's basically
+
+353
+00:15:07,389 --> 00:15:10,269
+asynchronous messaging between two
+
+354
+00:15:10,269 --> 00:15:12,910
+applications so this is all about JDBC
+
+355
+00:15:12,910 --> 00:15:15,550
+and JMS in WebLogic now head on to the
+
+356
+00:15:15,550 --> 00:15:17,680
+next lesson we will look at node manager
+
+357
+00:15:17,680 --> 00:15:21,100
+and machine and this is again one of the
+
+358
+00:15:21,100 --> 00:15:23,290
+important or one of the topics which we
+
+359
+00:15:23,290 --> 00:15:25,059
+get lot of questions especially around
+
+360
+00:15:25,059 --> 00:15:27,670
+the machine and node manager and how I
+
+361
+00:15:27,670 --> 00:15:30,320
+start my servers on
+
+362
+00:15:30,320 --> 00:15:32,720
+- over to the WebLogic service remotely
+
+363
+00:15:32,720 --> 00:15:35,780
+or from a from a web logic console so
+
+364
+00:15:35,780 --> 00:15:37,280
+head on to the next lesson we look at
+
+365
+00:15:37,280 --> 00:15:39,770
+node manager and machines in WebLogic
+
+366
+00:15:39,770 --> 00:15:44,230
+server I'll see you in next lesson
+

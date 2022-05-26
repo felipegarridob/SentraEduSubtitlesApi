@@ -1,0 +1,780 @@
+﻿1
+00:00:00,030 --> 00:00:02,070
+welcome back to this another lesson in
+
+2
+00:00:02,070 --> 00:00:05,040
+Oracle Fusion Middleware training and if
+
+3
+00:00:05,040 --> 00:00:06,960
+you're listening it at some other place
+
+4
+00:00:06,960 --> 00:00:09,840
+it's part of Oracle WebLogic server so
+
+5
+00:00:09,840 --> 00:00:12,120
+in this we are looking at domain room
+
+6
+00:00:12,120 --> 00:00:14,219
+and in this lesson be able to focus on
+
+7
+00:00:14,219 --> 00:00:16,139
+domain home earlier I mentioned about a
+
+8
+00:00:16,139 --> 00:00:18,630
+high level overview of domain and domain
+
+9
+00:00:18,630 --> 00:00:21,330
+whom is the top-level directory in which
+
+10
+00:00:21,330 --> 00:00:24,029
+you have domain specific directories so
+
+11
+00:00:24,029 --> 00:00:26,939
+things like admin server directory Java
+
+12
+00:00:26,939 --> 00:00:29,369
+database configuration JMS configuration
+
+13
+00:00:29,369 --> 00:00:31,769
+files the log files and everything we
+
+14
+00:00:31,769 --> 00:00:34,260
+discussed briefly in module 1 about
+
+15
+00:00:34,260 --> 00:00:36,390
+various homes and domain home was one of
+
+16
+00:00:36,390 --> 00:00:38,879
+them so when does this to mean home gets
+
+17
+00:00:38,879 --> 00:00:41,610
+created domain whom gets created when
+
+18
+00:00:41,610 --> 00:00:43,829
+you configure a WebLogic domain how do
+
+19
+00:00:43,829 --> 00:00:45,570
+you configure everyone you do mean you
+
+20
+00:00:45,570 --> 00:00:47,219
+configure it when you run config dot
+
+21
+00:00:47,219 --> 00:00:49,379
+asset you will see in this module how do
+
+22
+00:00:49,379 --> 00:00:51,030
+you run or create a membership domain
+
+23
+00:00:51,030 --> 00:00:53,760
+but domain whom contains top-level
+
+24
+00:00:53,760 --> 00:00:55,199
+directory in which you have all the
+
+25
+00:00:55,199 --> 00:00:57,300
+files and this is what you see in the
+
+26
+00:00:57,300 --> 00:01:01,760
+right hand side and that's a example or
+
+27
+00:01:01,760 --> 00:01:05,280
+or server where we have already
+
+28
+00:01:05,280 --> 00:01:09,360
+installed or files some look like so
+
+29
+00:01:09,360 --> 00:01:11,400
+this is still here this is my aura based
+
+30
+00:01:11,400 --> 00:01:14,040
+home or base domain or this is my domain
+
+31
+00:01:14,040 --> 00:01:16,439
+home inside that I have a bin folder
+
+32
+00:01:16,439 --> 00:01:18,420
+which is we been here
+
+33
+00:01:18,420 --> 00:01:20,159
+so bin folder will have all the
+
+34
+00:01:20,159 --> 00:01:23,490
+start-stop commands my servers folder
+
+35
+00:01:23,490 --> 00:01:27,720
+will have my admin and manage servers my
+
+36
+00:01:27,720 --> 00:01:29,670
+node manager folder will have node
+
+37
+00:01:29,670 --> 00:01:32,009
+manager depending on this impotency you
+
+38
+00:01:32,009 --> 00:01:34,350
+can decide and have node manager here or
+
+39
+00:01:34,350 --> 00:01:37,860
+some other place as well so if I go
+
+40
+00:01:37,860 --> 00:01:40,650
+under servers folder I will see a admin
+
+41
+00:01:40,650 --> 00:01:42,570
+server currently there's only admin
+
+42
+00:01:42,570 --> 00:01:45,360
+server started so these servers will get
+
+43
+00:01:45,360 --> 00:01:47,070
+created a folder servers will get
+
+44
+00:01:47,070 --> 00:01:48,659
+created when you start the server's
+
+45
+00:01:48,659 --> 00:01:51,780
+first time so I've only started admin
+
+46
+00:01:51,780 --> 00:01:53,700
+server in this domain and hence you see
+
+47
+00:01:53,700 --> 00:01:56,219
+admin folder within admin folder or
+
+48
+00:01:56,219 --> 00:01:57,570
+within the server folder I have cached
+
+49
+00:01:57,570 --> 00:01:59,850
+data data log and security we'll cover
+
+50
+00:01:59,850 --> 00:02:02,369
+that in a minute later then you have
+
+51
+00:02:02,369 --> 00:02:05,070
+config folder within domain whom the
+
+52
+00:02:05,070 --> 00:02:06,570
+config folder will have configuration
+
+53
+00:02:06,570 --> 00:02:08,669
+this config file folder I said earlier
+
+54
+00:02:08,669 --> 00:02:10,619
+that config dot XML this will have all
+
+55
+00:02:10,619 --> 00:02:12,480
+the configuration for entire domain you
+
+56
+00:02:12,480 --> 00:02:13,730
+can open this configuration
+
+57
+00:02:13,730 --> 00:02:15,830
+I'll tell what all things are configured
+
+58
+00:02:15,830 --> 00:02:17,049
+in this domain
+
+59
+00:02:17,049 --> 00:02:19,879
+you also have within config folder you
+
+60
+00:02:19,879 --> 00:02:22,760
+have GD BC folder and in JDBC folder you
+
+61
+00:02:22,760 --> 00:02:24,620
+have the Java database connectivity
+
+62
+00:02:24,620 --> 00:02:26,540
+final configuration file for the
+
+63
+00:02:26,540 --> 00:02:28,849
+database connectivity we'll see that in
+
+64
+00:02:28,849 --> 00:02:31,250
+a minute the bin folder will have all
+
+65
+00:02:31,250 --> 00:02:32,959
+the start-stop so you have start
+
+66
+00:02:32,959 --> 00:02:35,599
+WebLogic got SH to start the admin
+
+67
+00:02:35,599 --> 00:02:37,970
+server you have stopped WebLogic that sh
+
+68
+00:02:37,970 --> 00:02:39,980
+to stop the WebLogic server then you
+
+69
+00:02:39,980 --> 00:02:41,420
+have similarly start instead of node
+
+70
+00:02:41,420 --> 00:02:43,549
+managers start and stop the manage
+
+71
+00:02:43,549 --> 00:02:44,900
+servers as well so we will see all these
+
+72
+00:02:44,900 --> 00:02:48,650
+things what all our start/stop admin
+
+73
+00:02:48,650 --> 00:02:52,069
+server and manage servers or node
+
+74
+00:02:52,069 --> 00:02:54,470
+manager so this is all about a domain
+
+75
+00:02:54,470 --> 00:02:57,530
+home then I said there is a server and I
+
+76
+00:02:57,530 --> 00:02:58,730
+told you that there are two type of
+
+77
+00:02:58,730 --> 00:03:00,650
+servers admin server and manage server
+
+78
+00:03:00,650 --> 00:03:02,120
+we'll go a little bit deep into what
+
+79
+00:03:02,120 --> 00:03:03,650
+this administer our manage servers are
+
+80
+00:03:03,650 --> 00:03:06,739
+and how does they look like so this is a
+
+81
+00:03:06,739 --> 00:03:08,480
+screenshot about from a graphical user
+
+82
+00:03:08,480 --> 00:03:12,220
+interface which I call Oracle WebLogic
+
+83
+00:03:12,220 --> 00:03:14,390
+administration console of a logic
+
+84
+00:03:14,390 --> 00:03:17,120
+console and once you configure the
+
+85
+00:03:17,120 --> 00:03:18,859
+domain and once you start the admin
+
+86
+00:03:18,859 --> 00:03:20,690
+server you will be able to login and
+
+87
+00:03:20,690 --> 00:03:22,190
+access this console we are going to
+
+88
+00:03:22,190 --> 00:03:23,180
+cover that in a minute
+
+89
+00:03:23,180 --> 00:03:25,190
+or in subsequent lessons so when you
+
+90
+00:03:25,190 --> 00:03:27,079
+login on left hand side you explain this
+
+91
+00:03:27,079 --> 00:03:29,120
+and mom and you see servers and under
+
+92
+00:03:29,120 --> 00:03:30,919
+servers you see right hand side there's
+
+93
+00:03:30,919 --> 00:03:32,450
+something called as admin server and
+
+94
+00:03:32,450 --> 00:03:34,730
+other servers rest all are called as
+
+95
+00:03:34,730 --> 00:03:36,919
+manage servers so and means our first
+
+96
+00:03:36,919 --> 00:03:39,500
+one and only and the manage servers so
+
+97
+00:03:39,500 --> 00:03:41,389
+that's about servers so what is server
+
+98
+00:03:41,389 --> 00:03:43,819
+server of two type which is nothing but
+
+99
+00:03:43,819 --> 00:03:45,980
+1 is of admin server and just all our
+
+100
+00:03:45,980 --> 00:03:49,340
+manage servers these servers are used to
+
+101
+00:03:49,340 --> 00:03:51,620
+host the applications and resources like
+
+102
+00:03:51,620 --> 00:03:56,019
+what web archive er enterprise archive
+
+103
+00:03:56,019 --> 00:04:00,349
+czar Java archive JDBC to connect to the
+
+104
+00:04:00,349 --> 00:04:03,620
+database JMS to message exchange between
+
+105
+00:04:03,620 --> 00:04:08,000
+applications so that for application now
+
+106
+00:04:08,000 --> 00:04:10,669
+each server will have its own JVM and
+
+107
+00:04:10,669 --> 00:04:13,190
+JVM stands for Java Virtual Machine
+
+108
+00:04:13,190 --> 00:04:15,560
+I repeat JVM stands for Java Virtual
+
+109
+00:04:15,560 --> 00:04:17,750
+Machine the Java Virtual Machine will
+
+110
+00:04:17,750 --> 00:04:19,789
+have some memory beginning memory in
+
+111
+00:04:19,789 --> 00:04:21,769
+which the code is being executed Java
+
+112
+00:04:21,769 --> 00:04:25,909
+code is being executed then it is a new
+
+113
+00:04:25,909 --> 00:04:27,320
+concept in 12c which is
+
+114
+00:04:27,320 --> 00:04:29,330
+dynamic servers servers which are
+
+115
+00:04:29,330 --> 00:04:31,880
+automatically being spent or spawn or
+
+116
+00:04:31,880 --> 00:04:33,860
+created automatically based on the
+
+117
+00:04:33,860 --> 00:04:36,230
+configuration as the load increases you
+
+118
+00:04:36,230 --> 00:04:38,840
+can automatically scale up the services
+
+119
+00:04:38,840 --> 00:04:41,930
+in 12c we'll see that in dynamic servers
+
+120
+00:04:41,930 --> 00:04:44,420
+in a minute so this is how the geo
+
+121
+00:04:44,420 --> 00:04:46,010
+virtual machine looked like so I said
+
+122
+00:04:46,010 --> 00:04:47,690
+it's nothing but a Java Virtual Machine
+
+123
+00:04:47,690 --> 00:04:50,030
+this is how the Java Virtual Machine
+
+124
+00:04:50,030 --> 00:04:52,700
+looked like what do you see you do PS
+
+125
+00:04:52,700 --> 00:04:56,120
+minus EF and grep for Java on the UNIX
+
+126
+00:04:56,120 --> 00:04:58,520
+machine so if I'm doing connecting to
+
+127
+00:04:58,520 --> 00:05:02,210
+the server and I say PS and then us and
+
+128
+00:05:02,210 --> 00:05:06,680
+then pipe and then grab minus I and Java
+
+129
+00:05:06,680 --> 00:05:08,930
+and if I run that command I is going to
+
+130
+00:05:08,930 --> 00:05:10,820
+give me if my Java processes are running
+
+131
+00:05:10,820 --> 00:05:13,160
+it's going to give me some output and
+
+132
+00:05:13,160 --> 00:05:16,910
+here I get output so what it's saying
+
+133
+00:05:16,910 --> 00:05:19,910
+it's saying oh this is a JDK I'm using
+
+134
+00:05:19,910 --> 00:05:23,900
+or Java development kit 1.7 it's a
+
+135
+00:05:23,900 --> 00:05:27,200
+server it's starting with memory X and s
+
+136
+00:05:27,200 --> 00:05:30,410
+means small memory footprint one gig it
+
+137
+00:05:30,410 --> 00:05:35,120
+can grow up to two gig and name of this
+
+138
+00:05:35,120 --> 00:05:37,100
+web server is over m and score server
+
+139
+00:05:37,100 --> 00:05:38,930
+and there are some other properties of
+
+140
+00:05:38,930 --> 00:05:41,870
+this server so the JVM is this
+
+141
+00:05:41,870 --> 00:05:43,220
+particular process which is running
+
+142
+00:05:43,220 --> 00:05:45,020
+under the process ID two six eight nine
+
+143
+00:05:45,020 --> 00:05:47,390
+nine is the java virtual machine in
+
+144
+00:05:47,390 --> 00:05:48,830
+which the code is going to be executed
+
+145
+00:05:48,830 --> 00:05:50,900
+so this is about a java virtual machine
+
+146
+00:05:50,900 --> 00:05:53,750
+each server which either admin server a
+
+147
+00:05:53,750 --> 00:05:56,060
+managed server and on node - server will
+
+148
+00:05:56,060 --> 00:05:57,560
+have its own JVM
+
+149
+00:05:57,560 --> 00:05:59,690
+they will have its own memory sizes they
+
+150
+00:05:59,690 --> 00:06:03,410
+will have its own pump size and max pump
+
+151
+00:06:03,410 --> 00:06:05,750
+size again we'll cover that when these
+
+152
+00:06:05,750 --> 00:06:07,760
+pump size and maximum size are covered
+
+153
+00:06:07,760 --> 00:06:09,080
+in the blonic so if you're part of the
+
+154
+00:06:09,080 --> 00:06:10,940
+project weenie this should be somewhere
+
+155
+00:06:10,940 --> 00:06:12,710
+in the craning if you're listening this
+
+156
+00:06:12,710 --> 00:06:14,470
+in the project you should see high
+
+157
+00:06:14,470 --> 00:06:16,460
+performance tuning and that's when we
+
+158
+00:06:16,460 --> 00:06:17,750
+have trouble to cover Java Virtual
+
+159
+00:06:17,750 --> 00:06:19,370
+Machine in detail we'll go deep into
+
+160
+00:06:19,370 --> 00:06:21,470
+that how do you tools what tools you
+
+161
+00:06:21,470 --> 00:06:23,540
+used to tune that java virtual machine
+
+162
+00:06:23,540 --> 00:06:25,460
+how do you find out the garbage
+
+163
+00:06:25,460 --> 00:06:26,840
+collection and everything so that's
+
+164
+00:06:26,840 --> 00:06:30,820
+about java virtual machine so as i said
+
+165
+00:06:30,820 --> 00:06:33,260
+head on to the next lesson we'll look at
+
+166
+00:06:33,260 --> 00:06:35,060
+and good deep into this admin server in
+
+167
+00:06:35,060 --> 00:06:37,160
+- server and we'll also look at how
+
+168
+00:06:37,160 --> 00:06:39,050
+admin server in - ever talk to each
+
+169
+00:06:39,050 --> 00:06:39,950
+other and
+
+170
+00:06:39,950 --> 00:06:41,480
+what is something called as managed
+
+171
+00:06:41,480 --> 00:06:44,030
+service independence or MSI mode and
+
+172
+00:06:44,030 --> 00:06:46,490
+we'll also look at clusters and dynamic
+
+173
+00:06:46,490 --> 00:06:48,800
+clusters which are introduced into NZ so
+
+174
+00:06:48,800 --> 00:06:50,780
+handle to the next lesson but for now
+
+175
+00:06:50,780 --> 00:06:53,530
+let me do a quick recap on this I said a
+
+176
+00:06:53,530 --> 00:06:56,540
+domain whom or domain is nothing but or
+
+177
+00:06:56,540 --> 00:06:58,280
+domain whom gets created when you
+
+178
+00:06:58,280 --> 00:07:00,350
+configure a domain and it has top-level
+
+179
+00:07:00,350 --> 00:07:01,970
+directory in which you have all the
+
+180
+00:07:01,970 --> 00:07:04,310
+other configuration files or log files
+
+181
+00:07:04,310 --> 00:07:08,300
+or start-stop files so that's a domain
+
+182
+00:07:08,300 --> 00:07:10,490
+you your servers which are of admin
+
+183
+00:07:10,490 --> 00:07:13,310
+server and a managed server the servers
+
+184
+00:07:13,310 --> 00:07:14,990
+each server represents a Java Virtual
+
+185
+00:07:14,990 --> 00:07:18,140
+Machine these servers where you host
+
+186
+00:07:18,140 --> 00:07:22,370
+water file efi jar file JDBC JMS each
+
+187
+00:07:22,370 --> 00:07:25,400
+server have its own JVM and there's a
+
+188
+00:07:25,400 --> 00:07:27,380
+new concept in 20 which is called as
+
+189
+00:07:27,380 --> 00:07:30,050
+dynamic servers and what exactly is
+
+190
+00:07:30,050 --> 00:07:30,800
+admin server
+
+191
+00:07:30,800 --> 00:07:32,840
+what is the managed server what is
+
+192
+00:07:32,840 --> 00:07:35,330
+cluster how do admin server talk to -
+
+193
+00:07:35,330 --> 00:07:38,000
+server how what is - or independence and
+
+194
+00:07:38,000 --> 00:07:40,040
+so on let's head on to the next lesson
+
+195
+00:07:40,040 --> 00:07:43,960
+so I'll see you in next lesson
+

@@ -1,0 +1,640 @@
+﻿1
+00:00:00,030 --> 00:00:02,009
+so welcome back to this another lesson
+
+2
+00:00:02,009 --> 00:00:03,629
+and in this lesson we are going to look
+
+3
+00:00:03,629 --> 00:00:05,670
+at web logic concept in the previous
+
+4
+00:00:05,670 --> 00:00:07,560
+lesson I give you a high-level brief
+
+5
+00:00:07,560 --> 00:00:10,230
+overview of what topics we are going to
+
+6
+00:00:10,230 --> 00:00:12,990
+cover in this lesson so or in this
+
+7
+00:00:12,990 --> 00:00:15,660
+module so let's start with the first and
+
+8
+00:00:15,660 --> 00:00:17,190
+the most important about WebLogic
+
+9
+00:00:17,190 --> 00:00:20,730
+concept so what is a web logic server
+
+10
+00:00:20,730 --> 00:00:22,980
+it's nothing but an application server
+
+11
+00:00:22,980 --> 00:00:26,990
+which is Java EE 7 version of Java
+
+12
+00:00:26,990 --> 00:00:31,769
+compliant so application server is the
+
+13
+00:00:31,769 --> 00:00:33,390
+server on which you deploy the
+
+14
+00:00:33,390 --> 00:00:36,510
+application that has logic and this
+
+15
+00:00:36,510 --> 00:00:39,510
+application server helps you to run that
+
+16
+00:00:39,510 --> 00:00:41,760
+application running on the application
+
+17
+00:00:41,760 --> 00:00:44,250
+server so that's what is the WebLogic
+
+18
+00:00:44,250 --> 00:00:47,250
+server provide so what you do you deploy
+
+19
+00:00:47,250 --> 00:00:50,340
+or run and distribute Java based
+
+20
+00:00:50,340 --> 00:00:53,690
+applications on this application server
+
+21
+00:00:53,690 --> 00:00:56,610
+this application server access other
+
+22
+00:00:56,610 --> 00:00:58,829
+services like database to store the data
+
+23
+00:00:58,829 --> 00:01:02,670
+or messaging server to to send the
+
+24
+00:01:02,670 --> 00:01:05,640
+messages across between applications or
+
+25
+00:01:05,640 --> 00:01:07,890
+to connect to the external enterprise
+
+26
+00:01:07,890 --> 00:01:09,630
+systems like ebusiness suite or three
+
+27
+00:01:09,630 --> 00:01:12,450
+bill or peoplesoft or maybe salesforce
+
+28
+00:01:12,450 --> 00:01:16,950
+or s AP and shown so these that is the
+
+29
+00:01:16,950 --> 00:01:20,220
+WebLogic server WebLogic server various
+
+30
+00:01:20,220 --> 00:01:22,200
+exactly is used it's used pretty much
+
+31
+00:01:22,200 --> 00:01:25,549
+every Oracle product beeps ooh or Oh BAE
+
+32
+00:01:25,549 --> 00:01:28,350
+access manager Identity Manager
+
+33
+00:01:28,350 --> 00:01:30,920
+ebusiness suite Fusion Applications
+
+34
+00:01:30,920 --> 00:01:34,320
+Enterprise Manager 13c and so on so
+
+35
+00:01:34,320 --> 00:01:35,759
+you'll understand and appreciate if
+
+36
+00:01:35,759 --> 00:01:37,470
+you're looking for cloud Java cloud
+
+37
+00:01:37,470 --> 00:01:39,540
+services Sewer cloud services a
+
+38
+00:01:39,540 --> 00:01:42,420
+directory cloud service play from and
+
+39
+00:01:42,420 --> 00:01:44,460
+most of the pretty much swap cloud
+
+40
+00:01:44,460 --> 00:01:47,759
+service integration cloud service on
+
+41
+00:01:47,759 --> 00:01:49,950
+some platform you might have access to
+
+42
+00:01:49,950 --> 00:01:52,170
+the WebLogic some you may not have but
+
+43
+00:01:52,170 --> 00:01:54,720
+all underlying feeding using WebLogic
+
+44
+00:01:54,720 --> 00:01:58,979
+server now in 12c version there's a it
+
+45
+00:01:58,979 --> 00:02:01,259
+supports multi-tenancy which means what
+
+46
+00:02:01,259 --> 00:02:02,820
+do we what is multi-tenancy we'll cover
+
+47
+00:02:02,820 --> 00:02:06,149
+that in in a minute in the sub in the
+
+48
+00:02:06,149 --> 00:02:07,770
+respective lesson we have a dedicated
+
+49
+00:02:07,770 --> 00:02:11,129
+lesson for this so where one domain is
+
+50
+00:02:11,129 --> 00:02:13,379
+supporting multiple
+
+51
+00:02:13,379 --> 00:02:17,159
+what is tenant what is the domain we'll
+
+52
+00:02:17,159 --> 00:02:18,480
+look that in a minute
+
+53
+00:02:18,480 --> 00:02:21,750
+now WebLogic server now is also
+
+54
+00:02:21,750 --> 00:02:24,450
+supported on a docker container and if
+
+55
+00:02:24,450 --> 00:02:25,799
+you're big now if you don't know what is
+
+56
+00:02:25,799 --> 00:02:28,470
+it docker build may be worth googling
+
+57
+00:02:28,470 --> 00:02:30,030
+what is it docker solution
+
+58
+00:02:30,030 --> 00:02:32,129
+it's basically quickly and rapidly
+
+59
+00:02:32,129 --> 00:02:35,400
+deploy applications on and on a plate
+
+60
+00:02:35,400 --> 00:02:37,260
+form which is called a docker plate form
+
+61
+00:02:37,260 --> 00:02:40,019
+which is a additional software think of
+
+62
+00:02:40,019 --> 00:02:42,329
+it as a like a virtualization or virtual
+
+63
+00:02:42,329 --> 00:02:44,129
+server but it's not actually the virtual
+
+64
+00:02:44,129 --> 00:02:48,720
+server it's it's an in in compact
+
+65
+00:02:48,720 --> 00:02:51,329
+application in a docker container so Web
+
+66
+00:02:51,329 --> 00:02:53,760
+projects support that as well and other
+
+67
+00:02:53,760 --> 00:02:56,459
+competitors the lot of application
+
+68
+00:02:56,459 --> 00:02:58,319
+servers out in the market but these
+
+69
+00:02:58,319 --> 00:03:01,609
+three are top ones apache followed by
+
+70
+00:03:01,609 --> 00:03:05,040
+web logic and then IBM websphere these
+
+71
+00:03:05,040 --> 00:03:06,299
+are the three main players in
+
+72
+00:03:06,299 --> 00:03:07,950
+applications of a space you will see
+
+73
+00:03:07,950 --> 00:03:08,939
+either a patch a tomcat
+
+74
+00:03:08,939 --> 00:03:11,090
+you will either see IBM WebSphere or
+
+75
+00:03:11,090 --> 00:03:14,459
+Oracle WebLogic server there are plenty
+
+76
+00:03:14,459 --> 00:03:17,400
+more but these are more the most common
+
+77
+00:03:17,400 --> 00:03:19,590
+implementations of application server so
+
+78
+00:03:19,590 --> 00:03:21,810
+this is all about WebLogic server in
+
+79
+00:03:21,810 --> 00:03:23,190
+terms of if you look at the task
+
+80
+00:03:23,190 --> 00:03:26,819
+what a administrator does administrator
+
+81
+00:03:26,819 --> 00:03:28,650
+install the rom logic server they
+
+82
+00:03:28,650 --> 00:03:33,629
+configure domain they also you or a web
+
+83
+00:03:33,629 --> 00:03:35,370
+logic administrator will be deploying
+
+84
+00:03:35,370 --> 00:03:37,489
+the application given by the developers
+
+85
+00:03:37,489 --> 00:03:41,280
+you manage and migrate the domain from a
+
+86
+00:03:41,280 --> 00:03:43,819
+test environment to the product moment
+
+87
+00:03:43,819 --> 00:03:46,620
+integrate with identity access
+
+88
+00:03:46,620 --> 00:03:48,479
+management systems security system
+
+89
+00:03:48,479 --> 00:03:52,049
+third-party systems or like databases or
+
+90
+00:03:52,049 --> 00:03:55,319
+a business feed and so on troubleshoot
+
+91
+00:03:55,319 --> 00:03:58,440
+any issues find out the puff missed unit
+
+92
+00:03:58,440 --> 00:04:00,900
+some app users might say hey it's
+
+93
+00:04:00,900 --> 00:04:02,819
+running slow so that's where you look at
+
+94
+00:04:02,819 --> 00:04:04,709
+Java Virtual Machine garbage collections
+
+95
+00:04:04,709 --> 00:04:08,310
+or the struct threads and we'll cover
+
+96
+00:04:08,310 --> 00:04:10,919
+all these things on a high level in
+
+97
+00:04:10,919 --> 00:04:14,280
+coming lesson then monitor and manage
+
+98
+00:04:14,280 --> 00:04:17,608
+the WebLogic server configure and set up
+
+99
+00:04:17,608 --> 00:04:19,048
+high availability in disaster recovery
+
+100
+00:04:19,048 --> 00:04:21,690
+so these are all tasks of logic admin
+
+101
+00:04:21,690 --> 00:04:23,460
+and let's quickly look at what are the
+
+102
+00:04:23,460 --> 00:04:25,260
+tools available to you come handy so
+
+103
+00:04:25,260 --> 00:04:25,870
+there is a tool
+
+104
+00:04:25,870 --> 00:04:28,360
+WebLogic admin console we'll see and in
+
+105
+00:04:28,360 --> 00:04:31,240
+a minute about WebLogic console how does
+
+106
+00:04:31,240 --> 00:04:33,340
+it look like so it's a graphical user
+
+107
+00:04:33,340 --> 00:04:36,600
+interface to manage the entire domain
+
+108
+00:04:36,600 --> 00:04:39,340
+you another graphical user interface
+
+109
+00:04:39,340 --> 00:04:42,280
+which is Fusion Middleware control then
+
+110
+00:04:42,280 --> 00:04:44,860
+you have a command-line utility which is
+
+111
+00:04:44,860 --> 00:04:47,290
+called a web logic scripting tool or W
+
+112
+00:04:47,290 --> 00:04:51,460
+LST you also have restful api is exposed
+
+113
+00:04:51,460 --> 00:04:52,930
+by the WebLogic server through which you
+
+114
+00:04:52,930 --> 00:04:55,030
+can manage and deploy applications
+
+115
+00:04:55,030 --> 00:04:58,090
+you also have configuration wizard that
+
+116
+00:04:58,090 --> 00:05:00,160
+will be used to create or extend a
+
+117
+00:05:00,160 --> 00:05:01,030
+WebLogic domain
+
+118
+00:05:01,030 --> 00:05:02,620
+we'll see all these things in coming
+
+119
+00:05:02,620 --> 00:05:05,020
+lesson you also have Apache and
+
+120
+00:05:05,020 --> 00:05:06,850
+deployment tool which is from open
+
+121
+00:05:06,850 --> 00:05:08,860
+source to deploy applications on top of
+
+122
+00:05:08,860 --> 00:05:10,000
+a logic server
+
+123
+00:05:10,000 --> 00:05:13,169
+you also have SNMP agent which is a
+
+124
+00:05:13,169 --> 00:05:17,020
+simple network management or protocol to
+
+125
+00:05:17,020 --> 00:05:19,330
+and through which web logic has been
+
+126
+00:05:19,330 --> 00:05:21,490
+exposed you can you can do the hooks and
+
+127
+00:05:21,490 --> 00:05:24,100
+manage WebLogic server so these are
+
+128
+00:05:24,100 --> 00:05:27,130
+various tools on available for web logic
+
+129
+00:05:27,130 --> 00:05:29,380
+so in the next lesson we are going to
+
+130
+00:05:29,380 --> 00:05:31,270
+look at our head on to where we talk
+
+131
+00:05:31,270 --> 00:05:34,419
+about another most important component
+
+132
+00:05:34,419 --> 00:05:39,099
+or or concept which is called as
+
+133
+00:05:39,099 --> 00:05:41,229
+WebLogic domain but before we go to
+
+134
+00:05:41,229 --> 00:05:42,970
+WebLogic domain before we head on to the
+
+135
+00:05:42,970 --> 00:05:45,430
+next lesson let's quickly recap on what
+
+136
+00:05:45,430 --> 00:05:48,639
+we covered in this in this lesson so we
+
+137
+00:05:48,639 --> 00:05:49,990
+looked we started with the WebLogic
+
+138
+00:05:49,990 --> 00:05:52,180
+server I said it's an application server
+
+139
+00:05:52,180 --> 00:05:54,970
+it uses to run the applications and you
+
+140
+00:05:54,970 --> 00:05:56,979
+deploy application on top of that int
+
+141
+00:05:56,979 --> 00:05:59,410
+will see it supported multi-tenancy what
+
+142
+00:05:59,410 --> 00:06:01,300
+that multi-tenancy will we have going to
+
+143
+00:06:01,300 --> 00:06:02,320
+discuss in a minute
+
+144
+00:06:02,320 --> 00:06:04,840
+it also can be run or web logic can be
+
+145
+00:06:04,840 --> 00:06:06,880
+run in a docker based containers or
+
+146
+00:06:06,880 --> 00:06:09,250
+docker containers and other competitors
+
+147
+00:06:09,250 --> 00:06:11,770
+are IBM WebSphere and Apache Tomcat the
+
+148
+00:06:11,770 --> 00:06:13,330
+admin tasks these are some of the admin
+
+149
+00:06:13,330 --> 00:06:15,010
+tasks done by member logic
+
+150
+00:06:15,010 --> 00:06:17,440
+administrators you also have the tools
+
+151
+00:06:17,440 --> 00:06:19,599
+handy which are two graphical user
+
+152
+00:06:19,599 --> 00:06:22,300
+interfaces FM logic scripting tool
+
+153
+00:06:22,300 --> 00:06:24,520
+restful api is configuration with the
+
+154
+00:06:24,520 --> 00:06:27,250
+end and SNMP agent so head on to the
+
+155
+00:06:27,250 --> 00:06:29,260
+next lesson we will look at what exactly
+
+156
+00:06:29,260 --> 00:06:31,630
+is a admin server what is ever bloody
+
+157
+00:06:31,630 --> 00:06:33,729
+domain what is cluster what are the
+
+158
+00:06:33,729 --> 00:06:35,830
+resources and services and where are
+
+159
+00:06:35,830 --> 00:06:37,860
+these configurations store
+
+160
+00:06:37,860 --> 00:06:41,419
+I'll see you in next lesson
+

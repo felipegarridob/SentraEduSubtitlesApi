@@ -1,0 +1,228 @@
+﻿1
+00:00:00,140 --> 00:00:03,929
+hi good morning in this presentation or
+
+2
+00:00:03,929 --> 00:00:06,420
+session we are going to show you how to
+
+3
+00:00:06,420 --> 00:00:10,080
+install Oracle WebLogic server there are
+
+4
+00:00:10,080 --> 00:00:13,019
+three parts or three steps you do in
+
+5
+00:00:13,019 --> 00:00:14,670
+order to install Oracle WebLogic server
+
+6
+00:00:14,670 --> 00:00:19,350
+in part one you install JDK or Java
+
+7
+00:00:19,350 --> 00:00:22,170
+development kit which will be used to
+
+8
+00:00:22,170 --> 00:00:25,619
+run your WebLogic server the next part
+
+9
+00:00:25,619 --> 00:00:28,800
+is you create you install oracle
+
+10
+00:00:28,800 --> 00:00:31,650
+weblogic server and third parties you
+
+11
+00:00:31,650 --> 00:00:34,350
+configure or you create WebLogic domain
+
+12
+00:00:34,350 --> 00:00:38,280
+and start your project server the first
+
+13
+00:00:38,280 --> 00:00:42,600
+step is installation of Oracle JDK so
+
+14
+00:00:42,600 --> 00:00:44,550
+I'm going to a staging directory where I
+
+15
+00:00:44,550 --> 00:00:48,559
+have JDK downloaded which is stage
+
+16
+00:00:48,559 --> 00:00:52,980
+Oracle JDK so if you notice here I have
+
+17
+00:00:52,980 --> 00:00:56,489
+two JDK software one is rpm file and
+
+18
+00:00:56,489 --> 00:01:00,960
+second a star file so you can either log
+
+19
+00:01:00,960 --> 00:01:04,019
+in as root and run this RPM when you run
+
+20
+00:01:04,019 --> 00:01:06,689
+this RPM and is going to install your
+
+21
+00:01:06,689 --> 00:01:16,770
+JDK under user java jdk 1.7 dot 51 so
+
+22
+00:01:16,770 --> 00:01:21,570
+this is jdk 1.7 update 51 so if you go
+
+23
+00:01:21,570 --> 00:01:24,509
+inside bin directory you will see I've
+
+24
+00:01:24,509 --> 00:01:30,619
+already installed JDK using RPM and c
+
+25
+00:01:30,619 --> 00:01:34,920
+java version 1.7 update 51 so one method
+
+26
+00:01:34,920 --> 00:01:41,070
+is you install RPM or using RPM - ivh
+
+27
+00:01:41,070 --> 00:01:44,939
+and the file name or RPM name other
+
+28
+00:01:44,939 --> 00:01:50,100
+method is you simply enter the JDK 7 the
+
+29
+00:01:50,100 --> 00:01:51,899
+way we are I'm going to show you again
+
+30
+00:01:51,899 --> 00:01:56,329
+here which is let's go back to trade ek
+
+31
+00:01:56,329 --> 00:02:01,560
+Oracle stage JDK and now on tau star
+
+32
+00:02:01,560 --> 00:02:12,349
+minus x VF jdk update 9 Linux 64-bit are
+
+33
+00:02:12,430 --> 00:02:15,190
+so it's unzipping the file now in under
+
+34
+00:02:15,190 --> 00:02:21,819
+folder jdk 1.7 and if i so this is my
+
+35
+00:02:21,819 --> 00:02:25,599
+jelly key home or you install jdk if i
+
+36
+00:02:25,599 --> 00:02:30,730
+go to the bin directory and then Java -
+
+37
+00:02:30,730 --> 00:02:35,799
+version I see Jenny give 1.7 update 9 so
+
+38
+00:02:35,799 --> 00:02:41,019
+to repeat when you install Oracle
+
+39
+00:02:41,019 --> 00:02:42,970
+WebLogic server first part you need to
+
+40
+00:02:42,970 --> 00:02:46,269
+do is you know to install JDK and there
+
+41
+00:02:46,269 --> 00:02:48,400
+are two ways to install JDK one is
+
+42
+00:02:48,400 --> 00:02:51,609
+installing install using rpm and second
+
+43
+00:02:51,609 --> 00:02:55,000
+is you simply enter the tar file into
+
+44
+00:02:55,000 --> 00:02:57,040
+the directory in which you would like to
+
+45
+00:02:57,040 --> 00:02:59,890
+install your jdk so i'm going to pick
+
+46
+00:02:59,890 --> 00:03:03,010
+the first method which is installation
+
+47
+00:03:03,010 --> 00:03:05,620
+using RPM which have already done in the
+
+48
+00:03:05,620 --> 00:03:11,019
+past using on my my jdk software
+
+49
+00:03:11,019 --> 00:03:17,069
+location a's user java jdk this is my
+
+50
+00:03:17,069 --> 00:03:21,430
+java home and inside that these the
+
+51
+00:03:21,430 --> 00:03:24,069
+files I have if I could have pinned and
+
+52
+00:03:24,069 --> 00:03:26,560
+I can run the Java version to check what
+
+53
+00:03:26,560 --> 00:03:29,680
+my Jake jdk server version is which is
+
+54
+00:03:29,680 --> 00:03:36,760
+1.7 update 51 in next step I'm going to
+
+55
+00:03:36,760 --> 00:03:39,250
+show you how to install Oracle WebLogic
+
+56
+00:03:39,250 --> 00:03:42,639
+server are in third step we are going to
+
+57
+00:03:42,639 --> 00:03:47,340
+create WebLogic server domain
+

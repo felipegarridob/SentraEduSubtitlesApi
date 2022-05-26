@@ -1,0 +1,1280 @@
+﻿1
+00:00:00,350 --> 00:00:03,300
+so welcome back to this another lesson
+
+2
+00:00:03,300 --> 00:00:06,299
+in module WebLogic server and in this
+
+3
+00:00:06,299 --> 00:00:07,649
+lesson we are going to look at node
+
+4
+00:00:07,649 --> 00:00:11,070
+manager and machine but before I tell
+
+5
+00:00:11,070 --> 00:00:13,620
+road manager machine quickly what we did
+
+6
+00:00:13,620 --> 00:00:15,509
+in previous lesson was data source and
+
+7
+00:00:15,509 --> 00:00:18,240
+we looked at JMS and now let's look at
+
+8
+00:00:18,240 --> 00:00:21,660
+node manager so node manager is nothing
+
+9
+00:00:21,660 --> 00:00:25,830
+but a java process running on each host
+
+10
+00:00:25,830 --> 00:00:29,730
+or a machine where WebLogic server is
+
+11
+00:00:29,730 --> 00:00:33,270
+running so I repeat one more time node
+
+12
+00:00:33,270 --> 00:00:36,570
+manager is a Java process which is
+
+13
+00:00:36,570 --> 00:00:39,870
+running or which usually run on a server
+
+14
+00:00:39,870 --> 00:00:42,629
+where WebLogic admin or manage servers
+
+15
+00:00:42,629 --> 00:00:44,460
+or any type of web logic servers are
+
+16
+00:00:44,460 --> 00:00:48,000
+running what node manager helps known
+
+17
+00:00:48,000 --> 00:00:54,329
+manager helps in remotely or in in help
+
+18
+00:00:54,329 --> 00:00:57,449
+in enabling or works for or helps in
+
+19
+00:00:57,449 --> 00:01:00,809
+starting or stopping services remotely
+
+20
+00:01:00,809 --> 00:01:04,799
+and services I mean is the server's
+
+21
+00:01:04,799 --> 00:01:07,500
+managed server or admin server and for
+
+22
+00:01:07,500 --> 00:01:10,650
+some reason if server crashes abnormally
+
+23
+00:01:10,650 --> 00:01:12,930
+node manager if it started by node
+
+24
+00:01:12,930 --> 00:01:15,689
+manager then get go and restart that
+
+25
+00:01:15,689 --> 00:01:19,950
+server again it must be always if you
+
+26
+00:01:19,950 --> 00:01:24,030
+want a server to be started using the
+
+27
+00:01:24,030 --> 00:01:27,240
+logic console or through web logic
+
+28
+00:01:27,240 --> 00:01:29,939
+scripting tool then node manager must be
+
+29
+00:01:29,939 --> 00:01:31,799
+always running there are different ways
+
+30
+00:01:31,799 --> 00:01:33,450
+to start the services we will see that
+
+31
+00:01:33,450 --> 00:01:35,040
+when we look at the start and stop and
+
+32
+00:01:35,040 --> 00:01:37,740
+one of them is using start WebLogic dot
+
+33
+00:01:37,740 --> 00:01:40,409
+SH or start manage WebLogic dot SH which
+
+34
+00:01:40,409 --> 00:01:44,310
+is shell scripts or you can also start
+
+35
+00:01:44,310 --> 00:01:46,590
+them from a manage servers you can start
+
+36
+00:01:46,590 --> 00:01:48,270
+them from a graphical console which is
+
+37
+00:01:48,270 --> 00:01:53,040
+WebLogic admins web ready console or you
+
+38
+00:01:53,040 --> 00:01:55,380
+can also start them both admin server as
+
+39
+00:01:55,380 --> 00:01:57,689
+well as manage server from the blodgett
+
+40
+00:01:57,689 --> 00:01:59,250
+scripting tool and if you have to do
+
+41
+00:01:59,250 --> 00:02:01,409
+that using the basic scripting tool then
+
+42
+00:02:01,409 --> 00:02:04,409
+or from a web logic console then node
+
+43
+00:02:04,409 --> 00:02:05,909
+manager must be running and it's only
+
+44
+00:02:05,909 --> 00:02:09,508
+used to manage and maintain configure
+
+45
+00:02:09,508 --> 00:02:12,750
+maintain or the server life cycle to
+
+46
+00:02:12,750 --> 00:02:14,220
+start and stop services
+
+47
+00:02:14,220 --> 00:02:19,420
+so having said that you can run your
+
+48
+00:02:19,420 --> 00:02:21,849
+servers without node manager as well so
+
+49
+00:02:21,849 --> 00:02:23,920
+you can have node manager all down and
+
+50
+00:02:23,920 --> 00:02:27,400
+you can run servers independently
+
+51
+00:02:27,400 --> 00:02:29,250
+without any need of node manager
+
+52
+00:02:29,250 --> 00:02:31,780
+similarly let's suppose you have started
+
+53
+00:02:31,780 --> 00:02:33,760
+a server using a node manager which is
+
+54
+00:02:33,760 --> 00:02:35,470
+why a logic controller WebLogic
+
+55
+00:02:35,470 --> 00:02:37,420
+scripting tool and then your new manager
+
+56
+00:02:37,420 --> 00:02:39,370
+goes down your server will still
+
+57
+00:02:39,370 --> 00:02:43,870
+continue to run now the way you deployed
+
+58
+00:02:43,870 --> 00:02:45,480
+newton manager you can have multiple
+
+59
+00:02:45,480 --> 00:02:48,400
+deployment topology you can have one
+
+60
+00:02:48,400 --> 00:02:52,030
+node manager associated with multiple
+
+61
+00:02:52,030 --> 00:02:54,579
+domains in a sir on on that physical
+
+62
+00:02:54,579 --> 00:02:57,310
+host I repeat one more time you can have
+
+63
+00:02:57,310 --> 00:03:00,160
+one node manager serving multiple
+
+64
+00:03:00,160 --> 00:03:03,040
+different domains which means node
+
+65
+00:03:03,040 --> 00:03:05,769
+manager is not specific to or not a part
+
+66
+00:03:05,769 --> 00:03:08,110
+of just any domain node manager can be
+
+67
+00:03:08,110 --> 00:03:12,280
+associated with multiple domains on a
+
+68
+00:03:12,280 --> 00:03:16,030
+host or you can deploy it in a way
+
+69
+00:03:16,030 --> 00:03:18,730
+saying each domain will have one node
+
+70
+00:03:18,730 --> 00:03:20,859
+manager so it's all down to what you
+
+71
+00:03:20,859 --> 00:03:22,750
+feel comfortable with and that's what
+
+72
+00:03:22,750 --> 00:03:25,660
+you can set up so if I know so what you
+
+73
+00:03:25,660 --> 00:03:28,450
+see in the diagram let's suppose I have
+
+74
+00:03:28,450 --> 00:03:31,150
+a two machines let's suppose two
+
+75
+00:03:31,150 --> 00:03:33,010
+different machines and the yellow
+
+76
+00:03:33,010 --> 00:03:35,440
+represents into a man is a node manager
+
+77
+00:03:35,440 --> 00:03:40,799
+and the red represents a admin server
+
+78
+00:03:40,799 --> 00:03:43,510
+now I have one more machine which is on
+
+79
+00:03:43,510 --> 00:03:46,630
+the right-hand side where you have where
+
+80
+00:03:46,630 --> 00:03:48,220
+you have a manís server which is
+
+81
+00:03:48,220 --> 00:03:50,049
+currently down which is represented by
+
+82
+00:03:50,049 --> 00:03:52,450
+got it now dotted line and you want to
+
+83
+00:03:52,450 --> 00:03:55,889
+start that managed server which is
+
+84
+00:03:55,889 --> 00:03:58,090
+represented by the dotted line on the
+
+85
+00:03:58,090 --> 00:03:59,919
+upper of our image so what you're going
+
+86
+00:03:59,919 --> 00:04:01,930
+to do you are going to tell your going
+
+87
+00:04:01,930 --> 00:04:03,459
+to issue a command from the WebLogic
+
+88
+00:04:03,459 --> 00:04:05,799
+console and say go and start the server
+
+89
+00:04:05,799 --> 00:04:08,620
+- server where this managed server is
+
+90
+00:04:08,620 --> 00:04:10,950
+deployed and sitting on another machine
+
+91
+00:04:10,950 --> 00:04:15,760
+so they'll be association of managed
+
+92
+00:04:15,760 --> 00:04:18,459
+server with a node manager let me repeat
+
+93
+00:04:18,459 --> 00:04:21,519
+one more time will be association of a
+
+94
+00:04:21,519 --> 00:04:24,599
+manager work with a node manager and the
+
+95
+00:04:24,599 --> 00:04:27,540
+association happens by the Machine the
+
+96
+00:04:27,540 --> 00:04:31,890
+see in the next slide so note admin
+
+97
+00:04:31,890 --> 00:04:34,560
+server will see that this node manager
+
+98
+00:04:34,560 --> 00:04:37,980
+is running or associated with which
+
+99
+00:04:37,980 --> 00:04:40,830
+machine and on that machine what what
+
+100
+00:04:40,830 --> 00:04:44,580
+node manager is configured so admin
+
+101
+00:04:44,580 --> 00:04:46,290
+server will issue a command to the node
+
+102
+00:04:46,290 --> 00:04:48,720
+manager node manager will then in turn
+
+103
+00:04:48,720 --> 00:04:50,790
+go and start this managed server and
+
+104
+00:04:50,790 --> 00:04:53,670
+that's how this process works so let me
+
+105
+00:04:53,670 --> 00:04:55,920
+first let's see first of all where this
+
+106
+00:04:55,920 --> 00:04:58,980
+configuration are on the server or what
+
+107
+00:04:58,980 --> 00:05:01,020
+are the associated configurations with
+
+108
+00:05:01,020 --> 00:05:03,300
+respect to the node manager so I'm
+
+109
+00:05:03,300 --> 00:05:05,460
+currently so the node manager by default
+
+110
+00:05:05,460 --> 00:05:07,890
+for 11g I am going to focus only on 11g
+
+111
+00:05:07,890 --> 00:05:10,200
+and then picking up to NC is simple and
+
+112
+00:05:10,200 --> 00:05:12,030
+12c slightly there is a slight change in
+
+113
+00:05:12,030 --> 00:05:13,950
+the way node manager is configured or
+
+114
+00:05:13,950 --> 00:05:18,120
+done but the concept remains same so the
+
+115
+00:05:18,120 --> 00:05:20,370
+the configuration for node manager will
+
+116
+00:05:20,370 --> 00:05:22,290
+be all the configuration file log file
+
+117
+00:05:22,290 --> 00:05:24,390
+everything will be under the logic
+
+118
+00:05:24,390 --> 00:05:27,240
+server home under the directory or file
+
+119
+00:05:27,240 --> 00:05:29,910
+called servers and in that you will have
+
+120
+00:05:29,910 --> 00:05:33,780
+bin folder and you have a script called
+
+121
+00:05:33,780 --> 00:05:36,780
+start node manager dot SH and that will
+
+122
+00:05:36,780 --> 00:05:39,210
+start other node manager there's no
+
+123
+00:05:39,210 --> 00:05:41,520
+script to stop the node manager you have
+
+124
+00:05:41,520 --> 00:05:44,280
+to kill in order to stop the new manager
+
+125
+00:05:44,280 --> 00:05:47,700
+process in 11g princey there is a script
+
+126
+00:05:47,700 --> 00:05:50,550
+but I will focus on 11 GS n so in 11g
+
+127
+00:05:50,550 --> 00:05:52,410
+there is no process or there's no script
+
+128
+00:05:52,410 --> 00:05:54,090
+to stop the node manager you have to
+
+129
+00:05:54,090 --> 00:05:55,860
+kill it once you have started the loan
+
+130
+00:05:55,860 --> 00:05:58,080
+manager all the configurations and
+
+131
+00:05:58,080 --> 00:05:59,670
+everything will be under the common
+
+132
+00:05:59,670 --> 00:06:02,340
+folder so you go under M but common not
+
+133
+00:06:02,340 --> 00:06:04,860
+common Oracle home it's under WebLogic
+
+134
+00:06:04,860 --> 00:06:07,410
+home common folder and within common
+
+135
+00:06:07,410 --> 00:06:10,020
+folder you will go into the node manager
+
+136
+00:06:10,020 --> 00:06:12,420
+folder and here you will have all the
+
+137
+00:06:12,420 --> 00:06:14,550
+files like node manager log files or
+
+138
+00:06:14,550 --> 00:06:16,770
+anything any errors everything will be
+
+139
+00:06:16,770 --> 00:06:18,360
+going to node manager dot log file
+
+140
+00:06:18,360 --> 00:06:20,430
+they'll be a node manager dot properties
+
+141
+00:06:20,430 --> 00:06:22,590
+file so when the node method starts it
+
+142
+00:06:22,590 --> 00:06:24,510
+will use this node manager properties
+
+143
+00:06:24,510 --> 00:06:28,440
+dot file to start the node manager and
+
+144
+00:06:28,440 --> 00:06:31,380
+you can change this file here node
+
+145
+00:06:31,380 --> 00:06:33,690
+manager does properties file so it will
+
+146
+00:06:33,690 --> 00:06:37,260
+tell what where is my domain file what
+
+147
+00:06:37,260 --> 00:06:39,060
+all domains are associated with this
+
+148
+00:06:39,060 --> 00:06:41,070
+node manager it will be given in this
+
+149
+00:06:41,070 --> 00:06:41,810
+fight
+
+150
+00:06:41,810 --> 00:06:45,060
+where's my java home what is the lesson
+
+151
+00:06:45,060 --> 00:06:48,360
+address for this this node manager
+
+152
+00:06:48,360 --> 00:06:50,220
+what is the listen port for this node
+
+153
+00:06:50,220 --> 00:06:51,810
+manager and it's blank which means it is
+
+154
+00:06:51,810 --> 00:06:54,800
+running on all the IP addresses
+
+155
+00:06:54,800 --> 00:06:56,790
+configured on this machine
+
+156
+00:06:56,790 --> 00:07:00,780
+what is the listen port and so on so we
+
+157
+00:07:00,780 --> 00:07:04,170
+come out of this file here and then the
+
+158
+00:07:04,170 --> 00:07:06,180
+node manager dot property domain file
+
+159
+00:07:06,180 --> 00:07:07,980
+will have what all domains are
+
+160
+00:07:07,980 --> 00:07:10,500
+associated with this node manager so we
+
+161
+00:07:10,500 --> 00:07:12,840
+will see here and say this one domain
+
+162
+00:07:12,840 --> 00:07:15,570
+which is the the base domain and this is
+
+163
+00:07:15,570 --> 00:07:17,070
+the location of this domain that is how
+
+164
+00:07:17,070 --> 00:07:19,920
+you see or you can figure it or you
+
+165
+00:07:19,920 --> 00:07:23,250
+start it now as I said earlier there
+
+166
+00:07:23,250 --> 00:07:24,750
+will be association with the machine and
+
+167
+00:07:24,750 --> 00:07:26,130
+I am going to tell you machine in a
+
+168
+00:07:26,130 --> 00:07:28,170
+minute but let's first go and try to
+
+169
+00:07:28,170 --> 00:07:32,070
+start a server in the WebLogic console
+
+170
+00:07:32,070 --> 00:07:33,630
+through a web logic console so I have a
+
+171
+00:07:33,630 --> 00:07:36,840
+server called for example sua server and
+
+172
+00:07:36,840 --> 00:07:39,240
+I go and try to start this server I will
+
+173
+00:07:39,240 --> 00:07:42,960
+say control and I'll select the sua
+
+174
+00:07:42,960 --> 00:07:45,480
+server and say start and the minute I
+
+175
+00:07:45,480 --> 00:07:47,730
+start the server it says the so server
+
+176
+00:07:47,730 --> 00:07:50,520
+does not have a machine associated with
+
+177
+00:07:50,520 --> 00:07:53,610
+this and what is the machine which is we
+
+178
+00:07:53,610 --> 00:07:55,560
+can configure it from here I'll come
+
+179
+00:07:55,560 --> 00:07:58,050
+I'll go and explain the now front
+
+180
+00:07:58,050 --> 00:08:01,440
+presentation so machine is nothing but
+
+181
+00:08:01,440 --> 00:08:05,300
+it identifies a physical host on which
+
+182
+00:08:05,300 --> 00:08:07,980
+the server is running that server could
+
+183
+00:08:07,980 --> 00:08:10,170
+be an admin server or that server could
+
+184
+00:08:10,170 --> 00:08:13,860
+be a managed server so machine is used
+
+185
+00:08:13,860 --> 00:08:16,170
+to associate a WebLogic server with the
+
+186
+00:08:16,170 --> 00:08:19,260
+host on which that that managed server
+
+187
+00:08:19,260 --> 00:08:21,570
+admin server runs it is used by the node
+
+188
+00:08:21,570 --> 00:08:25,260
+manager to start if a server or restart
+
+189
+00:08:25,260 --> 00:08:28,670
+a failed server it's also used by
+
+190
+00:08:28,670 --> 00:08:33,120
+cluster or or or in a scenario where the
+
+191
+00:08:33,120 --> 00:08:35,340
+serve the session information needs to
+
+192
+00:08:35,340 --> 00:08:39,260
+be replicated in selecting the closest
+
+193
+00:08:39,260 --> 00:08:42,059
+cluster member to replicate that session
+
+194
+00:08:42,059 --> 00:08:43,860
+again be able to cover that in high
+
+195
+00:08:43,860 --> 00:08:46,050
+availability a module will be good deep
+
+196
+00:08:46,050 --> 00:08:48,810
+dive into this cluster communication but
+
+197
+00:08:48,810 --> 00:08:51,210
+if node manager is up and if the
+
+198
+00:08:51,210 --> 00:08:52,830
+services are started using new manager
+
+199
+00:08:52,830 --> 00:08:55,210
+it will be used in that scenario
+
+200
+00:08:55,210 --> 00:08:58,690
+so what happens so what how I do or what
+
+201
+00:08:58,690 --> 00:09:02,470
+I go here is I can create a machine on
+
+202
+00:09:02,470 --> 00:09:04,540
+which I want to start the sewer server
+
+203
+00:09:04,540 --> 00:09:06,940
+and then associate this managed server
+
+204
+00:09:06,940 --> 00:09:08,770
+through this machine so I'll go and to
+
+205
+00:09:08,770 --> 00:09:10,750
+server here and I'll create a machine
+
+206
+00:09:10,750 --> 00:09:13,570
+called new machine so I take a control
+
+207
+00:09:13,570 --> 00:09:15,700
+called lock and edit and say new machine
+
+208
+00:09:15,700 --> 00:09:17,800
+and I can give this name this machine
+
+209
+00:09:17,800 --> 00:09:19,480
+any name of my choice it's just a
+
+210
+00:09:19,480 --> 00:09:22,030
+virtual or or a logical representation
+
+211
+00:09:22,030 --> 00:09:25,450
+of the actual machine on which I want to
+
+212
+00:09:25,450 --> 00:09:27,700
+start this server so I will say it's 0 1
+
+213
+00:09:27,700 --> 00:09:30,820
+and say it's off a type UNIX machine
+
+214
+00:09:30,820 --> 00:09:32,230
+because I know it's a Linux or UNIX
+
+215
+00:09:32,230 --> 00:09:36,640
+machine which is 1 or 2 IP now this is
+
+216
+00:09:36,640 --> 00:09:38,680
+what I was saying is that each machine
+
+217
+00:09:38,680 --> 00:09:41,680
+will have a Associated node manager so
+
+218
+00:09:41,680 --> 00:09:43,870
+now this is the node manager properties
+
+219
+00:09:43,870 --> 00:09:46,510
+how the node manager is running so by
+
+220
+00:09:46,510 --> 00:09:48,640
+default node manager can run in SSL as
+
+221
+00:09:48,640 --> 00:09:51,910
+are SH plain SSL leave it to default SSL
+
+222
+00:09:51,910 --> 00:09:54,640
+and I say on which machine this node
+
+223
+00:09:54,640 --> 00:09:56,410
+manager I want or machine to be
+
+224
+00:09:56,410 --> 00:09:58,540
+associated and I want to associate this
+
+225
+00:09:58,540 --> 00:10:01,300
+machine then appropriate node manager on
+
+226
+00:10:01,300 --> 00:10:03,730
+which this node manager is running so
+
+227
+00:10:03,730 --> 00:10:06,700
+I'll say 192 dot 168 I want to run it on
+
+228
+00:10:06,700 --> 00:10:09,160
+the same machine so a 1 + 1 0 - I could
+
+229
+00:10:09,160 --> 00:10:13,090
+have done localhost as well save and say
+
+230
+00:10:13,090 --> 00:10:19,120
+finish now this machine should be
+
+231
+00:10:19,120 --> 00:10:21,400
+associated to the manage server that I
+
+232
+00:10:21,400 --> 00:10:23,140
+want to start so I'll go to servers I'll
+
+233
+00:10:23,140 --> 00:10:26,350
+say so a server and I say now this is
+
+234
+00:10:26,350 --> 00:10:29,770
+associated with this so a 1 and save it
+
+235
+00:10:29,770 --> 00:10:32,710
+and I activate the changes which means
+
+236
+00:10:32,710 --> 00:10:39,400
+now if let it save so now if I want to
+
+237
+00:10:39,400 --> 00:10:42,930
+start the sua server the so our server
+
+238
+00:10:42,930 --> 00:10:46,900
+admin server will check where this - a -
+
+239
+00:10:46,900 --> 00:10:49,780
+server is way is is running or which
+
+240
+00:10:49,780 --> 00:10:51,730
+machine this is associated with with
+
+241
+00:10:51,730 --> 00:10:54,580
+this and if you go to that machine or my
+
+242
+00:10:54,580 --> 00:10:57,900
+admin server will go to that machine and
+
+243
+00:10:57,900 --> 00:11:01,990
+see what is the node manager associated
+
+244
+00:11:01,990 --> 00:11:04,270
+with that so in this machine are at node
+
+245
+00:11:04,270 --> 00:11:07,450
+manager and say so that means admin
+
+246
+00:11:07,450 --> 00:11:08,579
+server has to
+
+247
+00:11:08,579 --> 00:11:12,509
+send a command to this node manager with
+
+248
+00:11:12,509 --> 00:11:14,040
+listening on this machine on this port
+
+249
+00:11:14,040 --> 00:11:16,769
+and say hey go and start is to a server
+
+250
+00:11:16,769 --> 00:11:19,379
+and that's how this is going to work so
+
+251
+00:11:19,379 --> 00:11:20,939
+let's suppose if I go and start the
+
+252
+00:11:20,939 --> 00:11:24,029
+service on so and I try to start and see
+
+253
+00:11:24,029 --> 00:11:28,100
+a and say it start now this time I'm not
+
+254
+00:11:28,100 --> 00:11:30,389
+getting that error which I got earlier
+
+255
+00:11:30,389 --> 00:11:32,220
+saying hey there's no machine associated
+
+256
+00:11:32,220 --> 00:11:33,929
+because now we have associated a machine
+
+257
+00:11:33,929 --> 00:11:36,410
+here so I'll say yes started
+
+258
+00:11:36,410 --> 00:11:39,179
+however it's saying a request has been
+
+259
+00:11:39,179 --> 00:11:41,129
+sent to start the selected server
+
+260
+00:11:41,129 --> 00:11:42,420
+which means the request has gone that
+
+261
+00:11:42,420 --> 00:11:45,149
+means when that looks like the managed
+
+262
+00:11:45,149 --> 00:11:46,529
+server or the node manager is running
+
+263
+00:11:46,529 --> 00:11:48,869
+that's why a brick quest has gone so
+
+264
+00:11:48,869 --> 00:11:50,910
+otherwise if node - is down you will see
+
+265
+00:11:50,910 --> 00:11:52,920
+another error saying the node manager is
+
+266
+00:11:52,920 --> 00:11:55,739
+not available or down so if you see here
+
+267
+00:11:55,739 --> 00:11:58,739
+now I saw associated leave right now on
+
+268
+00:11:58,739 --> 00:12:00,660
+14th of April just few minutes ago and
+
+269
+00:12:00,660 --> 00:12:03,660
+it has sent a command to issue or it has
+
+270
+00:12:03,660 --> 00:12:06,660
+started or issued a command to start the
+
+271
+00:12:06,660 --> 00:12:09,600
+show underscore server 1 which means now
+
+272
+00:12:09,600 --> 00:12:11,220
+it has started or issued the command
+
+273
+00:12:11,220 --> 00:12:14,279
+this is how the machine or node manager
+
+274
+00:12:14,279 --> 00:12:17,069
+and machines are associated within a
+
+275
+00:12:17,069 --> 00:12:19,139
+domain so let me do a quick recap on
+
+276
+00:12:19,139 --> 00:12:21,989
+this so node manage is nothing but a
+
+277
+00:12:21,989 --> 00:12:23,519
+java process and if want to see the
+
+278
+00:12:23,519 --> 00:12:24,779
+process now if you want to see the
+
+279
+00:12:24,779 --> 00:12:27,720
+process you simply see and say PS - Kiev
+
+280
+00:12:27,720 --> 00:12:31,980
+and fight and grep for - I and node
+
+281
+00:12:31,980 --> 00:12:39,449
+manager and node manager and so this is
+
+282
+00:12:39,449 --> 00:12:42,660
+my node manager process which says it's
+
+283
+00:12:42,660 --> 00:12:45,569
+using this JDK it's starting with 32 MB
+
+284
+00:12:45,569 --> 00:12:48,720
+mmm and it can go up to 200 MB if
+
+285
+00:12:48,720 --> 00:12:51,959
+required and this is WebLogic node node
+
+286
+00:12:51,959 --> 00:12:55,230
+manager and so it's nothing but a java
+
+287
+00:12:55,230 --> 00:12:58,259
+process which is used to remotely start
+
+288
+00:12:58,259 --> 00:13:00,419
+and stop in managed server or services
+
+289
+00:13:00,419 --> 00:13:06,360
+or also restart a failed server services
+
+290
+00:13:06,360 --> 00:13:08,879
+can run without a node manager but if
+
+291
+00:13:08,879 --> 00:13:10,919
+you won't as I said earlier to be
+
+292
+00:13:10,919 --> 00:13:12,869
+started using a remotely WebLogic
+
+293
+00:13:12,869 --> 00:13:14,579
+scripting tool or console then node
+
+294
+00:13:14,579 --> 00:13:16,559
+manager is required machine is nothing
+
+295
+00:13:16,559 --> 00:13:20,910
+but a a it identifies about physical
+
+296
+00:13:20,910 --> 00:13:21,960
+host on which you
+
+297
+00:13:21,960 --> 00:13:25,650
+- satay server or associate a WebLogic
+
+298
+00:13:25,650 --> 00:13:28,230
+server or to do that it's used by node
+
+299
+00:13:28,230 --> 00:13:30,560
+manager and you also used in a cluster
+
+300
+00:13:30,560 --> 00:13:33,480
+cluster communication when when we look
+
+301
+00:13:33,480 --> 00:13:35,010
+at high availability we'll be going too
+
+302
+00:13:35,010 --> 00:13:37,590
+deep into that and just already showed
+
+303
+00:13:37,590 --> 00:13:40,050
+you how machine and node manager are
+
+304
+00:13:40,050 --> 00:13:42,030
+associated with each other so you go to
+
+305
+00:13:42,030 --> 00:13:44,220
+servers under server each server will
+
+306
+00:13:44,220 --> 00:13:46,290
+have a machine associated each machine
+
+307
+00:13:46,290 --> 00:13:48,240
+will have a node manager associated with
+
+308
+00:13:48,240 --> 00:13:51,000
+that and that's how these machine and
+
+309
+00:13:51,000 --> 00:13:53,550
+node manager are related now head on to
+
+310
+00:13:53,550 --> 00:13:55,410
+the next lesson when we look at security
+
+311
+00:13:55,410 --> 00:13:57,420
+realm which is another important topic
+
+312
+00:13:57,420 --> 00:13:59,220
+where you will look at how the users
+
+313
+00:13:59,220 --> 00:14:01,980
+security realm will have a something
+
+314
+00:14:01,980 --> 00:14:03,870
+called as authentication providers
+
+315
+00:14:03,870 --> 00:14:06,540
+authorization providers users groups
+
+316
+00:14:06,540 --> 00:14:09,210
+embedded LDAP servers rules all these
+
+317
+00:14:09,210 --> 00:14:10,530
+things we are going to look at into the
+
+318
+00:14:10,530 --> 00:14:12,660
+next lesson which is security lesson or
+
+319
+00:14:12,660 --> 00:14:14,880
+security realm I'll see you in next
+
+320
+00:14:14,880 --> 00:14:17,240
+lesson
+
