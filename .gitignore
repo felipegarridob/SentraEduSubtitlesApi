@@ -1,4 +1,5 @@
 node_modules/
+repositories/
 /package-lock.json
 
 # IDE - VSCode
