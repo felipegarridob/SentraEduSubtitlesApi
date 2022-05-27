@@ -1,9 +1,9 @@
+'use strict'
 const srt2vtt = require('srt-to-vtt')
 const fs = require('fs')
 const path = require('path')
 
 exports.transformSrtToVtt = async (req, res) => {
-
 
     try {
         let { repository, course } = req.body
@@ -131,20 +131,19 @@ exports.transformSrtToVtt = async (req, res) => {
 
         res.status(200).send({
             success: true,
-            message:strFilesWithoutVttVersion.length > 0 ?
-            `Archivos .srt convertidos a .vtt exitosamente, proceda a agregar los subtitulos a los videos` :
-            `No se crearón archivos .vtt por que ya existen en la carpeta del curso ${course}.`,
+            message: strFilesWithoutVttVersion.length > 0 ?
+                `Archivos .srt convertidos a .vtt exitosamente, proceda a agregar los subtitulos a los videos` :
+                `No se crearón archivos .vtt por que ya existen en la carpeta del curso ${course}.`,
             details: details
         });
 
     } catch (e) {
-
-        res.status(500).send({
+        console.log(e)
+        return res.status(500).send({
             success: false,
             message: e.message
 
         });
 
-        console.log(e)
     }
 }
